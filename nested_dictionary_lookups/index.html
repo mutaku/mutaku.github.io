@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
@@ -128,9 +130,9 @@
           
           <div class="col-12 col-md-3 bd-sidebar"><div class="logo"><img src="../_static/profile.jpg"></div>
 <div class="snippet">
-    <div>Matthew Martz, PhD</div>
-    <div>Principal, Research and Machine Learning at PenroseHill/Firstleaf</div>
-    <div>Machine Learning | Predictive Modeling | Data Science | Biomedical Research</div>
+    <div class="name">Matthew Martz, PhD</div>
+    <div class="title">Principal, Research and Machine Learning at PenroseHill/Firstleaf</div>
+    <div class="specialties">Machine Learning | Predictive Modeling | Data Science | Biomedical Research</div>
 </div>
           </div>
           
@@ -187,6 +189,21 @@
               <div>
                  <div class="section" id="dictionary-lookup-exploring-the-depths">
 <h1>Dictionary Lookup - Exploring the Depths<a class="headerlink" href="#dictionary-lookup-exploring-the-depths" title="Permalink to this headline">¶</a></h1>
+<p>Exploring methods of performant Python dictionary lookups</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header font-weight-bold bg-info docutils">
+<p class="card-text">Note</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">This is an in-progress draft.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Some introduction text here.</p>
@@ -223,8 +240,8 @@ expect anything either than <code class="docutils literal notranslate"><span cla
 
 <span class="k">def</span> <span class="nf">walrus_style</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Walrus operator cleans this up&quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="p">:</span><span class="o">=</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;top_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">lower</span> <span class="p">:</span><span class="o">=</span> <span class="n">top</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lower_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">:=</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;top_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">lower</span> <span class="o">:=</span> <span class="n">top</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lower_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
             <span class="k">return</span> <span class="n">lower</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;our_key&#39;</span><span class="p">,</span> <span class="n">default_value</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">default_value</span>
@@ -341,7 +358,7 @@ quick starting block.</p>
     <span class="k">while</span> <span class="n">key_list</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">lookup_key</span> <span class="o">=</span> <span class="n">key_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">current_depth_value</span> <span class="p">:</span><span class="o">=</span> <span class="n">current_depth_value</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lookup_key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">current_depth_value</span> <span class="o">:=</span> <span class="n">current_depth_value</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lookup_key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
                 <span class="k">return</span> <span class="n">default_value</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">continue</span>
@@ -471,11 +488,6 @@ key_list = [&#39;top_level&#39;, &#39;fail_key&#39;, &#39;our_level&#39;]
      
 <div class="section">
   <span style="float: left">
-     Previous:
-    
-    <a href="../first-post/">
-       First Post
-    </a>
     
   </span>
   <span>&nbsp;</span>

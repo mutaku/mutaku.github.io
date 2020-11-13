@@ -6,6 +6,17 @@
 
 Python Generators and Comprehension
 ==========
+Digging into generators and comprehension - from basics to 
+to implementation in a comprehensive tutorial. This is a walkthrough
+for beginners that will build up to real world examples.
+
+.. panels::
+    :column: col-lg-12 p-0
+    :header: font-weight-bold bg-info
+
+    Note
+    ^^^^^^^^^^^^^^
+    This is an in-progress draft.
 
 .. code:: python
 

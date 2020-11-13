@@ -7,6 +7,13 @@ div.logo img {
     border-radius: 50%;
     height: 150px;
 }
-div.snippet {
+div.name {
     font-size: 15px;
+}
+div.title {
+    font-size: 15px;
+}
+div.specialties {
+    font-size: 15px;
+    border-top: 1px solid grey;
 }

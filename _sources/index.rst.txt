@@ -3,12 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Matthew Martz's Blog!
+Welcome to Mutaku - the writings of Matthew Martz
 ==================================
 
 
-Hello World! Find more about me here: :ref:`about`
+My background is in Quantitative Cell Biology and I have a PhD in Biochemistry and Molecular Biology.
+I spent much of my career researching novel cancer therapeutics through live cell imaging and machine learning.
+You can now find me developing and implementing machine learning platforms and algorithms for everything from 
+optimization problems to personalized medicine and medicinal AI. Find more about me here: :ref:`about`
 
+Mutaku is a collection of writings across the spectrum of biomedical research, software engineering (Python),
+Machine Learning, and Data Science.
 
 Here is a list of most recent posts:
 

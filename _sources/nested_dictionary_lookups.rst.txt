@@ -6,6 +6,15 @@
 
 Dictionary Lookup - Exploring the Depths
 ========================================
+Exploring methods of performant Python dictionary lookups
+
+.. panels::
+    :column: col-lg-12 p-0
+    :header: font-weight-bold bg-info
+
+    Note
+    ^^^^^^^^^^^^^^
+    This is an in-progress draft.
 
 Introduction
 ------------
