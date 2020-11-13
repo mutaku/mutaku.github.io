@@ -1,0 +1,325 @@
+.. Dictionary Lookup - Exploring the Depths
+
+.. post:: Nov 13, 2020
+   :tags: atag
+   :author: Matthew Martz
+
+Dictionary Lookup - Exploring the Depths
+========================================
+
+Introduction
+------------
+
+Some introduction text here.
+
+The Bread and Butter
+--------------------
+
+.. code:: python
+
+    try:
+        return data_dict['this']['that']['the_other']
+    except KeyError:
+        return None
+
+A Simple Example
+----------------
+
+Setup the example here before we define things.
+
+``data_dict`` is a dict where we expect in a perfect world we would have
+our expected structure and could simply query the deepest nested level
+for ``our_key`` and default to ``default_value``. But we know we can't
+expect anything either than ``data_dict`` exists and is a dict
+
+.. code:: python
+
+    data_dict = {}
+    default_value = 1.0
+
+
+    def old_style():
+        """Old style (Python < 3.8)"""
+        if 'top_level' in data_dict:
+            if 'lower_level' in data_dict['top_level']:
+                if 'our_key' in data_dict['top_level']['lower_level']:
+                    return data_dict['top_level']['lower_level']['our_key']
+        else:
+            return default_value
+
+
+    def walrus_style():
+        """Walrus operator cleans this up"""
+        if (top := data_dict.get('top_level', None)):
+            if (lower := top.get('lower_level', None)):
+                return lower.get('our_key', default_value)
+        else:
+            return default_value
+
+
+    def chaining_style():
+        """Chaining with object defaults"""
+        return (
+            data_dict.get("top_level", {})
+            .get("lower_level", {})
+            .get("our_key", default_value)
+        )
+
+Try with an empty ``data_dict`` We should expect the first two to be
+faster as they break quicker
+
+.. code:: python
+
+    %timeit old_style()
+    %timeit walrus_style()
+    %timeit chaining_style()
+
+.. code:: text
+
+    152 ns ± 0.825 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+    204 ns ± 2.71 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+    366 ns ± 1.66 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+
+Indeed, if we do not have our initial key, our chained lookup is longer
+since it proceeds through multiple lookups. Our walrus method is a
+little slower since we make an assignment. So the simple nested hash
+lookups will fail faster.
+
+Now let's use a semi-populated ``data_dict`` We should expect some
+convergence on timing now that we remove the early fail
+
+.. code:: python
+
+    data_dict = {'top_level': {'lower_level': {'not_our_key': -1}}}
+    %timeit old_style()
+    %timeit walrus_style()
+    %timeit chaining_style()
+
+.. code:: text
+
+    303 ns ± 1.31 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+    373 ns ± 0.586 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+    359 ns ± 0.543 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+
+Now we do see a bit more convergence on timing since we have to recurse
+with all methods. And the first method still wins by using only hash
+lookups as opposed to multiple rounds of assignment. What intrigues me
+is that the chained assignment is faster than the walrus operator method
+(will do some PEP research, this is a good CS exercise).
+
+Now let's try the last scenario when our key is indeed in our structure
+
+.. code:: python
+
+    data_dict = {'top_level': {'lower_level': {'our_key': -1}}}
+    %timeit old_style()
+    %timeit walrus_style()
+    %timeit chaining_style()
+
+.. code:: text
+
+    404 ns ± 5.23 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+    370 ns ± 1.45 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+    372 ns ± 1.74 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+
+Now we get interesting. If we have our key, the first method only using
+hash lookups is slower when we will end up getting our key of interest.
+We have to identify lookup, then ultimately do it all again to get our
+value. However, with walrus and chaining assignment, we are doing a
+lookup *and* storing of the value as we go. So when we get to the final
+level of recursion we can simply return what we have. We also now see
+that the walrus and chaining methods have equalized.
+
+Summarizing Our Toy Data Experiments
+------------------------------------
+
+To summarize, continual assignment works nice when we can fairly
+confidently expect to recurse through most of our data structure and not
+fail immediately. The walrus operator introduced in Python 3.8 is truly
+wonderful, and one of my favorite Python 3 additions (I know, you
+probably said Async or division). Without further testing, we are left
+primarily to a style decision.
+
+While I often use the chaining approach with empty dict structures as
+defaults to continue the chain, and personally find it a clean syntax,
+the walrus operator approach has (at least) two primary benefits: 1)
+while debugging we would have the value of the last successful lookup
+regardless of where it failed, and 2) I think it's a bit more
+understandable to someone who might not be as familiar with the idea of
+chaining an object. As an additional note regarding the first point, we
+could obtain the value of our last lookup by assigning it. However, when
+we do that, we are simply performing the task the walrus operator was
+introduced to provide. Another [+1] for the walrus operator method.
+
+Further, if we would be working with large, messy nesting and
+performance was critical -- and we will presume so -- we know from many
+nights of banging our heads against the keyboard that we can never
+expect a consistent data structure. I know we are all thinking of that
+master piece of a JSON dump we get from some third party service we are
+required to utilize that contains inconsistent structure and data types.
+That one for which we will have to parse at 3am again and again.
+Therefore, our method should be performant at any level of lookup
+failure. Our chaining method will always get or assign all the way
+through the intended structure. If we expect a very large recursion, but
+we don't actually have it, we would have to use the time and memory to
+unecessarily work through all of that failure. That would leave us with
+the nested if/else or the walrus style. So again, another [+1] for the
+walrus operator method. Are you seeing the theme?
+
+Moving Beyond Our Toy Data - Let's Make Some Real Improvements
+--------------------------------------------------------------
+
+We used some fixed key lookups here. This works okay for a shallow
+search depth. However, I would say that anything beyond four keys is a
+bit unwieldy. In this case, and likely if we are going to do any depth
+of search consistently in a a module, we should create a more
+programmatic approach that might step through a list of keys. I'll end
+with a very quick example of how I might implement such an approach, but
+note, we would want to write some tests around this -- it is merely a
+quick starting block.
+
+.. code:: python
+
+    def programmatic_depth_search(data_dict, key_list, default_value=None):
+        current_depth_value = data_dict
+        while key_list:
+            try:
+                lookup_key = key_list.pop(0)
+                if not (current_depth_value := current_depth_value.get(lookup_key, None)):
+                    return default_value
+                else:
+                    continue
+            except AttributeError:
+                return default_value
+
+        return current_depth_value
+
+Then we might try the following examples:
+
+.. code:: python
+
+    search_value = programmatic_depth_search(
+        data_dict={'top_level': {'lower_level': {'our_key': 3}}},
+        key_list=['top_level', 'lower_level'],
+        default_value='Not Found'
+    )
+    # {'our_key': 3}
+
+.. code:: python
+
+    search_value = programmatic_depth_search(
+        data_dict={'top_level': {'lower_level': {'our_key': 3}}},
+        key_list=['top_level', 'lower_level', 'our_key'],
+        default_value='Not Found'
+    )
+    # 3
+
+.. code:: python
+
+    search_value = programmatic_depth_search(
+        data_dict={'top_level': {'lower_level': {'our_key': 3}}},
+        key_list=['top_level', 'lower_level', 'our_key', 'fail_key'],
+        default_value='Not Found'
+    )
+    # 'Not Found'
+
+Revisiting an Old Friend
+------------------------
+
+With the hindsight of writing a testable and modularized version of our
+dictionary searcher, let's revisit our first three comparisons. We were
+essentially comparing by always assuming we would either find
+``our_key`` and return it's value, or it would not be found and we would
+return ``default_value``. However, let's try this:
+
+.. code:: python
+
+    data_dict = {'top_level': {'lower_level': 1}}
+    old_style()
+    #TypeError: argument of type 'int' is not iterable
+
+    walrus_style()
+    # AttributeError: 'int' object has no attribute 'get'
+
+    chaining_style()
+    # AttributeError: 'int' object has no attribute 'get'
+
+As you can clearly see, our fixed methods, while sufficient for our
+specific initital example case, they break easily. We have tricked them
+into finding a key at a particular level, but it is now an integer and
+not a ``dict``. I wanted to highlight this to highlight that in
+modularizing our experiment, we also added robustness against the
+unexpected -- something we know is key. To prove this, let's now run
+this with our modularized version:
+
+.. code:: python
+
+    search_value = programmatic_depth_search(
+        data_dict, ['top_level', 'lower_level', 'our_key'], None
+    )
+    # None
+
+Neat!
+
+What About the Simple Approach
+------------------------------
+
+.. code:: python
+
+    def normal():
+        try:
+            return data_dict['top_level']['lower_level']['our_key']
+        except KeyError:
+            return None
+
+.. code:: python
+
+    154 ns ± 13.1 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+    %timeit programmatic_depth_search(data_dict, key_list)
+    158 ns ± 9.12 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+    key_list = ['top_level', 'lower_level', 'our_key']
+
+    %timeit programmatic_depth_search(data_dict, key_list)
+    156 ns ± 22.6 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+.. code:: python
+
+    def normal(default_value):
+         try:
+             return data_dict['top_level']['lower_level']['fail_key']
+         except KeyError as e:
+             return (e, default_value)
+
+.. code:: python
+
+    %timeit normal(1)
+    528 ns ± 98.3 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+
+    key_list = ['top_level', 'lower_level', 'fail_key']
+
+    data_dict = {'top_level': {'lower_level': {'our_key': 3}}}
+
+    %timeit programmatic_depth_search(data_dict, key_list, 1)
+    164 ns ± 21.8 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+    key_list = ['top_level', 'fail_key', 'our_level']
+
+    %timeit programmatic_depth_search(data_dict, key_list, 1)
+    163 ns ± 30 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+.. code:: python
+
+    def normal(default_value):
+        try:
+            return data_dict['top_level']['fail_key']['our_key']
+        except KeyError as e:
+            return (e, default_value)
+
+.. code:: python
+
+    %timeit normal(1)
+    390 ns ± 11 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+
+.. update:: November 13, 2020 Updated with some additional content

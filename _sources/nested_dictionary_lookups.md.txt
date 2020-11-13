@@ -1,3 +1,9 @@
+.. Dictionary Lookup - Exploring the Depths
+
+.. post:: Nov 13, 2020
+   :tags: atag
+   :author: Matthew Martz
+
 # Dictionary Lookup - Exploring the Depths
 
 ## Introduction
@@ -253,7 +259,8 @@ def normal():
         return data_dict['top_level']['lower_level']['our_key']
     except KeyError:
         return None
-
+```
+```Python
 154 ns ± 13.1 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 
 %timeit programmatic_depth_search(data_dict, key_list)
@@ -263,14 +270,15 @@ key_list = ['top_level', 'lower_level', 'our_key']
 
 %timeit programmatic_depth_search(data_dict, key_list)
 156 ns ± 22.6 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-
+```
+```Python
 def normal(default_value):
      try:
          return data_dict['top_level']['lower_level']['fail_key']
      except KeyError as e:
          return (e, default_value)
-
-
+```
+```Python
 %timeit normal(1)
 528 ns ± 98.3 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
@@ -285,13 +293,15 @@ key_list = ['top_level', 'fail_key', 'our_level']
 
 %timeit programmatic_depth_search(data_dict, key_list, 1)
 163 ns ± 30 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-
+```
+```Python
 def normal(default_value):
     try:
         return data_dict['top_level']['fail_key']['our_key']
     except KeyError as e:
         return (e, default_value)
-
+```
+```Python
 %timeit normal(1)
 390 ns ± 11 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 ```
