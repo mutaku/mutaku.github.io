@@ -4,6 +4,15 @@
 
 Some introduction text here.
 
+## The Bread and Butter
+
+```Python
+try:
+    return data_dict['this']['that']['the_other']
+except KeyError:
+    return None
+```
+
 ## A Simple Example
 
 Setup the example here before we define things.
@@ -202,7 +211,7 @@ search_value = programmatic_depth_search(
 
 ## Revisiting an Old Friend
 
-One last note. With the hindsight of writing a testable and modularized
+With the hindsight of writing a testable and modularized
 version of our dictionary searcher, let's revisit our first three comparisons.
 We were essentially comparing by always assuming we would either find `our_key`
 and return it's value, or it would not be found and we would return `default_value`.
@@ -235,3 +244,57 @@ search_value = programmatic_depth_search(
 ```
 
 Neat!
+
+## What About the Simple Approach
+
+```Python
+def normal():
+    try:
+        return data_dict['top_level']['lower_level']['our_key']
+    except KeyError:
+        return None
+
+154 ns ± 13.1 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+%timeit programmatic_depth_search(data_dict, key_list)
+158 ns ± 9.12 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+key_list = ['top_level', 'lower_level', 'our_key']
+
+%timeit programmatic_depth_search(data_dict, key_list)
+156 ns ± 22.6 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+def normal(default_value):
+     try:
+         return data_dict['top_level']['lower_level']['fail_key']
+     except KeyError as e:
+         return (e, default_value)
+
+
+%timeit normal(1)
+528 ns ± 98.3 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+
+key_list = ['top_level', 'lower_level', 'fail_key']
+
+data_dict = {'top_level': {'lower_level': {'our_key': 3}}}
+
+%timeit programmatic_depth_search(data_dict, key_list, 1)
+164 ns ± 21.8 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+key_list = ['top_level', 'fail_key', 'our_level']
+
+%timeit programmatic_depth_search(data_dict, key_list, 1)
+163 ns ± 30 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+def normal(default_value):
+    try:
+        return data_dict['top_level']['fail_key']['our_key']
+    except KeyError as e:
+        return (e, default_value)
+
+%timeit normal(1)
+390 ns ± 11 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+```
+
+.. update:: November 13, 2020
+    Updated with some additional content

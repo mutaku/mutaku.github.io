@@ -150,6 +150,10 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#the-bread-and-butter" class="nav-link">The Bread and Butter</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
             <a href="#a-simple-example" class="nav-link">A Simple Example</a>
         </li>
     
@@ -163,6 +167,10 @@
     
         <li class="nav-item toc-entry toc-h2">
             <a href="#revisiting-an-old-friend" class="nav-link">Revisiting an Old Friend</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#what-about-the-simple-approach" class="nav-link">What About the Simple Approach</a>
         </li>
     
     </ul>
@@ -182,6 +190,15 @@
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
 <p>Some introduction text here.</p>
+</div>
+<div class="section" id="the-bread-and-butter">
+<h2>The Bread and Butter<a class="headerlink" href="#the-bread-and-butter" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">data_dict</span><span class="p">[</span><span class="s1">&#39;this&#39;</span><span class="p">][</span><span class="s1">&#39;that&#39;</span><span class="p">][</span><span class="s1">&#39;the_other&#39;</span><span class="p">]</span>
+<span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="a-simple-example">
 <h2>A Simple Example<a class="headerlink" href="#a-simple-example" title="Permalink to this headline">¶</a></h2>
@@ -359,7 +376,7 @@ merely a quick starting block.</p>
 </div>
 <div class="section" id="revisiting-an-old-friend">
 <h2>Revisiting an Old Friend<a class="headerlink" href="#revisiting-an-old-friend" title="Permalink to this headline">¶</a></h2>
-<p>One last note. With the hindsight of writing a testable and modularized
+<p>With the hindsight of writing a testable and modularized
 version of our dictionary searcher, let’s revisit our first three comparisons.
 We were essentially comparing by always assuming we would either find <code class="docutils literal notranslate"><span class="pre">our_key</span></code>
 and return it’s value, or it would not be found and we would return <code class="docutils literal notranslate"><span class="pre">default_value</span></code>.
@@ -388,6 +405,59 @@ To prove this, let’s now run this with our modularized version:</p>
 </pre></div>
 </div>
 <p>Neat!</p>
+</div>
+<div class="section" id="what-about-the-simple-approach">
+<h2>What About the Simple Approach<a class="headerlink" href="#what-about-the-simple-approach" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span>def normal():
+    try:
+        return data_dict[&#39;top_level&#39;][&#39;lower_level&#39;][&#39;our_key&#39;]
+    except KeyError:
+        return None
+
+154 ns ± 13.1 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+%timeit programmatic_depth_search(data_dict, key_list)
+158 ns ± 9.12 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+key_list = [&#39;top_level&#39;, &#39;lower_level&#39;, &#39;our_key&#39;]
+
+%timeit programmatic_depth_search(data_dict, key_list)
+156 ns ± 22.6 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+def normal(default_value):
+     try:
+         return data_dict[&#39;top_level&#39;][&#39;lower_level&#39;][&#39;fail_key&#39;]
+     except KeyError as e:
+         return (e, default_value)
+
+
+%timeit normal(1)
+528 ns ± 98.3 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+
+key_list = [&#39;top_level&#39;, &#39;lower_level&#39;, &#39;fail_key&#39;]
+
+data_dict = {&#39;top_level&#39;: {&#39;lower_level&#39;: {&#39;our_key&#39;: 3}}}
+
+%timeit programmatic_depth_search(data_dict, key_list, 1)
+164 ns ± 21.8 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+key_list = [&#39;top_level&#39;, &#39;fail_key&#39;, &#39;our_level&#39;]
+
+%timeit programmatic_depth_search(data_dict, key_list, 1)
+163 ns ± 30 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+def normal(default_value):
+    try:
+        return data_dict[&#39;top_level&#39;][&#39;fail_key&#39;][&#39;our_key&#39;]
+    except KeyError as e:
+        return (e, default_value)
+
+%timeit normal(1)
+390 ns ± 11 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+</pre></div>
+</div>
+<p>.. update:: November 13, 2020
+Updated with some additional content</p>
 </div>
 </div>
 
