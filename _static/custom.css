@@ -1,1 +1,10 @@
-/* This file intentionally left blank. */
+div.logo {
+    margin-top: 2em;
+}
+div.logo img {
+    display: block;
+    margin: 0;
+}
+div.snippet {
+    font-size: 2em;
+}

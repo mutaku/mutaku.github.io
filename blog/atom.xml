@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://mutaku.github.io</id>
-  <title>Mutaku Blog</title>
-  <updated>2020-11-13T00:15:18.713954+00:00</updated>
+  <title>Mutaku</title>
+  <updated>2020-11-13T01:34:58.423970+00:00</updated>
   <link href="https://mutaku.github.io"/>
   <link href="https://mutaku.github.io/blog/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
