@@ -1,4 +1,4 @@
-.. code:: ipython3
+.. code:: python
 
     import numpy as np
     import string
@@ -12,7 +12,7 @@ Do something 20 times so we can have 20 items as (key, value). For each
 of the 20 iterations, choose a random lowercase alphabetical character
 as string and a positive integer up to 100.
 
-.. code:: ipython3
+.. code:: python
 
     alpha = list(string.ascii_lowercase)
     collection = {
@@ -79,10 +79,10 @@ string representation.
 Now let's demonstrate a few things we can do with this ``collection``
 dictionary.
 
-.. code:: ipython3
+.. code:: python
 
     from collections import Counter
-    
+
     value_counts = Counter(collection.values())
     value_counts.most_common()
 
@@ -116,12 +116,12 @@ the counts descending by occurrence. We could have also called
 
 This is really doing something like the following.
 
-.. code:: ipython3
+.. code:: python
 
     value_counts = {}
     for val in collection.values():
         value_counts[val] = value_counts.get(val, 0) + 1
-    
+
     sorted(value_counts.items(), key=lambda count: count[1], reverse=True)
 
 
@@ -177,7 +177,7 @@ easily done the same for the alphabetical keys by calling
 Now let's do some conditional selection. We will first find all keys
 whose value is gt 40.
 
-.. code:: ipython3
+.. code:: python
 
     gt40keys = [
         k for (k, v) in collection.items()
@@ -204,7 +204,7 @@ We could have returned the full key: value pair with
 new dictionary of only those key: value pairs matching that condition.
 Let's do that because it is a common routine.
 
-.. code:: ipython3
+.. code:: python
 
     gt40collection = {
         k: v for (k, v) in collection.items()
@@ -239,7 +239,7 @@ But what if we want to search for a value. Let's say we want create a
 new dictionary that is a subset of ``collection`` where the values equal
 93. We will do this just like above.
 
-.. code:: ipython3
+.. code:: python
 
     equals93collection = {
         k: v for (k, v) in collection.items()
@@ -264,7 +264,7 @@ double check how many values are equal to 93. Nothing more, nothing
 less. We can combine a few of the methods we've highlight to get
 something like the following.
 
-.. code:: ipython3
+.. code:: python
 
     number_values_equal_to_93 = sum(
         1 for v in collection.values()
@@ -309,7 +309,7 @@ points. There's no reason we should search further than that; if 93
 occurs at position 0 and 1, why should we be searching through the
 remainder of collection?
 
-.. code:: ipython3
+.. code:: python
 
     found = []
     while len(found) < 2:
@@ -342,19 +342,19 @@ still generate the entirety of ``collection``'s key: value pairings.
 Let's make this better by only creating one key: value pair, check it,
 then move on if we need to do so.
 
-.. code:: ipython3
+.. code:: python
 
     found = []
     for (i, (k, v)) in enumerate(collection.items()):
         if v == 93:
             print(f'Found a 93 on loop {i=} for {k=}')
             found.append(k)
-    
+
         if len(found) == 2:
             break
         else:
             continue
-            
+
     print(f'collection is {len(collection)=} and we searched through {i=} key: value pairs')
     found
 
@@ -413,24 +413,24 @@ First, though, let's make a version like our list comprehension to see
 what that looks like, and then do the same thing with a generator to
 compare.
 
-.. code:: ipython3
+.. code:: python
 
     def list_building(n=10):
         """Generate a list of size 10"""
         created_array = []
         for i in range(n):
             created_array.append(i)
-    
+
         return created_array
-    
+
     def generator_list_building(n=10):
         for i in range(n):
             yield i
-    
-    
+
+
     complete_list = list_building(10)
     print(f'{complete_list=} is {type(complete_list)=}')
-    
+
     iterable_list = generator_list_building(10)
     print(f'{iterable_list=} is {type(iterable_list)=}')
 
@@ -452,13 +452,13 @@ object.
 But how do we get something out of the generator? Let's say for our list
 of objects, we wanted an array of squared values.
 
-.. code:: ipython3
+.. code:: python
 
     squared_list = [
         n ** 2 for n in complete_list
     ]
     print(squared_list)
-    
+
     squared_generator_list = [
         n ** 2 for n in iterable_list
     ]
@@ -492,13 +492,13 @@ The great thing is, our squaring operation looks the same! Nice and
 simple, right? But our functions were a bit crude --- can we write them
 in our comprehension style? Can we make a comprehension generator? Yes!
 
-.. code:: ipython3
+.. code:: python
 
     comprehension_based_complete_list = [
         i for i in range(10)
     ]
     print(f'{comprehension_based_complete_list=} is {type(comprehension_based_complete_list)=}')
-    
+
     comprehension_based_iterable_list = (
         i for i in range(10)
     )
@@ -525,13 +525,13 @@ squared value list and generator. This should be a better example than
 ``range`` alone, and it will allow us to write something more succinct
 than the multi-step functions above.
 
-.. code:: ipython3
+.. code:: python
 
     comprehension_based_squared_list = [
         i ** 2 for i in range(10)
     ]
     print(f'{comprehension_based_squared_list=} is {type(comprehension_based_squared_list)=}')
-    
+
     comprehension_based_squared_iterable = (
         i ** 2 for i in range(10)
     )
@@ -550,17 +550,17 @@ Let's get back to our "searching". Remember way back we used
 ``enumerate`` to create a generator-based version of our data for which
 we could iterate. Let's take a look at another way we can do this.
 
-.. code:: ipython3
+.. code:: python
 
     collections_generator = iter(collection.items())
-    
+
     found = []
     while len(found) < 2:
         k, v = next(collections_generator)
         if v == 93:
             print(f'Found a 93 for {k=}')
             found.append(k)
-    
+
     found
 
 
@@ -606,10 +606,10 @@ not break our code.
 
 So how do we go about doing this here?
 
-.. code:: ipython3
+.. code:: python
 
     collections_generator = iter(collection.items())
-    
+
     found = []
     while len(found) < 2:
         try:
@@ -620,7 +620,7 @@ So how do we go about doing this here?
         except StopIteration:
             print('We ran out of data to search')
             break
-                
+
     found
 
 
@@ -689,19 +689,19 @@ had only one match, for example, our user with a specific. Let's create
 a simple class object, ``User`` and highlight to things we can do wrap
 up everything we've gone over thus far.
 
-.. code:: ipython3
+.. code:: python
 
     class User:
         def __init__(self, name, age, active=True):
             self.name = name
             self.age = age
             self.active = active
-        
+
         def toggle_active(self):
             self.active = not self.active
-    
+
             return True
-    
+
         def __repr__(self):
             return f'<User> {self.name=} | {self.age=} | {self.active}'
 
@@ -714,7 +714,7 @@ of our users.
 Let's add some users, and we will store them in a list. So let's do this
 with some list comprehension!
 
-.. code:: ipython3
+.. code:: python
 
     user_names = ['Patrick', 'Matthew', 'Linux Admin', 'Operating Doctor', 'Data Scientist']
     users = [
@@ -755,22 +755,22 @@ this. I will comment out the first few methods and only run the last
 since we only want to toggle this once, but we want to highlight them
 all.
 
-.. code:: ipython3
+.. code:: python
 
     # # Pretty standard approach
     for user in users:
         if user.age < 18:
             user.toggle_active()
-    
+
     # # This works, but map is a generator so to perform the mapped function we
     # # have to iterate it - so for our simple purpose this is a bit terse
     # list(map(lambda user: user.toggle_active(), (user for user in users if user.age < 18))
-    
+
     # # If we wanted to do the mapped approach, we could do it in a list comprehension
     # # further, since we return True after toggling as long as there is no thrown error
     # # we could add a check to make sure all requested toggling ran successfully
     # assert all(user.toggle_active() for user in users if user.age < 18)
-    
+
     users
 
 
@@ -826,7 +826,7 @@ And because we can only take so many, let's use our generator approach.
 we could use indexing and other tricks. But let's assume we are
 somewhere between our example of 5 and Google big data.
 
-.. code:: ipython3
+.. code:: python
 
     users_iter = iter(users)
     max_capacity = 2
@@ -838,7 +838,7 @@ somewhere between our example of 5 and Google big data.
                 intensive_care_patients.append(patient.name)
         except StopIteration:
             print(f'We still have capacity!')
-    
+
     intensive_care_patients
 
 
@@ -874,16 +874,16 @@ above. Rather than appending the ``User.name`` to a list, we could have
 simply made those objects and collected them. Let's do that quick here
 just as an example.
 
-.. code:: ipython3
+.. code:: python
 
     class VulnerablePatient:
         def __init__(self, patient):
             self.patient = patient
-    
+
         def __repr__(self):
             return f'<VulnerablePatient> {self.patient}'
-    
-    
+
+
     users_iter = iter(users)
     max_capacity = 2
     intensive_care_patients = []
@@ -896,7 +896,7 @@ just as an example.
                 )
         except StopIteration:
             print(f'We still have capacity!')
-    
+
     intensive_care_patients
 
 
@@ -921,7 +921,7 @@ Here is where we can check to see if we have made two patients, one a
 referencing the same ``User`` object and thus same memory block. Let's
 check.
 
-.. code:: ipython3
+.. code:: python
 
     check_user = next(
         user for user in users
@@ -931,7 +931,7 @@ check.
         patient for patient in intensive_care_patients
         if patient.patient.name == check_user.name
     )
-    
+
     print(check_user, compare_vulnerable_patient)
 
 
@@ -977,10 +977,10 @@ Okay, back to it. We now have a ``User`` and a ``VulnerablePatient``
 that should be the same person. But is this a copy or a reference to one
 memory block? Let's check.
 
-.. code:: ipython3
+.. code:: python
 
     print(f'{id(check_user)=}, {id(compare_vulnerable_patient)=}, and {id(compare_vulnerable_patient.patient)=})', end='\n\n')
-    
+
     def assert_equivalency(obj1, obj2):
         """Assert the equivalency of two objects"""
         try:
@@ -989,8 +989,8 @@ memory block? Let's check.
             print(f'{obj1=} and {obj2=} are not equivalent', end='\n\n')
         else:
             print(f'{obj1=} and {obj2=} are equivalent', end='\n\n')
-    
-    
+
+
     assert_equivalency(check_user, compare_vulnerable_patient)
     assert_equivalency(check_user, compare_vulnerable_patient.patient)
 
@@ -998,11 +998,11 @@ memory block? Let's check.
 .. parsed-literal::
 
     id(check_user)=140252981884720, id(compare_vulnerable_patient)=140252983924240, and id(compare_vulnerable_patient.patient)=140252981884720)
-    
+
     obj1=<User> self.name='Matthew' | self.age=45 | True and obj2=<VulnerablePatient> <User> self.name='Matthew' | self.age=45 | True are not equivalent
-    
+
     obj1=<User> self.name='Matthew' | self.age=45 | True and obj2=<User> self.name='Matthew' | self.age=45 | True are equivalent
-    
+
 
 
 So a few ways to look at it. The first we simply print the result of the
@@ -1024,4 +1024,3 @@ we can check these things, proves to be helpful.
 
 I think that should do it for generators and generator comprehensions,
 and when we might want to use them over lists and list comprehensions.
-

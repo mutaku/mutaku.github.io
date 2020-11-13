@@ -154,8 +154,8 @@
           <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
-                 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy as np
-import string
+                 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">string</span>
 </pre></div>
 </div>
 <p>Here we will build a dictionary of items that we can use for examples.
@@ -164,12 +164,12 @@ Let’s make it keyed on alphabetical characters and random integers.</p>
 <p>Do something 20 times so we can have 20 items as (key, value). For each
 of the 20 iterations, choose a random lowercase alphabetical character
 as string and a positive integer up to 100.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>alpha = list(string.ascii_lowercase)
-collection = {
-    np.random.choice(alpha): np.random.randint(100)
-    for _ in range(20)
-}
-collection
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">alpha</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span><span class="p">)</span>
+<span class="n">collection</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">alpha</span><span class="p">):</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">collection</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;i&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
@@ -218,10 +218,10 @@ function of our <code class="docutils literal notranslate"><span class="pre">col
 string representation.</p>
 <p>Now let’s demonstrate a few things we can do with this <code class="docutils literal notranslate"><span class="pre">collection</span></code>
 dictionary.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from collections import Counter
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 
-value_counts = Counter(collection.values())
-value_counts.most_common()
+<span class="n">value_counts</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">collection</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="n">value_counts</span><span class="o">.</span><span class="n">most_common</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="mi">93</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
@@ -246,11 +246,11 @@ it tabulate occurrences. We call the <code class="docutils literal notranslate">
 the counts descending by occurrence. We could have also called
 <code class="docutils literal notranslate"><span class="pre">collections.Counter.most_common(5)</span></code> to get the top 5, for example.</p>
 <p>This is really doing something like the following.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>value_counts = {}
-for val in collection.values():
-    value_counts[val] = value_counts.get(val, 0) + 1
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">value_counts</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">collection</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="n">value_counts</span><span class="p">[</span><span class="n">val</span><span class="p">]</span> <span class="o">=</span> <span class="n">value_counts</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
 
-sorted(value_counts.items(), key=lambda count: count[1], reverse=True)
+<span class="nb">sorted</span><span class="p">(</span><span class="n">value_counts</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">count</span><span class="p">:</span> <span class="n">count</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="mi">93</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
@@ -296,11 +296,11 @@ easily done the same for the alphabetical keys by calling
 <code class="docutils literal notranslate"><span class="pre">collections.Counter(collection.keys()).most_common()</span></code>.</p>
 <p>Now let’s do some conditional selection. We will first find all keys
 whose value is gt 40.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>gt40keys = [
-    k for (k, v) in collection.items()
-    if v &gt; 40
-]
-gt40keys
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gt40keys</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">k</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">collection</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">40</span>
+<span class="p">]</span>
+<span class="n">gt40keys</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;q&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">]</span>
@@ -314,11 +314,11 @@ result is a list for keys.</p>
 <code class="docutils literal notranslate"><span class="pre">(k,</span> <span class="pre">v)</span> <span class="pre">for</span> <span class="pre">(k,</span> <span class="pre">v)</span> <span class="pre">in</span> <span class="pre">collection.items()</span> <span class="pre">...</span></code> or we could have made a
 new dictionary of only those key: value pairs matching that condition.
 Let’s do that because it is a common routine.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>gt40collection = {
-    k: v for (k, v) in collection.items()
-    if v &gt; 40
-}
-gt40collection
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gt40collection</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">collection</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">40</span>
+<span class="p">}</span>
+<span class="n">gt40collection</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;h&#39;</span><span class="p">:</span> <span class="mi">74</span><span class="p">,</span>
@@ -340,11 +340,11 @@ if the value is gt 40. The result is a dictionary that is a subset of
 <p>But what if we want to search for a value. Let’s say we want create a
 new dictionary that is a subset of <code class="docutils literal notranslate"><span class="pre">collection</span></code> where the values equal
 93. We will do this just like above.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>equals93collection = {
-    k: v for (k, v) in collection.items()
-    if v == 93
-}
-equals93collection
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">equals93collection</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">collection</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">93</span>
+<span class="p">}</span>
+<span class="n">equals93collection</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mi">93</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">:</span> <span class="mi">93</span><span class="p">}</span>
@@ -356,11 +356,11 @@ The result is a dictionary.</p>
 double check how many values are equal to 93. Nothing more, nothing
 less. We can combine a few of the methods we’ve highlight to get
 something like the following.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>number_values_equal_to_93 = sum(
-    1 for v in collection.values()
-    if v == 93
-)
-number_values_equal_to_93
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number_values_equal_to_93</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span>
+    <span class="mi">1</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">collection</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">93</span>
+<span class="p">)</span>
+<span class="n">number_values_equal_to_93</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
@@ -390,12 +390,12 @@ a generator so that we can stop as soon as we have found our two data
 points. There’s no reason we should search further than that; if 93
 occurs at position 0 and 1, why should we be searching through the
 remainder of collection?</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>found = []
-while len(found) &lt; 2:
-    for (k, v) in collection.items():
-        if v == 93:
-            found.append(k)
-found
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">found</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">found</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">collection</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">93</span><span class="p">:</span>
+            <span class="n">found</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+<span class="n">found</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">]</span>
@@ -413,19 +413,19 @@ it’s better in that we stop iterating as soon as our 2 are found, we
 still generate the entirety of <code class="docutils literal notranslate"><span class="pre">collection</span></code>’s key: value pairings.</p>
 <p>Let’s make this better by only creating one key: value pair, check it,
 then move on if we need to do so.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>found = []
-for (i, (k, v)) in enumerate(collection.items()):
-    if v == 93:
-        print(f&#39;Found a 93 on loop {i=} for {k=}&#39;)
-        found.append(k)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">found</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">collection</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">93</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found a 93 on loop </span><span class="si">{</span><span class="n">i</span><span class="si">=}</span><span class="s1"> for </span><span class="si">{</span><span class="n">k</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">found</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
 
-    if len(found) == 2:
-        break
-    else:
-        continue
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">found</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">continue</span>
 
-print(f&#39;collection is {len(collection)=} and we searched through {i=} key: value pairs&#39;)
-found
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;collection is </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">collection</span><span class="p">)</span><span class="si">=}</span><span class="s1"> and we searched through </span><span class="si">{</span><span class="n">i</span><span class="si">=}</span><span class="s1"> key: value pairs&#39;</span><span class="p">)</span>
+<span class="n">found</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Found</span> <span class="n">a</span> <span class="mi">93</span> <span class="n">on</span> <span class="n">loop</span> <span class="n">i</span><span class="o">=</span><span class="mi">3</span> <span class="k">for</span> <span class="n">k</span><span class="o">=</span><span class="s1">&#39;x&#39;</span>
@@ -470,24 +470,24 @@ with large arrays and networks when using a GPU.</p>
 First, though, let’s make a version like our list comprehension to see
 what that looks like, and then do the same thing with a generator to
 compare.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def list_building(n=10):
-    &quot;&quot;&quot;Generate a list of size 10&quot;&quot;&quot;
-    created_array = []
-    for i in range(n):
-        created_array.append(i)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">list_building</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generate a list of size 10&quot;&quot;&quot;</span>
+    <span class="n">created_array</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">created_array</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 
-    return created_array
+    <span class="k">return</span> <span class="n">created_array</span>
 
-def generator_list_building(n=10):
-    for i in range(n):
-        yield i
+<span class="k">def</span> <span class="nf">generator_list_building</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="n">i</span>
 
 
-complete_list = list_building(10)
-print(f&#39;{complete_list=} is {type(complete_list)=}&#39;)
+<span class="n">complete_list</span> <span class="o">=</span> <span class="n">list_building</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">complete_list</span><span class="si">=}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">complete_list</span><span class="p">)</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
 
-iterable_list = generator_list_building(10)
-print(f&#39;{iterable_list=} is {type(iterable_list)=}&#39;)
+<span class="n">iterable_list</span> <span class="o">=</span> <span class="n">generator_list_building</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">iterable_list</span><span class="si">=}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">iterable_list</span><span class="p">)</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>complete_list=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] is type(complete_list)=&lt;class &#39;list&#39;&gt;
@@ -503,15 +503,15 @@ However, <code class="docutils literal notranslate"><span class="pre">iterable_l
 object.</p>
 <p>But how do we get something out of the generator? Let’s say for our list
 of objects, we wanted an array of squared values.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>squared_list = [
-    n ** 2 for n in complete_list
-]
-print(squared_list)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">squared_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">n</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">complete_list</span>
+<span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squared_list</span><span class="p">)</span>
 
-squared_generator_list = [
-    n ** 2 for n in iterable_list
-]
-print(squared_generator_list)
+<span class="n">squared_generator_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">n</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">iterable_list</span>
+<span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">squared_generator_list</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">81</span><span class="p">]</span>
@@ -536,15 +536,15 @@ fruit inspection at the market.</p>
 <p>The great thing is, our squaring operation looks the same! Nice and
 simple, right? But our functions were a bit crude — can we write them
 in our comprehension style? Can we make a comprehension generator? Yes!</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>comprehension_based_complete_list = [
-    i for i in range(10)
-]
-print(f&#39;{comprehension_based_complete_list=} is {type(comprehension_based_complete_list)=}&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">comprehension_based_complete_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">comprehension_based_complete_list</span><span class="si">=}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">comprehension_based_complete_list</span><span class="p">)</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
 
-comprehension_based_iterable_list = (
-    i for i in range(10)
-)
-print(f&#39;{comprehension_based_iterable_list=} is {type(comprehension_based_iterable_list)=}&#39;)
+<span class="n">comprehension_based_iterable_list</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">comprehension_based_iterable_list</span><span class="si">=}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">comprehension_based_iterable_list</span><span class="p">)</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>comprehension_based_complete_list=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] is type(comprehension_based_complete_list)=&lt;class &#39;list&#39;&gt;
@@ -563,15 +563,15 @@ let’s just combine everything in the last few functions to make a
 squared value list and generator. This should be a better example than
 <code class="docutils literal notranslate"><span class="pre">range</span></code> alone, and it will allow us to write something more succinct
 than the multi-step functions above.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>comprehension_based_squared_list = [
-    i ** 2 for i in range(10)
-]
-print(f&#39;{comprehension_based_squared_list=} is {type(comprehension_based_squared_list)=}&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">comprehension_based_squared_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">comprehension_based_squared_list</span><span class="si">=}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">comprehension_based_squared_list</span><span class="p">)</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
 
-comprehension_based_squared_iterable = (
-    i ** 2 for i in range(10)
-)
-print(f&#39;{comprehension_based_squared_iterable=} is {type(comprehension_based_squared_iterable)=}&#39;)
+<span class="n">comprehension_based_squared_iterable</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">comprehension_based_squared_iterable</span><span class="si">=}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">comprehension_based_squared_iterable</span><span class="p">)</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>comprehension_based_squared_list=[0, 1, 4, 9, 16, 25, 36, 49, 64, 81] is type(comprehension_based_squared_list)=&lt;class &#39;list&#39;&gt;
@@ -582,16 +582,16 @@ comprehension_based_squared_iterable=&lt;generator object &lt;genexpr&gt; at 0x7
 <p>Let’s get back to our “searching”. Remember way back we used
 <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> to create a generator-based version of our data for which
 we could iterate. Let’s take a look at another way we can do this.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>collections_generator = iter(collection.items())
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collections_generator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">collection</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
 
-found = []
-while len(found) &lt; 2:
-    k, v = next(collections_generator)
-    if v == 93:
-        print(f&#39;Found a 93 for {k=}&#39;)
-        found.append(k)
+<span class="n">found</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">found</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">collections_generator</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">93</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found a 93 for </span><span class="si">{</span><span class="n">k</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">found</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
 
-found
+<span class="n">found</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Found</span> <span class="n">a</span> <span class="mi">93</span> <span class="k">for</span> <span class="n">k</span><span class="o">=</span><span class="s1">&#39;x&#39;</span>
@@ -624,20 +624,20 @@ knowledge. We will hit an iteration error and break. We always want to
 catch such exceptions, deal with them gracefully, and move on so we do
 not break our code.</p>
 <p>So how do we go about doing this here?</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>collections_generator = iter(collection.items())
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">collections_generator</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">collection</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
 
-found = []
-while len(found) &lt; 2:
-    try:
-        k, v = next(collections_generator)
-        if v == 53:
-            print(f&#39;Found a 53 for {k=}&#39;)
-            found.append(k)
-    except StopIteration:
-        print(&#39;We ran out of data to search&#39;)
-        break
+<span class="n">found</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">found</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">collections_generator</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">53</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found a 53 for </span><span class="si">{</span><span class="n">k</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">found</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We ran out of data to search&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
 
-found
+<span class="n">found</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Found</span> <span class="n">a</span> <span class="mi">53</span> <span class="k">for</span> <span class="n">k</span><span class="o">=</span><span class="s1">&#39;t&#39;</span>
@@ -691,19 +691,19 @@ we briefly touched on adding some error handling.</p>
 had only one match, for example, our user with a specific. Let’s create
 a simple class object, <code class="docutils literal notranslate"><span class="pre">User</span></code> and highlight to things we can do wrap
 up everything we’ve gone over thus far.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class User:
-    def __init__(self, name, age, active=True):
-        self.name = name
-        self.age = age
-        self.active = active
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">active</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="n">active</span>
 
-    def toggle_active(self):
-        self.active = not self.active
+    <span class="k">def</span> <span class="nf">toggle_active</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">active</span> <span class="o">=</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">active</span>
 
-        return True
+        <span class="k">return</span> <span class="kc">True</span>
 
-    def __repr__(self):
-        return f&#39;&lt;User&gt; {self.name=} | {self.age=} | {self.active}&#39;
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;User&gt; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">=}</span><span class="s1"> | </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">=}</span><span class="s1"> | </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">active</span><span class="si">}</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
 <p>Okay, we now have a <code class="docutils literal notranslate"><span class="pre">User</span></code> class that represents a user with a
@@ -713,12 +713,12 @@ also set a <code class="docutils literal notranslate"><span class="pre">__repr__
 of our users.</p>
 <p>Let’s add some users, and we will store them in a list. So let’s do this
 with some list comprehension!</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>user_names = [&#39;Patrick&#39;, &#39;Matthew&#39;, &#39;Linux Admin&#39;, &#39;Operating Doctor&#39;, &#39;Data Scientist&#39;]
-users = [
-    User(name=name, age=np.random.randint(80))
-    for name in user_names
-]
-users
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">user_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Patrick&#39;</span><span class="p">,</span> <span class="s1">&#39;Matthew&#39;</span><span class="p">,</span> <span class="s1">&#39;Linux Admin&#39;</span><span class="p">,</span> <span class="s1">&#39;Operating Doctor&#39;</span><span class="p">,</span> <span class="s1">&#39;Data Scientist&#39;</span><span class="p">]</span>
+<span class="n">users</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">80</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">user_names</span>
+<span class="p">]</span>
+<span class="n">users</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Patrick&#39;</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="o">=</span><span class="mi">3</span> <span class="o">|</span> <span class="kc">True</span><span class="p">,</span>
@@ -744,21 +744,21 @@ go ahead and take care of that. But let’s highlight a few methods to do
 this. I will comment out the first few methods and only run the last
 since we only want to toggle this once, but we want to highlight them
 all.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># # Pretty standard approach
-for user in users:
-    if user.age &lt; 18:
-        user.toggle_active()
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># # Pretty standard approach</span>
+<span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+        <span class="n">user</span><span class="o">.</span><span class="n">toggle_active</span><span class="p">()</span>
 
-# # This works, but map is a generator so to perform the mapped function we
-# # have to iterate it - so for our simple purpose this is a bit terse
-# list(map(lambda user: user.toggle_active(), (user for user in users if user.age &lt; 18))
+<span class="c1"># # This works, but map is a generator so to perform the mapped function we</span>
+<span class="c1"># # have to iterate it - so for our simple purpose this is a bit terse</span>
+<span class="c1"># list(map(lambda user: user.toggle_active(), (user for user in users if user.age &lt; 18))</span>
 
-# # If we wanted to do the mapped approach, we could do it in a list comprehension
-# # further, since we return True after toggling as long as there is no thrown error
-# # we could add a check to make sure all requested toggling ran successfully
-# assert all(user.toggle_active() for user in users if user.age &lt; 18)
+<span class="c1"># # If we wanted to do the mapped approach, we could do it in a list comprehension</span>
+<span class="c1"># # further, since we return True after toggling as long as there is no thrown error</span>
+<span class="c1"># # we could add a check to make sure all requested toggling ran successfully</span>
+<span class="c1"># assert all(user.toggle_active() for user in users if user.age &lt; 18)</span>
 
-users
+<span class="n">users</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Patrick&#39;</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="o">=</span><span class="mi">3</span> <span class="o">|</span> <span class="kc">False</span><span class="p">,</span>
@@ -802,18 +802,18 @@ And because we can only take so many, let’s use our generator approach.</p>
 <p>*Note: if we were really memory intensive here and speed was important,
 we could use indexing and other tricks. But let’s assume we are
 somewhere between our example of 5 and Google big data.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>users_iter = iter(users)
-max_capacity = 2
-intensive_care_patients = []
-while len(intensive_care_patients) &lt; max_capacity:
-    try:
-        patient = next(users_iter)
-        if patient.age &gt; 30:
-            intensive_care_patients.append(patient.name)
-    except StopIteration:
-        print(f&#39;We still have capacity!&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">users_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
+<span class="n">max_capacity</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">intensive_care_patients</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">intensive_care_patients</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">max_capacity</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">patient</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">users_iter</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">patient</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">:</span>
+            <span class="n">intensive_care_patients</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">patient</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;We still have capacity!&#39;</span><span class="p">)</span>
 
-intensive_care_patients
+<span class="n">intensive_care_patients</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Matthew&#39;</span><span class="p">,</span> <span class="s1">&#39;Operating Doctor&#39;</span><span class="p">]</span>
@@ -839,28 +839,28 @@ user.</p>
 above. Rather than appending the <code class="docutils literal notranslate"><span class="pre">User.name</span></code> to a list, we could have
 simply made those objects and collected them. Let’s do that quick here
 just as an example.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class VulnerablePatient:
-    def __init__(self, patient):
-        self.patient = patient
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">VulnerablePatient</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">patient</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">patient</span> <span class="o">=</span> <span class="n">patient</span>
 
-    def __repr__(self):
-        return f&#39;&lt;VulnerablePatient&gt; {self.patient}&#39;
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;VulnerablePatient&gt; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">patient</span><span class="si">}</span><span class="s1">&#39;</span>
 
 
-users_iter = iter(users)
-max_capacity = 2
-intensive_care_patients = []
-while len(intensive_care_patients) &lt; max_capacity:
-    try:
-        patient = next(users_iter)
-        if patient.age &gt; 30:
-            intensive_care_patients.append(
-                VulnerablePatient(patient)
-            )
-    except StopIteration:
-        print(f&#39;We still have capacity!&#39;)
+<span class="n">users_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
+<span class="n">max_capacity</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">intensive_care_patients</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">intensive_care_patients</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">max_capacity</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">patient</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">users_iter</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">patient</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">:</span>
+            <span class="n">intensive_care_patients</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">VulnerablePatient</span><span class="p">(</span><span class="n">patient</span><span class="p">)</span>
+            <span class="p">)</span>
+    <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;We still have capacity!&#39;</span><span class="p">)</span>
 
-intensive_care_patients
+<span class="n">intensive_care_patients</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">&lt;</span><span class="n">VulnerablePatient</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Matthew&#39;</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="o">=</span><span class="mi">45</span> <span class="o">|</span> <span class="kc">True</span><span class="p">,</span>
@@ -876,16 +876,16 @@ on the <code class="docutils literal notranslate"><span class="pre">User.__repr_
 <code class="docutils literal notranslate"><span class="pre">User</span></code> and one user <code class="docutils literal notranslate"><span class="pre">User</span></code> within <code class="docutils literal notranslate"><span class="pre">VulnerablePatient</span></code> or we are
 referencing the same <code class="docutils literal notranslate"><span class="pre">User</span></code> object and thus same memory block. Let’s
 check.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>check_user = next(
-    user for user in users
-    if user.age &gt; 30
-)
-compare_vulnerable_patient = next(
-    patient for patient in intensive_care_patients
-    if patient.patient.name == check_user.name
-)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">check_user</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+    <span class="n">user</span> <span class="k">for</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">users</span>
+    <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span>
+<span class="p">)</span>
+<span class="n">compare_vulnerable_patient</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+    <span class="n">patient</span> <span class="k">for</span> <span class="n">patient</span> <span class="ow">in</span> <span class="n">intensive_care_patients</span>
+    <span class="k">if</span> <span class="n">patient</span><span class="o">.</span><span class="n">patient</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">check_user</span><span class="o">.</span><span class="n">name</span>
+<span class="p">)</span>
 
-print(check_user, compare_vulnerable_patient)
+<span class="nb">print</span><span class="p">(</span><span class="n">check_user</span><span class="p">,</span> <span class="n">compare_vulnerable_patient</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Matthew&#39;</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="o">=</span><span class="mi">45</span> <span class="o">|</span> <span class="kc">True</span> <span class="o">&lt;</span><span class="n">VulnerablePatient</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">User</span><span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Matthew&#39;</span> <span class="o">|</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="o">=</span><span class="mi">45</span> <span class="o">|</span> <span class="kc">True</span>
@@ -922,20 +922,20 @@ they?</em>)</p>
 <p>Okay, back to it. We now have a <code class="docutils literal notranslate"><span class="pre">User</span></code> and a <code class="docutils literal notranslate"><span class="pre">VulnerablePatient</span></code>
 that should be the same person. But is this a copy or a reference to one
 memory block? Let’s check.</p>
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(f&#39;{id(check_user)=}, {id(compare_vulnerable_patient)=}, and {id(compare_vulnerable_patient.patient)=})&#39;, end=&#39;\n\n&#39;)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">check_user</span><span class="p">)</span><span class="si">=}</span><span class="s1">, </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">compare_vulnerable_patient</span><span class="p">)</span><span class="si">=}</span><span class="s1">, and </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">compare_vulnerable_patient</span><span class="o">.</span><span class="n">patient</span><span class="p">)</span><span class="si">=}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
-def assert_equivalency(obj1, obj2):
-    &quot;&quot;&quot;Assert the equivalency of two objects&quot;&quot;&quot;
-    try:
-        assert id(obj1) == id(obj2)
-    except AssertionError:
-        print(f&#39;{obj1=} and {obj2=} are not equivalent&#39;, end=&#39;\n\n&#39;)
-    else:
-        print(f&#39;{obj1=} and {obj2=} are equivalent&#39;, end=&#39;\n\n&#39;)
+<span class="k">def</span> <span class="nf">assert_equivalency</span><span class="p">(</span><span class="n">obj1</span><span class="p">,</span> <span class="n">obj2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Assert the equivalency of two objects&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="nb">id</span><span class="p">(</span><span class="n">obj1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">id</span><span class="p">(</span><span class="n">obj2</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">AssertionError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">obj1</span><span class="si">=}</span><span class="s1"> and </span><span class="si">{</span><span class="n">obj2</span><span class="si">=}</span><span class="s1"> are not equivalent&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">obj1</span><span class="si">=}</span><span class="s1"> and </span><span class="si">{</span><span class="n">obj2</span><span class="si">=}</span><span class="s1"> are equivalent&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 
-assert_equivalency(check_user, compare_vulnerable_patient)
-assert_equivalency(check_user, compare_vulnerable_patient.patient)
+<span class="n">assert_equivalency</span><span class="p">(</span><span class="n">check_user</span><span class="p">,</span> <span class="n">compare_vulnerable_patient</span><span class="p">)</span>
+<span class="n">assert_equivalency</span><span class="p">(</span><span class="n">check_user</span><span class="p">,</span> <span class="n">compare_vulnerable_patient</span><span class="o">.</span><span class="n">patient</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span><span class="p">(</span><span class="n">check_user</span><span class="p">)</span><span class="o">=</span><span class="mi">140252981884720</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">compare_vulnerable_patient</span><span class="p">)</span><span class="o">=</span><span class="mi">140252983924240</span><span class="p">,</span> <span class="ow">and</span> <span class="nb">id</span><span class="p">(</span><span class="n">compare_vulnerable_patient</span><span class="o">.</span><span class="n">patient</span><span class="p">)</span><span class="o">=</span><span class="mi">140252981884720</span><span class="p">)</span>
