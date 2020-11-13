@@ -210,11 +210,46 @@
 </div>
 <div class="section" id="the-bread-and-butter">
 <h2>The Bread and Butter<a class="headerlink" href="#the-bread-and-butter" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<p>Let us start with a simple, nested dictionary lookup.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Find the value of our nested key</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_dict</span><span class="p">[</span><span class="s1">&#39;this&#39;</span><span class="p">][</span><span class="s1">&#39;that&#39;</span><span class="p">][</span><span class="s1">&#39;the_other&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>As you likely know, we will raise a KeyError exception if any of the keys within our
+lookup chain are missing. If we want to fallback to a default value, we can wrap this
+to return our default with a failed retrieval.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Example Code</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">default</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">try</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">data_dict</span><span class="p">[</span><span class="s1">&#39;this&#39;</span><span class="p">][</span><span class="s1">&#39;that&#39;</span><span class="p">][</span><span class="s1">&#39;the_other&#39;</span><span class="p">]</span>
 <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-    <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">return</span> <span class="n">default</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="a-simple-example">

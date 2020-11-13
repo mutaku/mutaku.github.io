@@ -23,13 +23,38 @@ Some introduction text here.
 
 The Bread and Butter
 --------------------
+Let us start with a simple, nested dictionary lookup.
 
-.. code:: python
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    try:
-        return data_dict['this']['that']['the_other']
-    except KeyError:
-        return None
+    Find the value of our nested key
+    ^^^^^^^^^^^^^^
+
+    .. code:: python
+
+        data_dict['this']['that']['the_other']
+
+As you likely know, we will raise a KeyError exception if any of the keys within our 
+lookup chain are missing. If we want to fallback to a default value, we can wrap this 
+to return our default with a failed retrieval.
+
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
+
+    Example Code
+    ^^^^^^^^^^^^^^
+    .. code:: python
+
+        default = None
+
+        try:
+            return data_dict['this']['that']['the_other']
+        except KeyError:
+            return default
+
 
 A Simple Example
 ----------------

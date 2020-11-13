@@ -41,6 +41,3 @@ optimization problems to personalized medicine and medicinal AI. Find more about
 
 Mutaku is a collection of writings across the spectrum of biomedical research, software engineering (Python),
 Machine Learning, and Data Science.
-
-
-
