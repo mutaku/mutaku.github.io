@@ -6,7 +6,6 @@
 Welcome to Matthew Martz's Blog!
 ==================================
 
-.. image:: /_static/profile.jpg
 
 Hello World! Find more about me here: :ref:`about`
 
