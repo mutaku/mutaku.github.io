@@ -259,6 +259,14 @@ to return our default with a failed retrieval.</p>
 our expected structure and could simply query the deepest nested level
 for <code class="docutils literal notranslate"><span class="pre">our_key</span></code> and default to <code class="docutils literal notranslate"><span class="pre">default_value</span></code>. But we know we can’t
 expect anything either than <code class="docutils literal notranslate"><span class="pre">data_dict</span></code> exists and is a dict</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Three example methods for key lookup</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_dict</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">default_value</span> <span class="o">=</span> <span class="mf">1.0</span>
 
@@ -275,8 +283,8 @@ expect anything either than <code class="docutils literal notranslate"><span cla
 
 <span class="k">def</span> <span class="nf">walrus_style</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Walrus operator cleans this up&quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">:=</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;top_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">lower</span> <span class="o">:=</span> <span class="n">top</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lower_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="p">:</span><span class="o">=</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;top_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">lower</span> <span class="p">:</span><span class="o">=</span> <span class="n">top</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lower_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
             <span class="k">return</span> <span class="n">lower</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;our_key&#39;</span><span class="p">,</span> <span class="n">default_value</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">default_value</span>
@@ -291,8 +299,21 @@ expect anything either than <code class="docutils literal notranslate"><span cla
     <span class="p">)</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p>Try with an empty <code class="docutils literal notranslate"><span class="pre">data_dict</span></code> We should expect the first two to be
 faster as they break quicker</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Timing our methods</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">timeit</span> <span class="n">old_style</span><span class="p">()</span>
 <span class="o">%</span><span class="n">timeit</span> <span class="n">walrus_style</span><span class="p">()</span>
 <span class="o">%</span><span class="n">timeit</span> <span class="n">chaining_style</span><span class="p">()</span>
@@ -303,13 +324,29 @@ faster as they break quicker</p>
 366 ns ± 1.66 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p>Indeed, if we do not have our initial key, our chained lookup is longer
 since it proceeds through multiple lookups. Our walrus method is a
 little slower since we make an assignment. So the simple nested hash
 lookups will fail faster.</p>
 <p>Now let’s use a semi-populated <code class="docutils literal notranslate"><span class="pre">data_dict</span></code> We should expect some
 convergence on timing now that we remove the early fail</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;top_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;lower_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;not_our_key&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}}}</span>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Failing early in our lookup</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;top_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;lower_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;not_our_key&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}}</span>
+<span class="p">}</span>
+
 <span class="o">%</span><span class="n">timeit</span> <span class="n">old_style</span><span class="p">()</span>
 <span class="o">%</span><span class="n">timeit</span> <span class="n">walrus_style</span><span class="p">()</span>
 <span class="o">%</span><span class="n">timeit</span> <span class="n">chaining_style</span><span class="p">()</span>
@@ -320,12 +357,25 @@ convergence on timing now that we remove the early fail</p>
 359 ns ± 0.543 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p>Now we do see a bit more convergence on timing since we have to recurse
 with all methods. And the first method still wins by using only hash
 lookups as opposed to multiple rounds of assignment. What intrigues me
 is that the chained assignment is faster than the walrus operator method
 (will do some PEP research, this is a good CS exercise).</p>
 <p>Now let’s try the last scenario when our key is indeed in our structure</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Finding our nested key</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;top_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;lower_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;our_key&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}}}</span>
 <span class="o">%</span><span class="n">timeit</span> <span class="n">old_style</span><span class="p">()</span>
 <span class="o">%</span><span class="n">timeit</span> <span class="n">walrus_style</span><span class="p">()</span>
@@ -336,6 +386,11 @@ is that the chained assignment is faster than the walrus operator method
 370 ns ± 1.45 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 372 ns ± 1.74 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <p>Now we get interesting. If we have our key, the first method only using
 hash lookups is slower when we will end up getting our key of interest.
@@ -388,12 +443,22 @@ programmatic approach that might step through a list of keys. I’ll end
 with a very quick example of how I might implement such an approach, but
 note, we would want to write some tests around this – it is merely a
 quick starting block.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">A programmatic and modular method</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">programmatic_depth_search</span><span class="p">(</span><span class="n">data_dict</span><span class="p">,</span> <span class="n">key_list</span><span class="p">,</span> <span class="n">default_value</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">current_depth_value</span> <span class="o">=</span> <span class="n">data_dict</span>
     <span class="k">while</span> <span class="n">key_list</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">lookup_key</span> <span class="o">=</span> <span class="n">key_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">current_depth_value</span> <span class="o">:=</span> <span class="n">current_depth_value</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lookup_key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span>
+                <span class="n">current_depth_value</span> <span class="p">:</span><span class="o">=</span> <span class="n">current_depth_value</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lookup_key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="p">):</span>
                 <span class="k">return</span> <span class="n">default_value</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">continue</span>
@@ -403,30 +468,74 @@ quick starting block.</p>
     <span class="k">return</span> <span class="n">current_depth_value</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p>Then we might try the following examples:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Timing our methods</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">search_value</span> <span class="o">=</span> <span class="n">programmatic_depth_search</span><span class="p">(</span>
     <span class="n">data_dict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;top_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;lower_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;our_key&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}}},</span>
     <span class="n">key_list</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;top_level&#39;</span><span class="p">,</span> <span class="s1">&#39;lower_level&#39;</span><span class="p">],</span>
     <span class="n">default_value</span><span class="o">=</span><span class="s1">&#39;Not Found&#39;</span>
 <span class="p">)</span>
-<span class="c1"># {&#39;our_key&#39;: 3}</span>
+<span class="c1"># Returns: {&#39;our_key&#39;: 3}</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Timing our methods</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">search_value</span> <span class="o">=</span> <span class="n">programmatic_depth_search</span><span class="p">(</span>
     <span class="n">data_dict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;top_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;lower_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;our_key&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}}},</span>
     <span class="n">key_list</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;top_level&#39;</span><span class="p">,</span> <span class="s1">&#39;lower_level&#39;</span><span class="p">,</span> <span class="s1">&#39;our_key&#39;</span><span class="p">],</span>
     <span class="n">default_value</span><span class="o">=</span><span class="s1">&#39;Not Found&#39;</span>
 <span class="p">)</span>
-<span class="c1"># 3</span>
+<span class="c1"># Returns: 3</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Timing our methods</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">search_value</span> <span class="o">=</span> <span class="n">programmatic_depth_search</span><span class="p">(</span>
     <span class="n">data_dict</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;top_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;lower_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;our_key&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}}},</span>
     <span class="n">key_list</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;top_level&#39;</span><span class="p">,</span> <span class="s1">&#39;lower_level&#39;</span><span class="p">,</span> <span class="s1">&#39;our_key&#39;</span><span class="p">,</span> <span class="s1">&#39;fail_key&#39;</span><span class="p">],</span>
     <span class="n">default_value</span><span class="o">=</span><span class="s1">&#39;Not Found&#39;</span>
 <span class="p">)</span>
-<span class="c1"># &#39;Not Found&#39;</span>
+<span class="c1"># Returns: &#39;Not Found&#39;</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="revisiting-an-old-friend">
@@ -436,16 +545,29 @@ dictionary searcher, let’s revisit our first three comparisons. We were
 essentially comparing by always assuming we would either find
 <code class="docutils literal notranslate"><span class="pre">our_key</span></code> and return it’s value, or it would not be found and we would
 return <code class="docutils literal notranslate"><span class="pre">default_value</span></code>. However, let’s try this:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Breaking our original functions with unexpected types</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;top_level&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;lower_level&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}}</span>
 <span class="n">old_style</span><span class="p">()</span>
-<span class="c1">#TypeError: argument of type &#39;int&#39; is not iterable</span>
+<span class="c1"># Returns: TypeError: argument of type &#39;int&#39; is not iterable</span>
 
 <span class="n">walrus_style</span><span class="p">()</span>
-<span class="c1"># AttributeError: &#39;int&#39; object has no attribute &#39;get&#39;</span>
+<span class="c1"># Returns: AttributeError: &#39;int&#39; object has no attribute &#39;get&#39;</span>
 
 <span class="n">chaining_style</span><span class="p">()</span>
-<span class="c1"># AttributeError: &#39;int&#39; object has no attribute &#39;get&#39;</span>
+<span class="c1"># Returns: AttributeError: &#39;int&#39; object has no attribute &#39;get&#39;</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <p>As you can clearly see, our fixed methods, while sufficient for our
 specific initital example case, they break easily. We have tricked them
@@ -454,16 +576,37 @@ not a <code class="docutils literal notranslate"><span class="pre">dict</span></
 modularizing our experiment, we also added robustness against the
 unexpected – something we know is key. To prove this, let’s now run
 this with our modularized version:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Robustness with our programmatic approach</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">search_value</span> <span class="o">=</span> <span class="n">programmatic_depth_search</span><span class="p">(</span>
     <span class="n">data_dict</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;top_level&#39;</span><span class="p">,</span> <span class="s1">&#39;lower_level&#39;</span><span class="p">,</span> <span class="s1">&#39;our_key&#39;</span><span class="p">],</span> <span class="kc">None</span>
 <span class="p">)</span>
-<span class="c1"># None</span>
+<span class="c1"># Returns: None (our default value)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <p>Neat!</p>
 </div>
 <div class="section" id="what-about-the-simple-approach">
 <h2>What About the Simple Approach<a class="headerlink" href="#what-about-the-simple-approach" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">A simple, fixed lookup</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">normal</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">data_dict</span><span class="p">[</span><span class="s1">&#39;top_level&#39;</span><span class="p">][</span><span class="s1">&#39;lower_level&#39;</span><span class="p">][</span><span class="s1">&#39;our_key&#39;</span><span class="p">]</span>
@@ -471,22 +614,49 @@ this with our modularized version:</p>
         <span class="k">return</span> <span class="kc">None</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>154 ns ± 13.1 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-
-%timeit programmatic_depth_search(data_dict, key_list)
-158 ns ± 9.12 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-
-key_list = [&#39;top_level&#39;, &#39;lower_level&#39;, &#39;our_key&#39;]
-
-%timeit programmatic_depth_search(data_dict, key_list)
-156 ns ± 22.6 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-</pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">column</dt>
+<dd class="field-odd"><p class="card-text">col-lg-12 p-0</p>
+</dd>
+<dt class="field-even">header</dt>
+<dd class="field-even"><p class="card-text">text-secondary</p>
+</dd>
+</dl>
+</div></blockquote>
+<p class="card-text">Comparing a fixed lookup to our programmatic approach</p>
+</div>
+<div class="card-body docutils">
+<blockquote>
+<div></div></blockquote>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Trying with a failure</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">normal</span><span class="p">(</span><span class="n">default_value</span><span class="p">):</span>
-     <span class="k">try</span><span class="p">:</span>
-         <span class="k">return</span> <span class="n">data_dict</span><span class="p">[</span><span class="s1">&#39;top_level&#39;</span><span class="p">][</span><span class="s1">&#39;lower_level&#39;</span><span class="p">][</span><span class="s1">&#39;fail_key&#39;</span><span class="p">]</span>
-     <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-         <span class="k">return</span> <span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">default_value</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">data_dict</span><span class="p">[</span><span class="s1">&#39;top_level&#39;</span><span class="p">][</span><span class="s1">&#39;lower_level&#39;</span><span class="p">][</span><span class="s1">&#39;fail_key&#39;</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">default_value</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%timeit normal(1)
@@ -505,6 +675,19 @@ key_list = [&#39;top_level&#39;, &#39;fail_key&#39;, &#39;our_level&#39;]
 163 ns ± 30 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Breaking our original functions with unexpected types</p>
+</div>
+<div class="card-body docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">normal</span><span class="p">(</span><span class="n">default_value</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">data_dict</span><span class="p">[</span><span class="s1">&#39;top_level&#39;</span><span class="p">][</span><span class="s1">&#39;fail_key&#39;</span><span class="p">][</span><span class="s1">&#39;our_key&#39;</span><span class="p">]</span>
@@ -515,6 +698,11 @@ key_list = [&#39;top_level&#39;, &#39;fail_key&#39;, &#39;our_level&#39;]
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%timeit normal(1)
 390 ns ± 11 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

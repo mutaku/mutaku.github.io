@@ -66,53 +66,68 @@ our expected structure and could simply query the deepest nested level
 for ``our_key`` and default to ``default_value``. But we know we can't
 expect anything either than ``data_dict`` exists and is a dict
 
-.. code:: python
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    data_dict = {}
-    default_value = 1.0
+    Three example methods for key lookup
+    ^^^^^^^^^^^^^^
 
+    .. code:: python
 
-    def old_style():
-        """Old style (Python < 3.8)"""
-        if 'top_level' in data_dict:
-            if 'lower_level' in data_dict['top_level']:
-                if 'our_key' in data_dict['top_level']['lower_level']:
-                    return data_dict['top_level']['lower_level']['our_key']
-        else:
-            return default_value
+        data_dict = {}
+        default_value = 1.0
 
 
-    def walrus_style():
-        """Walrus operator cleans this up"""
-        if (top := data_dict.get('top_level', None)):
-            if (lower := top.get('lower_level', None)):
-                return lower.get('our_key', default_value)
-        else:
-            return default_value
+        def old_style():
+            """Old style (Python < 3.8)"""
+            if 'top_level' in data_dict:
+                if 'lower_level' in data_dict['top_level']:
+                    if 'our_key' in data_dict['top_level']['lower_level']:
+                        return data_dict['top_level']['lower_level']['our_key']
+            else:
+                return default_value
 
 
-    def chaining_style():
-        """Chaining with object defaults"""
-        return (
-            data_dict.get("top_level", {})
-            .get("lower_level", {})
-            .get("our_key", default_value)
-        )
+        def walrus_style():
+            """Walrus operator cleans this up"""
+            if (top := data_dict.get('top_level', None)):
+                if (lower := top.get('lower_level', None)):
+                    return lower.get('our_key', default_value)
+            else:
+                return default_value
+
+
+        def chaining_style():
+            """Chaining with object defaults"""
+            return (
+                data_dict.get("top_level", {})
+                .get("lower_level", {})
+                .get("our_key", default_value)
+            )
 
 Try with an empty ``data_dict`` We should expect the first two to be
 faster as they break quicker
 
-.. code:: python
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    %timeit old_style()
-    %timeit walrus_style()
-    %timeit chaining_style()
+    Timing our methods
+    ^^^^^^^^^^^^^^
 
-.. code:: text
+    .. code:: python
 
-    152 ns ± 0.825 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
-    204 ns ± 2.71 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
-    366 ns ± 1.66 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+        %timeit old_style()
+        %timeit walrus_style()
+        %timeit chaining_style()
+
+    .. code:: text
+
+        152 ns ± 0.825 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+        204 ns ± 2.71 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+        366 ns ± 1.66 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+
 
 Indeed, if we do not have our initial key, our chained lookup is longer
 since it proceeds through multiple lookups. Our walrus method is a
@@ -122,18 +137,28 @@ lookups will fail faster.
 Now let's use a semi-populated ``data_dict`` We should expect some
 convergence on timing now that we remove the early fail
 
-.. code:: python
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    data_dict = {'top_level': {'lower_level': {'not_our_key': -1}}}
-    %timeit old_style()
-    %timeit walrus_style()
-    %timeit chaining_style()
+    Failing early in our lookup
+    ^^^^^^^^^^^^^^
 
-.. code:: text
+    .. code:: python
 
-    303 ns ± 1.31 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
-    373 ns ± 0.586 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
-    359 ns ± 0.543 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+        data_dict = {
+            'top_level': {'lower_level': {'not_our_key': -1}}
+        }
+
+        %timeit old_style()
+        %timeit walrus_style()
+        %timeit chaining_style()
+
+    .. code:: text
+
+        303 ns ± 1.31 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+        373 ns ± 0.586 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+        359 ns ± 0.543 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
 Now we do see a bit more convergence on timing since we have to recurse
 with all methods. And the first method still wins by using only hash
@@ -143,18 +168,25 @@ is that the chained assignment is faster than the walrus operator method
 
 Now let's try the last scenario when our key is indeed in our structure
 
-.. code:: python
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    data_dict = {'top_level': {'lower_level': {'our_key': -1}}}
-    %timeit old_style()
-    %timeit walrus_style()
-    %timeit chaining_style()
+    Finding our nested key
+    ^^^^^^^^^^^^^^
 
-.. code:: text
+    .. code:: python
 
-    404 ns ± 5.23 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
-    370 ns ± 1.45 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
-    372 ns ± 1.74 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+        data_dict = {'top_level': {'lower_level': {'our_key': -1}}}
+        %timeit old_style()
+        %timeit walrus_style()
+        %timeit chaining_style()
+
+    .. code:: text
+
+        404 ns ± 5.23 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+        370 ns ± 1.45 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+        372 ns ± 1.74 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
 Now we get interesting. If we have our key, the first method only using
 hash lookups is slower when we will end up getting our key of interest.
@@ -212,50 +244,80 @@ with a very quick example of how I might implement such an approach, but
 note, we would want to write some tests around this -- it is merely a
 quick starting block.
 
-.. code:: python
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    def programmatic_depth_search(data_dict, key_list, default_value=None):
-        current_depth_value = data_dict
-        while key_list:
-            try:
-                lookup_key = key_list.pop(0)
-                if not (current_depth_value := current_depth_value.get(lookup_key, None)):
+    A programmatic and modular method
+    ^^^^^^^^^^^^^^
+
+    .. code:: python
+
+        def programmatic_depth_search(data_dict, key_list, default_value=None):
+            current_depth_value = data_dict
+            while key_list:
+                try:
+                    lookup_key = key_list.pop(0)
+                    if not (
+                        current_depth_value := current_depth_value.get(lookup_key, None)
+                    ):
+                        return default_value
+                    else:
+                        continue
+                except AttributeError:
                     return default_value
-                else:
-                    continue
-            except AttributeError:
-                return default_value
 
-        return current_depth_value
+            return current_depth_value
 
 Then we might try the following examples:
 
-.. code:: python
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    search_value = programmatic_depth_search(
-        data_dict={'top_level': {'lower_level': {'our_key': 3}}},
-        key_list=['top_level', 'lower_level'],
-        default_value='Not Found'
-    )
-    # {'our_key': 3}
+    Timing our methods
+    ^^^^^^^^^^^^^^
 
-.. code:: python
+    .. code:: python
 
-    search_value = programmatic_depth_search(
-        data_dict={'top_level': {'lower_level': {'our_key': 3}}},
-        key_list=['top_level', 'lower_level', 'our_key'],
-        default_value='Not Found'
-    )
-    # 3
+        search_value = programmatic_depth_search(
+            data_dict={'top_level': {'lower_level': {'our_key': 3}}},
+            key_list=['top_level', 'lower_level'],
+            default_value='Not Found'
+        )
+        # Returns: {'our_key': 3}
 
-.. code:: python
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    search_value = programmatic_depth_search(
-        data_dict={'top_level': {'lower_level': {'our_key': 3}}},
-        key_list=['top_level', 'lower_level', 'our_key', 'fail_key'],
-        default_value='Not Found'
-    )
-    # 'Not Found'
+    Timing our methods
+    ^^^^^^^^^^^^^^
+
+    .. code:: python
+
+        search_value = programmatic_depth_search(
+            data_dict={'top_level': {'lower_level': {'our_key': 3}}},
+            key_list=['top_level', 'lower_level', 'our_key'],
+            default_value='Not Found'
+        )
+        # Returns: 3
+
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
+
+    Timing our methods
+    ^^^^^^^^^^^^^^
+
+    .. code:: python
+
+        search_value = programmatic_depth_search(
+            data_dict={'top_level': {'lower_level': {'our_key': 3}}},
+            key_list=['top_level', 'lower_level', 'our_key', 'fail_key'],
+            default_value='Not Found'
+        )
+        # Returns: 'Not Found'
 
 Revisiting an Old Friend
 ------------------------
@@ -266,17 +328,24 @@ essentially comparing by always assuming we would either find
 ``our_key`` and return it's value, or it would not be found and we would
 return ``default_value``. However, let's try this:
 
-.. code:: python
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    data_dict = {'top_level': {'lower_level': 1}}
-    old_style()
-    #TypeError: argument of type 'int' is not iterable
+    Breaking our original functions with unexpected types
+    ^^^^^^^^^^^^^^
 
-    walrus_style()
-    # AttributeError: 'int' object has no attribute 'get'
+    .. code:: python
 
-    chaining_style()
-    # AttributeError: 'int' object has no attribute 'get'
+        data_dict = {'top_level': {'lower_level': 1}}
+        old_style()
+        # Returns: TypeError: argument of type 'int' is not iterable
+
+        walrus_style()
+        # Returns: AttributeError: 'int' object has no attribute 'get'
+
+        chaining_style()
+        # Returns: AttributeError: 'int' object has no attribute 'get'
 
 As you can clearly see, our fixed methods, while sufficient for our
 specific initital example case, they break easily. We have tricked them
@@ -286,74 +355,109 @@ modularizing our experiment, we also added robustness against the
 unexpected -- something we know is key. To prove this, let's now run
 this with our modularized version:
 
-.. code:: python
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    search_value = programmatic_depth_search(
-        data_dict, ['top_level', 'lower_level', 'our_key'], None
-    )
-    # None
+    Robustness with our programmatic approach
+    ^^^^^^^^^^^^^^
+
+    .. code:: python
+
+        search_value = programmatic_depth_search(
+            data_dict, ['top_level', 'lower_level', 'our_key'], None
+        )
+        # Returns: None (our default value)
 
 Neat!
 
 What About the Simple Approach
 ------------------------------
 
-.. code:: python
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    def normal():
-        try:
-            return data_dict['top_level']['lower_level']['our_key']
-        except KeyError:
-            return None
+    A simple, fixed lookup
+    ^^^^^^^^^^^^^^
 
-.. code:: python
+    .. code:: python
 
-    154 ns ± 13.1 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+        def normal():
+            try:
+                return data_dict['top_level']['lower_level']['our_key']
+            except KeyError:
+                return None
 
-    %timeit programmatic_depth_search(data_dict, key_list)
-    158 ns ± 9.12 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    key_list = ['top_level', 'lower_level', 'our_key']
+   Comparing a fixed lookup to our programmatic approach
+    ^^^^^^^^^^^^^^
 
-    %timeit programmatic_depth_search(data_dict, key_list)
-    156 ns ± 22.6 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+    .. code:: python
+        %timeit normal
+        154 ns ± 13.1 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 
-.. code:: python
+        %timeit programmatic_depth_search(data_dict, key_list)
+        158 ns ± 9.12 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 
-    def normal(default_value):
-         try:
-             return data_dict['top_level']['lower_level']['fail_key']
-         except KeyError as e:
-             return (e, default_value)
+        key_list = ['top_level', 'lower_level', 'our_key']
 
-.. code:: python
+        %timeit programmatic_depth_search(data_dict, key_list)
+        156 ns ± 22.6 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 
-    %timeit normal(1)
-    528 ns ± 98.3 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
 
-    key_list = ['top_level', 'lower_level', 'fail_key']
+    Trying with a failure
+    ^^^^^^^^^^^^^^
 
-    data_dict = {'top_level': {'lower_level': {'our_key': 3}}}
+    .. code:: python
 
-    %timeit programmatic_depth_search(data_dict, key_list, 1)
-    164 ns ± 21.8 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+        def normal(default_value):
+            try:
+                return data_dict['top_level']['lower_level']['fail_key']
+            except KeyError as e:
+                return (e, default_value)
 
-    key_list = ['top_level', 'fail_key', 'our_level']
+    .. code:: python
 
-    %timeit programmatic_depth_search(data_dict, key_list, 1)
-    163 ns ± 30 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+        %timeit normal(1)
+        528 ns ± 98.3 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
-.. code:: python
+        key_list = ['top_level', 'lower_level', 'fail_key']
 
-    def normal(default_value):
-        try:
-            return data_dict['top_level']['fail_key']['our_key']
-        except KeyError as e:
-            return (e, default_value)
+        data_dict = {'top_level': {'lower_level': {'our_key': 3}}}
 
-.. code:: python
+        %timeit programmatic_depth_search(data_dict, key_list, 1)
+        164 ns ± 21.8 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 
-    %timeit normal(1)
-    390 ns ± 11 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
+        key_list = ['top_level', 'fail_key', 'our_level']
+
+        %timeit programmatic_depth_search(data_dict, key_list, 1)
+        163 ns ± 30 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary
+
+    Breaking our original functions with unexpected types
+    ^^^^^^^^^^^^^^
+
+    .. code:: python
+
+        def normal(default_value):
+            try:
+                return data_dict['top_level']['fail_key']['our_key']
+            except KeyError as e:
+                return (e, default_value)
+
+    .. code:: python
+
+        %timeit normal(1)
+        390 ns ± 11 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
 
 .. update:: November 13, 2020 Updated with some additional content
