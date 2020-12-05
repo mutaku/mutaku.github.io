@@ -389,6 +389,7 @@ What About the Simple Approach
             except KeyError:
                 return None
 
+
 .. panels::
     :column: col-lg-12 p-0
     :header: text-secondary
@@ -397,6 +398,7 @@ What About the Simple Approach
     ^^^^^^^^^^^^^^
 
     .. code:: python
+
         %timeit normal
         154 ns ± 13.1 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
 

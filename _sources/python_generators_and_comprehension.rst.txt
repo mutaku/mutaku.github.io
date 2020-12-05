@@ -5,8 +5,8 @@
    :author: Matthew Martz
 
 Python Generators and Comprehension
-==========
-Digging into generators and comprehension - from basics to 
+========================================
+Digging into generators and comprehension - from basics to
 to implementation in a comprehensive tutorial. This is a walkthrough
 for beginners that will build up to real world examples.
 

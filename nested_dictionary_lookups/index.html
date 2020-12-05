@@ -283,8 +283,8 @@ expect anything either than <code class="docutils literal notranslate"><span cla
 
 <span class="k">def</span> <span class="nf">walrus_style</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Walrus operator cleans this up&quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="p">:</span><span class="o">=</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;top_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">lower</span> <span class="p">:</span><span class="o">=</span> <span class="n">top</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lower_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">:=</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;top_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">lower</span> <span class="o">:=</span> <span class="n">top</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lower_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
             <span class="k">return</span> <span class="n">lower</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;our_key&#39;</span><span class="p">,</span> <span class="n">default_value</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">default_value</span>
@@ -457,7 +457,7 @@ quick starting block.</p>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">lookup_key</span> <span class="o">=</span> <span class="n">key_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span>
-                <span class="n">current_depth_value</span> <span class="p">:</span><span class="o">=</span> <span class="n">current_depth_value</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lookup_key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="n">current_depth_value</span> <span class="o">:=</span> <span class="n">current_depth_value</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lookup_key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
             <span class="p">):</span>
                 <span class="k">return</span> <span class="n">default_value</span>
             <span class="k">else</span><span class="p">:</span>
@@ -638,7 +638,19 @@ this with our modularized version:</p>
 </div>
 <div class="card-body docutils">
 <blockquote>
-<div></div></blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%timeit normal
+154 ns ± 13.1 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+%timeit programmatic_depth_search(data_dict, key_list)
+158 ns ± 9.12 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+
+key_list = [&#39;top_level&#39;, &#39;lower_level&#39;, &#39;our_key&#39;]
+
+%timeit programmatic_depth_search(data_dict, key_list)
+156 ns ± 22.6 ns per loop (mean ± std. dev. of 7 runs, 10000000 loops each)
+</pre></div>
+</div>
+</div></blockquote>
 </div>
 </div>
 </div>

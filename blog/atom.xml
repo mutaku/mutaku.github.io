@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://mutaku.github.io</id>
   <title>Mutaku</title>
-  <updated>2020-11-30T16:50:30.713660+00:00</updated>
+  <updated>2020-12-05T03:39:40.444339+00:00</updated>
   <link href="https://mutaku.github.io"/>
   <link href="https://mutaku.github.io/blog/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
@@ -25,7 +25,9 @@
     <author>
       <name>Matthew Martz</name>
     </author>
-    <content type="html">&lt;p&gt;Title underline too short.&lt;/p&gt;
+    <content type="html">&lt;p&gt;Digging into generators and comprehension - from basics to
+to implementation in a comprehensive tutorial. This is a walkthrough
+for beginners that will build up to real world examples.&lt;/p&gt;
 </content>
     <link href="https://mutaku.github.io/python_generators_and_comprehension/" rel="alternate"/>
     <published>2020-11-13T00:00:00-05:00</published>
