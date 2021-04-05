@@ -283,8 +283,8 @@ expect anything either than <code class="docutils literal notranslate"><span cla
 
 <span class="k">def</span> <span class="nf">walrus_style</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;Walrus operator cleans this up&quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="o">:=</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;top_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">lower</span> <span class="o">:=</span> <span class="n">top</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lower_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">top</span> <span class="p">:</span><span class="o">=</span> <span class="n">data_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;top_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">lower</span> <span class="p">:</span><span class="o">=</span> <span class="n">top</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;lower_level&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)):</span>
             <span class="k">return</span> <span class="n">lower</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;our_key&#39;</span><span class="p">,</span> <span class="n">default_value</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">default_value</span>
@@ -457,7 +457,7 @@ quick starting block.</p>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">lookup_key</span> <span class="o">=</span> <span class="n">key_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
             <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span>
-                <span class="n">current_depth_value</span> <span class="o">:=</span> <span class="n">current_depth_value</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lookup_key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                <span class="n">current_depth_value</span> <span class="p">:</span><span class="o">=</span> <span class="n">current_depth_value</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">lookup_key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
             <span class="p">):</span>
                 <span class="k">return</span> <span class="n">default_value</span>
             <span class="k">else</span><span class="p">:</span>
