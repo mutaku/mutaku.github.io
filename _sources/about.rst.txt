@@ -17,6 +17,12 @@ optimization problems to personalized medicine and medicinal AI. Find more about
     ^^^^^^^^^^^^^^
     Principal, Research and Machine Learning at Penrose Hill/Firstleaf
 
+    Created and maintain the core algorithms behind the Firstleaf wine club.
+
+    Leading a team of Data Scientists and Machine Learning engineers developing machine learning and AI platforms to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle. This includes the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques, along with novel algorithm development.
+
+    The Research and Machine Learning team is responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf. We utilize cutting edge approaches to both empower internal company function as well as customer facing products. The team is also responsible for design and implementation of the patent-pending algorithm that drives the Firstleaf experience.
+
 .. panels::
     :column: col-lg-12 p-0
     :header: text-secondary font-weight-bold
