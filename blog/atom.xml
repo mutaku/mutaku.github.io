@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://mutaku.github.io</id>
   <title>Mutaku</title>
-  <updated>2022-03-14T00:38:38.450716+00:00</updated>
+  <updated>2022-03-14T00:48:49.075500+00:00</updated>
   <link href="https://mutaku.github.io"/>
-  <link href="https://mutaku.github.io/blog/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <link href="https://mutaku.github.io/blog/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <entry>
     <id>https://mutaku.github.io/nested_dictionary_lookups/</id>
     <title>Dictionary Lookup - Exploring the Depths</title>
@@ -13,9 +13,13 @@
     <author>
       <name>Matthew Martz</name>
     </author>
-    <content type="html">&lt;p&gt;Exploring methods of performant Python dictionary lookups&lt;/p&gt;
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Exploring methods of performant Python dictionary lookups&lt;/p&gt;
+&lt;/div&gt;
 </content>
     <link href="https://mutaku.github.io/nested_dictionary_lookups/" rel="alternate"/>
+    <summary>Exploring methods of performant Python dictionary lookups</summary>
+    <category term="atag" label="atag"/>
     <published>2020-11-13T00:00:00-05:00</published>
   </entry>
   <entry>
@@ -25,11 +29,17 @@
     <author>
       <name>Matthew Martz</name>
     </author>
-    <content type="html">&lt;p&gt;Digging into generators and comprehension - from basics to
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Digging into generators and comprehension - from basics to
 to implementation in a comprehensive tutorial. This is a walkthrough
 for beginners that will build up to real world examples.&lt;/p&gt;
+&lt;/div&gt;
 </content>
     <link href="https://mutaku.github.io/python_generators_and_comprehension/" rel="alternate"/>
+    <summary>Digging into generators and comprehension - from basics to
+to implementation in a comprehensive tutorial. This is a walkthrough
+for beginners that will build up to real world examples.</summary>
+    <category term="atag" label="atag"/>
     <published>2020-11-13T00:00:00-05:00</published>
   </entry>
 </feed>
