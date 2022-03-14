@@ -61,6 +61,15 @@ optimization problems to personalized medicine and medicinal AI. Find more about
     :column: col-lg-12 p-0
     :header: text-secondary font-weight-bold
 
+    Selected Press
+    ^^^^^^^^^^^^^^
+    - https://www.fastcompany.com/90724383/most-innovative-companies-data-science-2022
+
+
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary font-weight-bold
+
     Publications
     ^^^^^^^^^^^^^^
     - Ramona Schrage, ..., Matthew Martz, ..., Evi Kostenis. The experimental power of FR900359 to study Gq-regulated biological processes. Nature Communications 6, Article number: 10156. 14 December 2015.
@@ -68,7 +77,6 @@ optimization problems to personalized medicine and medicinal AI. Find more about
     - Martz MK, Grabocka E, Beeharry N, Yen TJ, Wedegaertner PW. Leukemia-Associated RhoGEF (LARG) is a Novel RhoGEF in Cytokinesis and Required for the Proper Completion of Abscission. Mol. Biol. Cell September 15, 2013 vol. 24 no. 18 2785-2794.
     - Matthew Martz and Philip Wedegaertner: Faculty of 1000 Biology, 23 Jul 2010 F1000Prime.com/4242964#eval4039063
     - Carkaci-Salli N, Flanagan JM, Martz MK, Salli U, Walther DJ, Bader M, Vrana KE. Functional domains of human tryptophan hydroxylase 2 (hTPH2). J Biol Chem. 2006 Sep 22;281(38):28105-12. Epub 2006 Jul 24.
-
 
 
 Mutaku is a collection of writings across the spectrum of biomedical research, software engineering (Python),
