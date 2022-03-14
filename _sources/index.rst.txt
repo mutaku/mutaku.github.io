@@ -24,7 +24,7 @@ optimization problems to personalized medicine and medicinal AI. Find more about
 
     Leading a team of Data Scientists and Machine Learning engineers developing machine learning and AI platforms to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle. This includes the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques, along with novel algorithm development.
 
-    The Research and Machine Learning team is responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf. We utilize cutting edge approaches to both empower internal company function as well as customer facing products. The team is also responsible for design and implementation of the patent-pending algorithm that drives the Firstleaf experience.
+    The Research and Machine Learning team is responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf. We utilize cutting edge approaches to both empower internal company function as well as customer facing products. The team is also responsible for design and implementation of the patent algorithms that drive the Firstleaf experience.
 
 .. panels::
     :column: col-lg-12 p-0
@@ -46,6 +46,29 @@ optimization problems to personalized medicine and medicinal AI. Find more about
     - Research Postdoctoral Fellow, Lineberger Cancer Center, University of North Carolina at Chapel Hill
     - 18 years of Software Engineering and Data Science experience
     - 15 years of rigorous scientific training in academic programs
+
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary font-weight-bold
+
+    Patents
+    ^^^^^^^^^^^^^^
+    - Systems and methods for labeling and distributing products having multiple versions with recipient version correlation on a per user basics
+    - Systems and methods for controlling production and distribution of consumable items based on their chemical profiles
+
+
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary font-weight-bold
+
+    Publications
+    ^^^^^^^^^^^^^^
+    - Ramona Schrage, ..., Matthew Martz, ..., Evi Kostenis. The experimental power of FR900359 to study Gq-regulated biological processes. Nature Communications 6, Article number: 10156. 14 December 2015.
+    - Michelle C Helms, Elda Grabocka, Matthew K Martz, Christopher C Fischer, Nobuchika Suzuki, Philip B Wedegaertner. Mitotic-dependent phosphorylation of leukemia-associated RhoGEF (LARG) by Cdk1. Cellular Signalling, Volume 28, Issue 1, January 2016, Pages 43-52.
+    - Martz MK, Grabocka E, Beeharry N, Yen TJ, Wedegaertner PW. Leukemia-Associated RhoGEF (LARG) is a Novel RhoGEF in Cytokinesis and Required for the Proper Completion of Abscission. Mol. Biol. Cell September 15, 2013 vol. 24 no. 18 2785-2794.
+    - Matthew Martz and Philip Wedegaertner: Faculty of 1000 Biology, 23 Jul 2010 F1000Prime.com/4242964#eval4039063
+    - Carkaci-Salli N, Flanagan JM, Martz MK, Salli U, Walther DJ, Bader M, Vrana KE. Functional domains of human tryptophan hydroxylase 2 (hTPH2). J Biol Chem. 2006 Sep 22;281(38):28105-12. Epub 2006 Jul 24.
+
 
 
 Mutaku is a collection of writings across the spectrum of biomedical research, software engineering (Python),
