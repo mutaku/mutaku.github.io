@@ -43,7 +43,7 @@ optimization problems to personalized medicine and medicinal AI. Find more about
     ^^^^^^^^^^^^^^
     - BS in Biochemistry and Molecular Biology, The Pennsylvania State University
     - PhD in Biochemistry and Molecular Biology, Thomas Jefferson University
-    - Research Postdoctoral Fellow, Lineberger Cancer Center
+    - Research Postdoctoral Fellow, Lineberger Cancer Center, University of North Carolina at Chapel Hill
     - 18 years of Software Engineering and Data Science experience
     - 15 years of rigorous scientific training in academic programs
 
