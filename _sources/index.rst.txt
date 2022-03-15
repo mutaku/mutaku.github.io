@@ -64,6 +64,7 @@ optimization problems to personalized medicine and medicinal AI. Find more about
     Selected Press
     ^^^^^^^^^^^^^^
     - https://www.fastcompany.com/90724383/most-innovative-companies-data-science-2022
+    - https://www.modernretail.co/startups/inside-firstleafs-data-driven-approach-to-wine-subscriptions/
 
 
 .. panels::
