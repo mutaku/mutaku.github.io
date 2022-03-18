@@ -10,7 +10,7 @@ Writings and Perambulations
 My background is in Quantitative Cell Biology and I have a PhD in Biochemistry and Molecular Biology.
 I spent much of my career researching novel cancer therapeutics through live cell imaging and machine learning.
 You can now find me developing and implementing machine learning platforms and algorithms for everything from
-optimization problems to personalized medicine and medicinal AI. Find more about me here: :ref:`about`
+optimization problems to personalized medicine and medicinal AI.
 
 .. panels::
     :column: col-lg-12 p-0
@@ -44,8 +44,8 @@ optimization problems to personalized medicine and medicinal AI. Find more about
     - BS in Biochemistry and Molecular Biology, The Pennsylvania State University
     - PhD in Biochemistry and Molecular Biology, Thomas Jefferson University
     - Research Postdoctoral Fellow, Lineberger Cancer Center, University of North Carolina at Chapel Hill
-    - 18 years of Software Engineering and Data Science experience
-    - 15 years of rigorous scientific training in academic programs
+    - 19 years of Software Engineering and Data Science experience
+    - 16 years of rigorous scientific training in academic programs
 
 .. panels::
     :column: col-lg-12 p-0
