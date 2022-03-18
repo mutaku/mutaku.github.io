@@ -24,7 +24,7 @@ optimization problems to personalized medicine and medicinal AI. Find more about
 
     Leading a team of Data Scientists and Machine Learning engineers developing machine learning and AI platforms to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle. This includes the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques, along with novel algorithm development.
 
-    The Research and Machine Learning team is responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf. We utilize cutting edge approaches to both empower internal company function as well as customer facing products. The team is also responsible for design and implementation of the patent algorithms that drive the Firstleaf experience.
+    The Research and Machine Learning team is responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf. We utilize cutting edge approaches to both empower internal company function as well as customer facing products. The team is also responsible for design and implementation of the patented algorithms that drive the Firstleaf experience.
 
 .. panels::
     :column: col-lg-12 p-0
@@ -71,7 +71,7 @@ optimization problems to personalized medicine and medicinal AI. Find more about
     :column: col-lg-12 p-0
     :header: text-secondary font-weight-bold
 
-    Publications
+    Selected Publications
     ^^^^^^^^^^^^^^
     - Ramona Schrage, ..., Matthew Martz, ..., Evi Kostenis. The experimental power of FR900359 to study Gq-regulated biological processes. Nature Communications 6, Article number: 10156. 14 December 2015.
     - Michelle C Helms, Elda Grabocka, Matthew K Martz, Christopher C Fischer, Nobuchika Suzuki, Philip B Wedegaertner. Mitotic-dependent phosphorylation of leukemia-associated RhoGEF (LARG) by Cdk1. Cellular Signalling, Volume 28, Issue 1, January 2016, Pages 43-52.

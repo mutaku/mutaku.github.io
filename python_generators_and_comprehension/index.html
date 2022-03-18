@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Python Generators and Comprehension &#8212; Mutaku  documentation</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -31,12 +31,13 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="author" title="About these documents" href="../about/" />
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" /> 
@@ -436,7 +437,7 @@ then move on if we need to do so.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">found</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">collection</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
     <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">93</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found a 93 on loop </span><span class="si">{</span><span class="n">i</span><span class="si">=}</span><span class="s1"> for </span><span class="si">{</span><span class="n">k</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found a 93 on loop {i=} for {k=}&#39;</span><span class="p">)</span>
         <span class="n">found</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">found</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
@@ -444,7 +445,7 @@ then move on if we need to do so.</p>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">continue</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;collection is </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">collection</span><span class="p">)</span><span class="si">=}</span><span class="s1"> and we searched through </span><span class="si">{</span><span class="n">i</span><span class="si">=}</span><span class="s1"> key: value pairs&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;collection is {len(collection)=} and we searched through {i=} key: value pairs&#39;</span><span class="p">)</span>
 <span class="n">found</span>
 </pre></div>
 </div>
@@ -504,10 +505,10 @@ compare.</p>
 
 
 <span class="n">complete_list</span> <span class="o">=</span> <span class="n">list_building</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">complete_list</span><span class="si">=}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">complete_list</span><span class="p">)</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;{complete_list=} is {type(complete_list)=}&#39;</span><span class="p">)</span>
 
 <span class="n">iterable_list</span> <span class="o">=</span> <span class="n">generator_list_building</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">iterable_list</span><span class="si">=}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">iterable_list</span><span class="p">)</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;{iterable_list=} is {type(iterable_list)=}&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>complete_list=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] is type(complete_list)=&lt;class &#39;list&#39;&gt;
@@ -559,12 +560,12 @@ in our comprehension style? Can we make a comprehension generator? Yes!</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">comprehension_based_complete_list</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">comprehension_based_complete_list</span><span class="si">=}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">comprehension_based_complete_list</span><span class="p">)</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;{comprehension_based_complete_list=} is {type(comprehension_based_complete_list)=}&#39;</span><span class="p">)</span>
 
 <span class="n">comprehension_based_iterable_list</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">comprehension_based_iterable_list</span><span class="si">=}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">comprehension_based_iterable_list</span><span class="p">)</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;{comprehension_based_iterable_list=} is {type(comprehension_based_iterable_list)=}&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>comprehension_based_complete_list=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] is type(comprehension_based_complete_list)=&lt;class &#39;list&#39;&gt;
@@ -586,12 +587,12 @@ than the multi-step functions above.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">comprehension_based_squared_list</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">comprehension_based_squared_list</span><span class="si">=}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">comprehension_based_squared_list</span><span class="p">)</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;{comprehension_based_squared_list=} is {type(comprehension_based_squared_list)=}&#39;</span><span class="p">)</span>
 
 <span class="n">comprehension_based_squared_iterable</span> <span class="o">=</span> <span class="p">(</span>
     <span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">comprehension_based_squared_iterable</span><span class="si">=}</span><span class="s1"> is </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">comprehension_based_squared_iterable</span><span class="p">)</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;{comprehension_based_squared_iterable=} is {type(comprehension_based_squared_iterable)=}&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>comprehension_based_squared_list=[0, 1, 4, 9, 16, 25, 36, 49, 64, 81] is type(comprehension_based_squared_list)=&lt;class &#39;list&#39;&gt;
@@ -608,7 +609,7 @@ we could iterate. Let’s take a look at another way we can do this.</p>
 <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">found</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
     <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">collections_generator</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">93</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found a 93 for </span><span class="si">{</span><span class="n">k</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found a 93 for {k=}&#39;</span><span class="p">)</span>
         <span class="n">found</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
 
 <span class="n">found</span>
@@ -651,7 +652,7 @@ not break our code.</p>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">collections_generator</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">53</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found a 53 for </span><span class="si">{</span><span class="n">k</span><span class="si">=}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Found a 53 for {k=}&#39;</span><span class="p">)</span>
             <span class="n">found</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We ran out of data to search&#39;</span><span class="p">)</span>
@@ -723,7 +724,7 @@ up everything we’ve gone over thus far.</p>
         <span class="k">return</span> <span class="kc">True</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;User&gt; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">=}</span><span class="s1"> | </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">=}</span><span class="s1"> | </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">active</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;User&gt; {self.name=} | {self.age=} | </span><span class="si">{self.active}</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
 <p>Okay, we now have a <code class="docutils literal notranslate"><span class="pre">User</span></code> class that represents a user with a
@@ -864,7 +865,7 @@ just as an example.</p>
         <span class="bp">self</span><span class="o">.</span><span class="n">patient</span> <span class="o">=</span> <span class="n">patient</span>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;VulnerablePatient&gt; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">patient</span><span class="si">}</span><span class="s1">&#39;</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;VulnerablePatient&gt; </span><span class="si">{self.patient}</span><span class="s1">&#39;</span>
 
 
 <span class="n">users_iter</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">users</span><span class="p">)</span>
@@ -942,16 +943,16 @@ they?</em>)</p>
 <p>Okay, back to it. We now have a <code class="docutils literal notranslate"><span class="pre">User</span></code> and a <code class="docutils literal notranslate"><span class="pre">VulnerablePatient</span></code>
 that should be the same person. But is this a copy or a reference to one
 memory block? Let’s check.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">check_user</span><span class="p">)</span><span class="si">=}</span><span class="s1">, </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">compare_vulnerable_patient</span><span class="p">)</span><span class="si">=}</span><span class="s1">, and </span><span class="si">{</span><span class="nb">id</span><span class="p">(</span><span class="n">compare_vulnerable_patient</span><span class="o">.</span><span class="n">patient</span><span class="p">)</span><span class="si">=}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;{id(check_user)=}, {id(compare_vulnerable_patient)=}, and {id(compare_vulnerable_patient.patient)=})&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">assert_equivalency</span><span class="p">(</span><span class="n">obj1</span><span class="p">,</span> <span class="n">obj2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Assert the equivalency of two objects&quot;&quot;&quot;</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">assert</span> <span class="nb">id</span><span class="p">(</span><span class="n">obj1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">id</span><span class="p">(</span><span class="n">obj2</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">AssertionError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">obj1</span><span class="si">=}</span><span class="s1"> and </span><span class="si">{</span><span class="n">obj2</span><span class="si">=}</span><span class="s1"> are not equivalent&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;{obj1=} and {obj2=} are not equivalent&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">obj1</span><span class="si">=}</span><span class="s1"> and </span><span class="si">{</span><span class="n">obj2</span><span class="si">=}</span><span class="s1"> are equivalent&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;{obj1=} and {obj2=} are equivalent&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
 
 <span class="n">assert_equivalency</span><span class="p">(</span><span class="n">check_user</span><span class="p">,</span> <span class="n">compare_vulnerable_patient</span><span class="p">)</span>
@@ -1018,14 +1019,14 @@ and when we might want to use them over lists and list comprehensions.</p>
     </div>
 
     
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     <footer class="footer mt-5 mt-md-0">
   <div class="container">
     <p>
           &copy; Copyright 2022, Matthew Martz.<br/>
-        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
     </p>
   </div>
 </footer>
