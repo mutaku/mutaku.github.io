@@ -6,8 +6,10 @@ About Matthew Martz
 
 My background is in Quantitative Cell Biology and I have a PhD in Biochemistry and Molecular Biology.
 I spent much of my career researching novel cancer therapeutics through live cell imaging and machine learning.
-You can now find me developing and implementing machine learning platforms and algorithms for everything from 
-optimization problems to personalized medicine and medicinal AI. Find more about me here: :ref:`about`
+You can now find me developing and implementing machine learning platforms and algorithms for everything from
+optimization problems to personalized medicine and medicinal AI. In recent years I have researched and built
+novel recommenders, 24/7 production machine learning solutions, and received patents for personalization solutions
+in the consumer sales space and chemical profile recommenders. Find more about me here: :ref:`about`
 
 .. panels::
     :column: col-lg-12 p-0
@@ -15,13 +17,17 @@ optimization problems to personalized medicine and medicinal AI. Find more about
 
     Currently
     ^^^^^^^^^^^^^^
-    Principal, Research and Machine Learning at Penrose Hill/Firstleaf
+    Principal, Research and Machine Learning and Head of Data Science at Penrose Hill/Firstleaf
 
     Created and maintain the core algorithms behind the Firstleaf wine club.
 
-    Leading a team of Data Scientists and Machine Learning engineers developing machine learning and AI platforms to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle. This includes the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques, along with novel algorithm development.
+    Leading a team of Data Scientists and Machine Learning engineers developing machine learning and AI platforms
+    to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle.
+    This includes the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques, along with novel algorithm development.
 
-    The Research and Machine Learning team is responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf. We utilize cutting edge approaches to both empower internal company function as well as customer facing products. The team is also responsible for design and implementation of the patent-pending algorithm that drives the Firstleaf experience.
+    The Research and Machine Learning team is responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf.
+    We utilize cutting edge approaches to both empower internal company function as well as consumer facing products.
+    The team is also responsible for the design and implementation of the algorithms behind our patented personalization technologies that drive the Firstleaf experience.
 
 .. panels::
     :column: col-lg-12 p-0
@@ -29,8 +35,10 @@ optimization problems to personalized medicine and medicinal AI. Find more about
 
     Expertise
     ^^^^^^^^^^^^^^
-    Predictive Modeling | Medicinal AI | Machine Learning | Algorithm Development | Technical Writing | 
-    Data Science | Python/Software Engineering | Cell Biology | Biophysics | Microscopy | Cancer Therapeutics
+    Predictive Modeling | Medicinal AI | Machine Learning | Algorithm Development | Technical Writing |
+    Leadership | Mentorship | Team Building | Cross-departmental Collaboration | Data Science | Artificial Intelligence |
+    Python/Software Engineering | Cell Biology | Biophysics | Microscopy | Cancer Therapeutics | E-commerce |
+    Manuscript and Grant Preparation | Patent Development
 
 .. panels::
     :column: col-lg-12 p-0
@@ -38,11 +46,12 @@ optimization problems to personalized medicine and medicinal AI. Find more about
 
     Experience
     ^^^^^^^^^^^^^^
+    - Principal, Research and Machine Learning and Head of Data Science at Penrose Hill/Firstleaf
     - BS in Biochemistry and Molecular Biology, The Pennsylvania State University
     - PhD in Biochemistry and Molecular Biology, Thomas Jefferson University
-    - Research Postdoctoral Fellow, Lineberger Cancer Center
-    - 18 years of Software Engineering and Data Science experience
-    - 15 years of rigorous scientific training in academic programs
+    - Research Postdoctoral Fellow, Lineberger Cancer Center, University of North Carolina at Chapel Hill
+    - 20 years of Software Engineering and Data Science experience
+    - 16 years of rigorous scientific training in academic programs
 
 
 Mutaku is a collection of writings across the spectrum of biomedical research, software engineering (Python),
