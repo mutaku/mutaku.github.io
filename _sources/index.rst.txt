@@ -24,9 +24,13 @@ in the consumer sales space and chemical profile recommenders.
 
     Created and maintain the core algorithms behind the Firstleaf wine club.
 
-    Leading a team of Data Scientists and Machine Learning engineers developing machine learning and AI platforms to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle. This includes the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques, along with novel algorithm development.
+    Leading a team of Data Scientists and Machine Learning engineers developing machine learning and AI platforms
+    to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle.
+    This includes the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques, along with novel algorithm development.
 
-    The Research and Machine Learning team is responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf. We utilize cutting edge approaches to both empower internal company function as well as consumer facing products. The team is also responsible for the design and implementation of the algorithms behind our patented personalization technologies that drive the Firstleaf experience.
+    The Research and Machine Learning team is responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf.
+    We utilize cutting edge approaches to both empower internal company function as well as consumer facing products.
+    The team is also responsible for the design and implementation of the algorithms behind our patented personalization technologies that drive the Firstleaf experience.
 
 .. panels::
     :column: col-lg-12 p-0
@@ -35,7 +39,9 @@ in the consumer sales space and chemical profile recommenders.
     Expertise
     ^^^^^^^^^^^^^^
     Predictive Modeling | Medicinal AI | Machine Learning | Algorithm Development | Technical Writing |
-    Data Science | Python/Software Engineering | Cell Biology | Biophysics | Microscopy | Cancer Therapeutics
+    Leadership | Mentorship | Team Building | Cross-departmental Collaboration | Data Science | Artificial Intelligence |
+    Python/Software Engineering | Cell Biology | Biophysics | Microscopy | Cancer Therapeutics | E-commerce |
+    Manuscript and Grant Preparation | Patent Development
 
 .. panels::
     :column: col-lg-12 p-0
@@ -70,6 +76,17 @@ in the consumer sales space and chemical profile recommenders.
     ^^^^^^^^^^^^^^
     - https://www.fastcompany.com/90724383/most-innovative-companies-data-science-2022
     - https://www.modernretail.co/startups/inside-firstleafs-data-driven-approach-to-wine-subscriptions/
+
+
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary font-weight-bold
+
+    Languages, Tooling, Infrastructure
+    ^^^^^^^^^^^^^^
+    Python | Amazon Web Services (AWS) | Pandas | Numpy | Scikit-learn | Matplotlib | Scipy | SQL | PyTorch | Sympy |
+    Flask | Gunicorn | FastAPI | BASH Shell Scripting | Linux | BSD | Git Github | Jupyter | HTML | CSS | Javascript |
+    Microsoft Office | Google Suite | Matlab
 
 
 .. panels::
