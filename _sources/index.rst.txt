@@ -12,7 +12,7 @@ I spent much of my career researching novel cancer therapeutics through live cel
 You can now find me developing and implementing machine learning platforms and algorithms for everything from
 optimization problems to personalized medicine and medicinal AI. In recent years I have researched and built
 novel recommenders, 24/7 production machine learning solutions, and received patents for personalization solutions
-in the consumer sales space.
+in the consumer sales space and chemical profile recommenders.
 
 .. panels::
     :column: col-lg-12 p-0
@@ -58,8 +58,8 @@ in the consumer sales space.
     ^^^^^^^^^^^^^^
     - Systems and methods for labeling and distributing products having multiple versions with recipient version correlation on a per user basis
     - Systems and methods for controlling production and distribution of consumable items based on their chemical profiles
-    - [Under review (title withheld): A patent application for recommender personalization under certain location-based constraints]
-    - [Under review (title withheld): A patent application for the utilization of chemical data for certain predictive capabilities]
+    - [Under review (title withheld)]: A patent application for recommender personalization under certain location-based constraints
+    - [Under review (title withheld)]: A patent application for the utilization of chemical data for certain environmental predictive capabilities
 
 
 .. panels::
