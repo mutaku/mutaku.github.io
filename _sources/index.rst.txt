@@ -22,6 +22,8 @@ in the consumer sales space and chemical profile recommenders.
     ^^^^^^^^^^^^^^
     Data Science Technical Lead at AgBiome
 
+    [more to come]
+
 .. panels::
     :column: col-lg-12 p-0
     :header: text-secondary font-weight-bold
