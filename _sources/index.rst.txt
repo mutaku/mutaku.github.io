@@ -20,6 +20,14 @@ in the consumer sales space and chemical profile recommenders.
 
     Currently
     ^^^^^^^^^^^^^^
+    Data Science Technical Lead at AgBiome
+
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary font-weight-bold
+
+    Previously
+    ^^^^^^^^^^^^^^
     Principal, Research and Machine Learning and Head of Data Science at Penrose Hill/Firstleaf
 
     Created and maintain the core algorithms behind the Firstleaf wine club.
