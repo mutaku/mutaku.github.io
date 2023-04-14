@@ -59,6 +59,7 @@ in the consumer sales space and chemical profile recommenders.
 
     Experience
     ^^^^^^^^^^^^^^
+    - Data Science Technical Lead at AgBiome
     - Principal, Research and Machine Learning and Head of Data Science at Penrose Hill/Firstleaf
     - BS in Biochemistry and Molecular Biology, The Pennsylvania State University
     - PhD in Biochemistry and Molecular Biology, Thomas Jefferson University
