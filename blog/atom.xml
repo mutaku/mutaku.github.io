@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://mutaku.github.io</id>
   <title>Mutaku</title>
-  <updated>2023-04-14T21:13:06.504619+00:00</updated>
+  <updated>2023-04-17T20:50:02.757512+00:00</updated>
   <link href="https://mutaku.github.io"/>
   <link href="https://mutaku.github.io/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -41,5 +41,27 @@ to implementation in a comprehensive tutorial. This is a walkthrough
 for beginners that will build up to real world examples.</summary>
     <category term="atag" label="atag"/>
     <published>2020-11-13T00:00:00-05:00</published>
+  </entry>
+  <entry>
+    <id>https://mutaku.github.io/notes_on_mlops_one/</id>
+    <title>Notes on MLOps - One</title>
+    <updated>2023-04-17T00:00:00-04:00</updated>
+    <author>
+      <name>Matthew Martz</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This is a short piece I wrote while at Firstleaf as a response
+to a really great article on the state of MLOps. I used several
+strong points in the article to articulate my thoughts on where
+we did things well and directions I would like to see us take.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://mutaku.github.io/notes_on_mlops_one/" rel="alternate"/>
+    <summary>This is a short piece I wrote while at Firstleaf as a response
+to a really great article on the state of MLOps. I used several
+strong points in the article to articulate my thoughts on where
+we did things well and directions I would like to see us take.</summary>
+    <category term="atag" label="atag"/>
+    <published>2023-04-17T00:00:00-04:00</published>
   </entry>
 </feed>

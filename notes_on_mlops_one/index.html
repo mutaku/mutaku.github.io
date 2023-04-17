@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes on MLOps - One &#8212; Mutaku  documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="author" title="About these documents" href="../about/" />
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" /> 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Mutaku"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../">
+    
+      <img src="../_static/plot_header.png" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../about/">About Matthew Martz</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/mutaku/" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/backpropagating" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><div class="logo"><img src="../_static/profile.jpg"></div>
+<div class="snippet">
+    <div class="name">Matthew Martz, PhD</div>
+    <div class="title">Data Science Technical Lead at AgBiome</div>
+    <div class="specialties">Machine Learning | Predictive Modeling | Data Science | Biomedical Research</div>
+</div>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="notes-on-mlops-one">
+<h1>Notes on MLOps - One<a class="headerlink" href="#notes-on-mlops-one" title="Permalink to this headline">¶</a></h1>
+<p>This is a short piece I wrote while at Firstleaf as a response
+to a really great article on the state of MLOps. I used several
+strong points in the article to articulate my thoughts on where
+we did things well and directions I would like to see us take.</p>
+<p>Source Article: <a class="reference external" href="https://www.mihaileric.com/posts/mlops-is-a-mess/">https://www.mihaileric.com/posts/mlops-is-a-mess/</a></p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header font-weight-bold bg-info docutils">
+<p class="card-text">Closing the loop in machine learning systems. Right now many machine learning systems still largely adhere to a unidirectional flow of information from data source to prediction. But this leads to stale and fundamentally broken pipelines.</p>
+</div>
+<div class="card-body docutils">
+<ol class="arabic simple">
+<li><p class="card-text">Monitoring is a key closure of this loop that informs and directionalizes the start of the loop going all the way back to the data sources and features that determine model architecture and deployment for prediction-making. This is one reason we are hiring for our MLOps and Data Engineer position.</p></li>
+<li><p class="card-text">Ending at prediction is one of the obvious objectives of data science modeling initiatives. Closing the loop through inferential modeling and analysis of model predictions is another that comes to mind as a major source of vital business intelligence and company value. We are just now beginning to roadmap projects that really solidify this backflow.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header font-weight-bold bg-info docutils">
+<p class="card-text">Declarative systems for machine learning. For a few years now, we’ve already seen the modeling tooling for ML become commoditized with the advent of software like PyTorch as well as higher-level libraries like HF Transformers. This is all a welcome step for the field, but I believe we can do even more. Democratizing access to something involves developing abstractions that hide unnecessary implementation details for downstream users. Declarative machine learning systems are some of the most exciting next phases of this modeling evolution.</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">The democratization of Machine Learning is something that I truly believe will be a big turning point in the practical application of Data Science and Machine Learning research. I think of all of the non-profits around the world that could benefit from the application of what we do as a field. I think this is very exciting and I believe we as a field are well on our way. What can we do as a department? Communicating what and how we do things at Firstleaf from the scientific level, and how we take research to deliverables is a possible step. It’s something I think about all the time and often keeps me up at night. I would love to hear your thoughts on how the amazing work we do can impact our community.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header font-weight-bold bg-info docutils">
+<p class="card-text">Real-time machine learning. ML systems are data-driven by design, and so for most applications having up-to-date data allows for more accurate predictions. Real-time ML can mean a lot of things, but in general it’s better to have fresher models. This is something we will continue to see investment in over the next few years, as building real-time systems is a difficult infrastructure challenge.</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">We have built this since day one and continue to strive to improve our real-time strategies in both architectural performance and quality of predictions. What’s further exciting is James’ proposed work on our roadmap for this year that aims to take all the other models we utilize that are currently offline learners and convert them to real-time, online learners. Moreover, with our new MLOps and Data Engineer position we hope to start to take advantage of streaming data as input to James’ streaming models.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header font-weight-bold bg-info docutils">
+<p class="card-text">Better data management. Data is the life-blood of every machine learning system, and in a future world where ML powers most enterprise functions, data is the life-blood of every organization. And yet, I think we have a long way to go with developing tools for management of data across its lifecycle from sourcing and curating to labelling and analyzing. Don’t get me wrong: I love Snowflake as much as the next person. But I believe we can do better than just a handful of siloed tables sitting around in an organization’s VPN. How can we make it easy for data practitioners to quickly answer questions about what data they have, what they can do with the data, and what they still need?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">I believe this to be a real pain point for many companies. We have a robust and phenomenal Business Intelligence department that does an incredible job of curating, analyzing, and reporting on our key company data. There is a hard fact here; this is one place we as a department fail. I think we need to be better at keeping track of the data we are using – sources, meta information, staleness. We also need to get a better handle of our data generation and where and how we are storing it. Again, another reason for hiring the MLOps and Data Engineer role. But we as the practitioners need to take ownership of the data of our Data Science. The new role will help us execute on that, but it is up to us to initialize and follow through. It is one of my top priorities to set the direction here.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header font-weight-bold bg-info docutils">
+<p class="card-text">Merging business insight tooling with data science/machine learning workflows. The tooling around business insights has always been more mature than that of data science. One reason for this has to do with the fact that data analysts’ output tends to be more readily surfaced to business leaders, and hence BI tooling investment is deemed more critical to an organization’s bottom line.</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">I briefly touched on this regarding data ownership in talking about better data management. Merging of workflows requires better exposure of our data science output and better storytelling of how these data create value. Business intelligence was built from the ground up around both exposure of data and storytelling of value creation. We unfortunately began as the magic unicorn that provided solutions to what were traditionally unsolvable problems. Once we become better at being our own advocates for the value we create and exposure into how we operate, we will  better align our corporate value to  that of Business Intelligence in the eyes of stakeholders. As a department, this is a goal of ours and our immediate plan is several-fold: increase the cadence of deliverables to key stakeholders, better visibility of our work, exposure of our throughput and output data in a digestible manner (e.g. Tableau), and value storytelling. I believe that looking to what Business Intelligence does well is a great first step that can be taken before even needing to merge tooling.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header font-weight-bold bg-info docutils">
+<p class="card-text">Talent shortage remains rampant. For many organizations these days, it’s hard to attract quality machine learning talent.</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">It is my job to seek out this talent and I think we are well on our way to building the team that will continue to keep Firstleaf in the position it is in at the forefront of the industry and how we use data science. I believe our innovative work, and in an unexpected industry, is what we can leverage to continue to attract high caliber talent.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header font-weight-bold bg-info docutils">
+<p class="card-text">Increasing consolidation around end-to-end platforms. The big 3 cloud providers (AWS, GCP, Azure) and other specialized players (DataRobot, Databricks, Dataiku) are all aggressively trying to own practitioner’s end-to-end ML workflows.</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">I do not intend to go into my thoughts on end-to-end solutions and the state of the market. I merely wanted to use this opportunity to remind everyone that we are an AWS ‘bought-in’ company and as we think about our end-to-end solutions, keep that in mind. Our new MLOps and Data Engineer will be our guide to better utilizing these solutions through AWS to address much of what I have discussed to this point.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header font-weight-bold bg-info docutils">
+<p class="card-text">Cultural adoption of machine learning thinking. As we continue to get more advanced tooling, organizations will adopt a machine learning mindset around their products and teams. In many ways, this also echoes the cultural shift that happened as DevOps principles were adopted. A few things we can expect to see here are more holistic systems thinking (break the silos), augmenting feedback loops in products, and instilling a mentality of continual experimentation and learning.</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">I do not seek to prophelitize our department as we are a company-level team culture guided by a set of well thought out core values. However, I do think this is a point to step back and take a look at what we have done as a department in regards to cultural adoption of machine learning. I think I only need to put it in the following context: we are a wine company that has been recognized as a top ten company utilizing data science in innovative ways. I cannot think of a neater example of adoption of machine learning and data science in an industry far from the typical sphere of technological innovation.</p>
+<p class="card-text">There is much exciting potential here and I look forward to what we will be able to build at Firstleaf as our department grows and how we can continue to contribute value both to our company and the field as a whole.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="../python_generators_and_comprehension/">
+       Python Generators and Comprehension
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2023, Matthew Martz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
