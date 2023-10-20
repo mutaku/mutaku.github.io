@@ -9,7 +9,11 @@ I spent much of my career researching novel cancer therapeutics through live cel
 You can now find me developing and implementing machine learning platforms and algorithms for everything from
 optimization problems to personalized medicine and medicinal AI. In recent years I have researched and built
 novel recommenders, 24/7 production machine learning solutions, and received patents for personalization solutions
-in the consumer sales space and chemical profile recommenders. Find more about me here: :ref:`about`
+in the consumer sales space and chemical profile recommenders.
+
+Most recently, I have been working in the Biotechnology space where I have developed the strategy and vision for Data Science, lead the team of Data Scientists, brought in-house innovative technologies and approaches to solve large scale research and product develop problems, developed novel algorithms in the predictive modeling and Bioinformatics spaces, driven biological research from Data Science, designed and implemented novel algorithms to detect differential modes of action in both natural products and whole microbe systems, and engineered a proprietary online learning platform to serve as an artificial intelligence decision guidance system for our extensive microbial collection and proprietary product discovery platform (GENESIS).
+
+Find more about me here: :ref:`about`
 
 .. panels::
     :column: col-lg-12 p-0
@@ -17,10 +21,21 @@ in the consumer sales space and chemical profile recommenders. Find more about m
 
     Currently
     ^^^^^^^^^^^^^^
-    Data Science Technical Lead at AgBiome
+    Head of Data Science and Technical Lead at AgBiome
 
-    [more to come]
+    Led a growing team of Data Scientists working to drive biological research and accelerate product development.
 
+    Developed and drove 4 year strategy and vision for Data Science, Data Engineering, Bioinformatics, and Data Product for entire organization.
+
+    Served as Data Science liaison across the company, communicating strategy, accomplishments, initiatives, and best practices. Developed the long-term Data Science strategy and vision, hiring plan, technological innovation pipeline, and overall project management for the department.
+
+    Developed a proprietary predictive artificial intelligence decision guidance system to serve as a core to our proprietary natural and whole microbe product discovery platform.
+
+    Led Data Science contribution to external manuscripts and internal white papers for both research, Data Science, and SOPs.
+
+    Sat on a team of technical leaders that drove research initiatives across the company and served as a hive mind to solve challenges across domains. Identified and addressed gaps in research and Data Science.
+
+    Developed a novel algorithm to use interpretable machine learning model ensembles to traverse genomic annotations and drive mode of action discovery from small datasets. Further, developed a predictive modeling platform to accelerate product discovery in indication screening. Worked on developing, and began implementation of, a cross-indication prediction platform to enable multi-target identification.
 
 .. panels::
     :column: col-lg-12 p-0
@@ -49,7 +64,7 @@ in the consumer sales space and chemical profile recommenders. Find more about m
     Predictive Modeling | Medicinal AI | Machine Learning | Algorithm Development | Technical Writing |
     Leadership | Mentorship | Team Building | Cross-departmental Collaboration | Data Science | Artificial Intelligence |
     Python/Software Engineering | Cell Biology | Biophysics | Microscopy | Cancer Therapeutics | E-commerce |
-    Manuscript and Grant Preparation | Patent Development
+    Manuscript and Grant Preparation | Patent Development | Bioinformatics | Microbiology | Crop Protection | AgTech | Biotechnology | Strategy and Vision Building | Resource Allocation
 
 .. panels::
     :column: col-lg-12 p-0
@@ -57,13 +72,15 @@ in the consumer sales space and chemical profile recommenders. Find more about m
 
     Experience
     ^^^^^^^^^^^^^^
-    - Data Science Technical Lead at AgBiome
+    - Head of Data Science and Technical Lead at AgBiome
     - Principal, Research and Machine Learning and Head of Data Science at Penrose Hill/Firstleaf
     - BS in Biochemistry and Molecular Biology, The Pennsylvania State University
     - PhD in Biochemistry and Molecular Biology, Thomas Jefferson University
     - Research Postdoctoral Fellow, Lineberger Cancer Center, University of North Carolina at Chapel Hill
-    - 20 years of Software Engineering and Data Science experience
-    - 16 years of rigorous scientific training in academic programs
+    - 21 years of Software Engineering and Data Science experience
+    - 17 years of rigorous scientific training in academic programs
+    - 8+ years of Data Science and Machine Learning leadership
+    - Industry proven leader in Data Science and Machine Learning
 
 
 Mutaku is a collection of writings across the spectrum of biomedical research, software engineering (Python),
