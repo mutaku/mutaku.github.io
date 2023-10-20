@@ -7,12 +7,7 @@ Writings and Perambulations
 ============================
 
 
-My background is in Quantitative Cell Biology and I have a PhD in Biochemistry and Molecular Biology.
-I spent much of my career researching novel cancer therapeutics through live cell imaging and machine learning.
-You can now find me developing and implementing machine learning platforms and algorithms for everything from
-optimization problems to personalized medicine and medicinal AI. In recent years I have researched and built
-novel recommenders, 24/7 production machine learning solutions, and received patents for personalization solutions
-in the consumer sales space and chemical profile recommenders.
+My background is in Quantitative Cell Biology and I have a PhD in Biochemistry and Molecular Biology. I spent much of my career researching novel cancer therapeutics through live cell imaging and machine learning. You can now find me developing and implementing machine learning platforms and algorithms for everything from optimization problems to personalized medicine and medicinal AI. In recent years I have researched and built novel recommenders, 24/7 production machine learning solutions, and received patents for personalization solutions in the consumer sales space and chemical profile recommenders. Most recently, I have been working in the Biotechnology space where I have developed the strategy and vision for Data Science, lead the team of Data Scientists, brought in-house innovative technologies and approaches to solve large scale research and product develop problems, developed novel algorithms in the predictive modeling and Bioinformatics spaces, driven biological research from Data Science, designed and implemented novel algorithms to detect differential modes of action in both natural products and whole microbe systems, and engineered a proprietary online learning platform to serve as an artificial intelligence decision guidance system for our extensive microbial collection and proprietary product discovery platform.
 
 .. panels::
     :column: col-lg-12 p-0
@@ -20,9 +15,21 @@ in the consumer sales space and chemical profile recommenders.
 
     Currently
     ^^^^^^^^^^^^^^
-    Data Science Technical Lead at AgBiome
+    Head of Data Science and Technical Lead at AgBiome
 
-    [more to come]
+    - Led a team of Data Scientists working to drive biological research and accelerate product development
+- Led a team of Data Scientists working to drive biological research and accelerate product development
+- Developed a propriety predictive artificial intelligence decision guidance system to serve as a core to our proprietary natural and whole microbe product discovery platform
+- Worked on developing, and began implementation of, a cross-indication prediction platform to enable multi-target identification
+- Served as Data Science liaison across the company, communicate strategy, accomplishments, initiatives, and best practices
+- Develop the long-term Data Science strategy and vision, hiring plan, technological innovation pipeline, and overall project management for the team
+- Contributed to external manuscripts and internal white papers for both research and Data Science
+- Sat on a team of technical leaders that drove research initiatives across the company and served as a hive mind to solve challenges across domains
+- Developed a novel algorithm to use interpretable machine learning model ensembles to traverse genomic annotations and drive mode of action discovery from small datasets
+- Developed predictive modeling platform to accelerate product discovery in indication screening
+- and more! Please ask!
+
+Most recently, I have been working in the Biotechnology space where I have developed the long-term strategy and vision for Data Science, led a growing team of Data Scientists to develop novel algorithms in the predictive modeling and Bioinformatics spaces, and accelerated biological discovery. Moreover, I designed and implemented novel algorithms to detect differential modes of action in both natural products and whole microbe systems, and engineered a proprietary online learning platform to serve as an artificial intelligence decision guidance system for our extensive microbial collection and proprietary product discovery platform (Genesis).
 
 .. panels::
     :column: col-lg-12 p-0
@@ -51,7 +58,7 @@ in the consumer sales space and chemical profile recommenders.
     Predictive Modeling | Medicinal AI | Machine Learning | Algorithm Development | Technical Writing |
     Leadership | Mentorship | Team Building | Cross-departmental Collaboration | Data Science | Artificial Intelligence |
     Python/Software Engineering | Cell Biology | Biophysics | Microscopy | Cancer Therapeutics | E-commerce |
-    Manuscript and Grant Preparation | Patent Development
+    Manuscript and Grant Preparation | Patent Development | Bioinformatics | Microbiology | Crop Protection | AgTech | Biotechnology | Strategy and Vision Building | Resource Allocation
 
 .. panels::
     :column: col-lg-12 p-0
@@ -59,13 +66,15 @@ in the consumer sales space and chemical profile recommenders.
 
     Experience
     ^^^^^^^^^^^^^^
-    - Data Science Technical Lead at AgBiome
+    - Head of Data Science and Technical Lead at AgBiome
     - Principal, Research and Machine Learning and Head of Data Science at Penrose Hill/Firstleaf
     - BS in Biochemistry and Molecular Biology, The Pennsylvania State University
     - PhD in Biochemistry and Molecular Biology, Thomas Jefferson University
     - Research Postdoctoral Fellow, Lineberger Cancer Center, University of North Carolina at Chapel Hill
-    - 20 years of Software Engineering and Data Science experience
-    - 16 years of rigorous scientific training in academic programs
+    - 21 years of Software Engineering and Data Science experience
+    - 17 years of rigorous scientific training in academic programs
+    - 8+ years of Data Science and Machine Learning leadership
+    - Industry proven leader in Data Science and Machine Learning
 
 .. panels::
     :column: col-lg-12 p-0
@@ -85,6 +94,7 @@ in the consumer sales space and chemical profile recommenders.
 
     Selected Press
     ^^^^^^^^^^^^^^
+    - https://agbiome.com/genesis-platform/
     - https://www.fastcompany.com/90724383/most-innovative-companies-data-science-2022
     - https://www.modernretail.co/startups/inside-firstleafs-data-driven-approach-to-wine-subscriptions/
 
@@ -97,7 +107,7 @@ in the consumer sales space and chemical profile recommenders.
     ^^^^^^^^^^^^^^
     Python | Amazon Web Services (AWS) | Pandas | Numpy | Scikit-learn | Matplotlib | Scipy | SQL | PyTorch | Sympy |
     Flask | Gunicorn | FastAPI | BASH Shell Scripting | Linux | BSD | Git Github | Jupyter | HTML | CSS | Javascript |
-    Microsoft Office | Google Suite | Matlab
+    Microsoft Office | Google Suite | Matlab | Full Stack Dev | APIs | MLOps | DevOPs | NLP (OpenAI, Hugging Face) | Agile
 
 
 .. panels::
@@ -106,6 +116,7 @@ in the consumer sales space and chemical profile recommenders.
 
     Selected Publications
     ^^^^^^^^^^^^^^
+    - Yong Jun Goh*, Brody J. DeYoung, Nicholas C. Dove, Brant R. Johnson, Matthew K. Martz, Patrick Videau. AgBiome: Harnessing the Microbial World for Human Benefit. Trends in Biotechnology. In press.
     - Ramona Schrage, ..., Matthew Martz, ..., Evi Kostenis. The experimental power of FR900359 to study Gq-regulated biological processes. Nature Communications 6, Article number: 10156. 14 December 2015.
     - Michelle C Helms, Elda Grabocka, Matthew K Martz, Christopher C Fischer, Nobuchika Suzuki, Philip B Wedegaertner. Mitotic-dependent phosphorylation of leukemia-associated RhoGEF (LARG) by Cdk1. Cellular Signalling, Volume 28, Issue 1, January 2016, Pages 43-52.
     - Martz MK, Grabocka E, Beeharry N, Yen TJ, Wedegaertner PW. Leukemia-Associated RhoGEF (LARG) is a Novel RhoGEF in Cytokinesis and Required for the Proper Completion of Abscission. Mol. Biol. Cell September 15, 2013 vol. 24 no. 18 2785-2794.
