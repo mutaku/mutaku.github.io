@@ -19,17 +19,20 @@ Most recently, I have been working in the Biotechnology space where I have devel
     ^^^^^^^^^^^^^^
     Head of Data Science and Technical Lead at AgBiome
 
-    - Led a team of Data Scientists working to drive biological research and accelerate product development
-    - Led a team of Data Scientists working to drive biological research and accelerate product development
-    - Developed a propriety predictive artificial intelligence decision guidance system to serve as a core to our proprietary natural and whole microbe product discovery platform
-    - Worked on developing, and began implementation of, a cross-indication prediction platform to enable multi-target identification
-    - Served as Data Science liaison across the company, communicate strategy, accomplishments, initiatives, and best practices
-    - Develop the long-term Data Science strategy and vision, hiring plan, technological innovation pipeline, and overall project management for the team
-    - Contributed to external manuscripts and internal white papers for both research and Data Science
-    - Sat on a team of technical leaders that drove research initiatives across the company and served as a hive mind to solve challenges across domains
-    - Developed a novel algorithm to use interpretable machine learning model ensembles to traverse genomic annotations and drive mode of action discovery from small datasets
-    - Developed predictive modeling platform to accelerate product discovery in indication screening
-    - and more! Please ask!
+    Led a growing team of Data Scientists working to drive biological research and accelerate product development.
+
+    Developed and drove 4 year strategy and vision for Data Science, Data Engineering, Bioinformatics, and Data Product for entire organization.
+
+    Served as Data Science liaison across the company, communicating strategy, accomplishments, initiatives, and best practices. Developed the long-term Data Science strategy and vision, hiring plan, technological innovation pipeline, and overall project management for the department.
+
+    Developed a proprietary predictive artificial intelligence decision guidance system to serve as a core to our proprietary natural and whole microbe product discovery platform.
+
+    Led Data Science contribution to external manuscripts and internal white papers for both research, Data Science, and SOPs.
+
+    Sat on a team of technical leaders that drove research initiatives across the company and served as a hive mind to solve challenges across domains. Identified and addressed gaps in research and Data Science.
+
+    Developed a novel algorithm to use interpretable machine learning model ensembles to traverse genomic annotations and drive mode of action discovery from small datasets. Further, developed a predictive modeling platform to accelerate product discovery in indication screening. Worked on developing, and began implementation of, a cross-indication prediction platform to enable multi-target identification.
+
 
 .. panels::
     :column: col-lg-12 p-0
