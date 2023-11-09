@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://mutaku.github.io</id>
   <title>Mutaku</title>
-  <updated>2023-10-20T15:49:00.850318+00:00</updated>
+  <updated>2023-11-09T14:23:39.517112+00:00</updated>
   <link href="https://mutaku.github.io"/>
   <link href="https://mutaku.github.io/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
@@ -63,5 +63,25 @@ strong points in the article to articulate my thoughts on where
 we did things well and directions I would like to see us take.</summary>
     <category term="atag" label="atag"/>
     <published>2023-04-17T00:00:00-04:00</published>
+  </entry>
+  <entry>
+    <id>https://mutaku.github.io/summer_of_AI/</id>
+    <title>Summer of AI - An AgBiome Perspective</title>
+    <updated>2023-11-09T00:00:00-05:00</updated>
+    <author>
+      <name>Matthew Martz</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;This is an interview that served as the starting point for a podcast wherein we discussed
+Artificial Intelligence with an AgBiome perspective. The podcast went beyond what is below and
+looked at the broader societal perspective; I will link the podcast shortly.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://mutaku.github.io/summer_of_AI/" rel="alternate"/>
+    <summary>This is an interview that served as the starting point for a podcast wherein we discussed
+Artificial Intelligence with an AgBiome perspective. The podcast went beyond what is below and
+looked at the broader societal perspective; I will link the podcast shortly.</summary>
+    <category term="atag" label="atag"/>
+    <published>2023-11-09T00:00:00-05:00</published>
   </entry>
 </feed>

@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer of AI - An AgBiome Perspective &#8212; Mutaku  documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="../about/" />
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" /> 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Mutaku"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="../">
+    
+      <img src="../_static/plot_header.png" class="logo" alt="logo" />
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../about/">About Matthew Martz</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/mutaku/" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/backpropagating" target="_blank" rel="noopener">
+              <span><i class="fab fa-twitter-square"></i></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar"><div class="logo"><img src="../_static/profile.jpg"></div>
+<div class="snippet">
+    <div class="name">Matthew Martz, PhD</div>
+    <div class="title">Head of Data Science and Technical Lead at AgBiome</div>
+    <div class="specialties">Machine Learning | Predictive Modeling | Data Science | Biomedical Research | Strategy</div>
+</div>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <div class="section" id="summer-of-ai-an-agbiome-perspective">
+<h1>Summer of AI - An AgBiome Perspective<a class="headerlink" href="#summer-of-ai-an-agbiome-perspective" title="Permalink to this headline">¶</a></h1>
+<p>This is an interview that served as the starting point for a podcast wherein we discussed
+Artificial Intelligence with an AgBiome perspective. The podcast went beyond what is below and
+looked at the broader societal perspective; I will link the podcast shortly.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Name, Title, and what do you do at AgBiome?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Matthew Martz - Data Science Technical Lead - Bring innovation to Data Science and keep us at the cutting edge of our field through tools, methods, best practices, and in-house development with work on our digital twin platform - an artificial intelligence guidance system.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">What did you do before coming to AgBiome?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Spent most of my career in academia studying the mechanisms of cancer and development of cancer therapeutics using high throughput imaging technologies and the creation of machine learning algorithms for real time analysis. I then spent a while in industry building recommender machine learning algorithms, data platforms, and predictive analytics for the chemical composition of products. I’ve also been awarded several patents in the recommendation algorithm space for novel applications of machine learning to consumer products.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">What attracted you to AgBiome?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">AgBiome was a way for me to transition back to science and biotechnology, a “for good” mission, and a truly unique culture where ideas and people can thrive. I truly love the nexus of technology and biological research and AgBiome really lives and breathes this joining of minds and methods. I also thought it was a place where I could bring my unique blend of experiences in both academia and industry and provide value.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">And what’s your favorite part about working here?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">All of the things that attracted me to AgBiome rang true from day one. The people, the work, the innovation, the hive mind mentality, you can feel the importance of our mission and the excitement is palpable. There is also a true feeling of being respected for your expertise and opinion in a way that contributions are appreciated.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">What is AI?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">I like to define artificial intelligence in its core essence as a set of heuristics that guide a machine to learn and make decisions on data. We can go into a debate on what is AI vs machine learning; I would argue that machine learning really is a subset field of AI. But it’s really the ability of a machine to learn from a set of rules, determine decisions, and in some circumstances, act on those decisions. One example I really like to highlight to folks is Conway’s Game of Life. You have a very rudimentary set of heuristics or rules of play, a board composed of a mesh grid, and a starting selection of randomized (or pseudo-randomized) start points that are “active” or “alive”. The game then runs on its own based upon a turn system where all rules are evaluated and a live vs dead cell is determined based on these rules. This will run until no moves are left to make – you have hit a state of homeostasis. What is so fascinating about this is that as scenarios play out, you will often see the creation of shapes that will emit objects that can collide and take out other, larger objects, or create additional satellites or projectiles. There is an entire field of mathematic study around the possible shapes and scenarios based on particular starting states. The game is a great programming exercise, an example of rule-based decision making by a machine, and often used to explain how complex simulation forms can be derived from simple starting states. Today artificial intelligence can be seen everywhere from the lab identifying the impact of cancer therapeutic drugs on dividing cells in real time, the clinic identifying tumor cells on images that are essentially obscured from the naked eye, to putting ads and products in front of the right people. AI and machine learning are truly everywhere and it’s quite an exciting time for those of us in the field.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Why are we getting into this space?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">As I mentioned, AI and machine learning are everywhere. They allow us to see what we can’t see, identify patterns that are too large for us to piece together, automate beyond our physical capabilities, and even develop complex rulesets from a minimal set of human-derived heuristics. These all provide solutions to challenges we have here at AgBiome as we grow our platform and scientific endeavors. In building our digital twin, we are creating an entire pipeline of predictive algorithms that together form an artificial intelligence decision engine. This allows us to harness the power of our microbial collection at scale and guide scientific discovery at an unrivaled pace.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">What makes it interesting to you?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">To see the power of our collection and the amount of data we have fed into a cutting edge AI engine to guide scientific discovery and product development is extremely exciting. I think we are sitting at the forefront of discovery with our technology and we have so much in the pipeline that we are placed such as to take our capabilities to unprecedented levels of advancement.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">How do you think AI could help agriculture? Crop yield, disease management, water conservation, the environment?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">At AgBiome we strive to provide natural products to better the world around us. This ranges from crop protection, human and animal health, industrial practices, and personal care. At the core of all of these is our microbial collection and platform. Through unmatched talent and innovation, we use our collection and platform to identify microbial products and natural compounds to address these specific crises we face as humans in an ever challenging environment. Our AI decision platform, a digital twin, better helps us identify these products and compounds at an unprecedented scale and pace. Without our digital twin platform and its machine learning algorithms, we would not be able to scale with the ever evolving genomic information annotations, data pipelines, microbial collection size, and support of scientific inquiry. The digital twin also builds in components to allow for rapid hypothesis testing, mode of action discovery, and screening decisions like never before. All this to say, AgBiome seeks to solve many of these agriculture problems and our digital twin platform is one major way we are doing so. In doing so, we have to solve the issue of the massive quantity of genomic data. Aside from the implementation of large language models, we are working to harness the power of generative AI technologies to perform powerful in-silico experimentation and take our predictive capabilities to the next level.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">How do you think it could help your job? Are you worried it would take it?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">This is a very common concern we hear about as new AI tools come online or advanced machine learning algorithms are implemented for optimization of workflow problems. I think what is often forgotten is that we need people to build these systems, monitor their capabilities and performance, and determine the best application over time. That’s just from an engineering perspective. I like to take a step back and see the broader landscape of artificial intelligence. It’s been around for longer than my lifetime and we are only now having this conversation and yet to see any real significant data to suggest this to be a legitimate problem. I see artificial intelligence more of a guidance system than some autonomous entity. When we talk about medical imaging AI, we call it things like “AI-assisted diagnoses” because the physician is still the one making decisions based in part on the data from the machine. In fact, I anticipate that we may see more jobs created outside of engineering as we enable scale of operations across fields, increasing guidance generated, and thus the need for a human in the loop to make a decision. I see AI as creating more opportunity than subtracting. I’ve been in the field a long while and I’m still around, so I see that as one affirmation of my beliefs, as biased as it may be.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">Are there any surprising discoveries you can tell us about? Or maybe an “ah-ha” moment you’ve had while working?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">While in academia I developed a set of machine learning algorithms that were able to analyze high throughput live cell imaging to link dynamics of the expression of a specific set of genes as bet hedging against environmental stresses to ensure the greater survival of the population. We were using these studies as a proof of concept for ideas around the variability of therapeutic responses within an individual patient in the clinical setting. There were other discoveries I’ve made with machine learning applications throughout my academic career, but this was probably the most surprising. At other jobs I’ve learned a lot of surprising things in human behavior and consumerism from machine learning systems I built. There were definitely a lot of hypotheses voided with experimentation using the AI platform and it was always a really interesting and shocking experience. Here at AgBiome, we’ve been developing some advanced predictive modeling techniques to describe modes of action for specific indication products, as well as identify novel and surprising microbes within our collection we would have otherwise missed. We’ve recently developed a model for a specific pest where we’ve been able to show both known and novel proteins likely involved in the efficacy of our microbes against this pest. Seeing these data come through was amazing. I’ve had a lot of “ah-ha” moments here at AgBiome in only 4 months so I think I’m in for quite the journey as I really settle in, roll up our sleeves, and build towards our bigger vision for our digital twin. I continue to be astonished by the power of machine learning and AI systems. Combining my expertise in biological systems with AI has always been a real dream of mine since beginning undergraduate studies. I feel really honored to be able to do so, and at such an amazing company here at AgBiome.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-0 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header text-secondary docutils">
+<p class="card-text">What are you excited about for the future?</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">I think as we add to the guidance system AI of our digital twin we will continue to see the rapid scaling of our capabilities at AgBiome to not only identify novel products, but also support our production of rigorous scientific research. We have a lot in the queue just for the next several years alone that will really bring true innovation and novel approaches to how we do just about everything at AgBiome.</p>
+<p class="card-text">Challenges?</p>
+<p class="card-text">Scaling algorithms, infrastructure, and compute to match the growth of the collection and data is a constant. We plan around it, but it’s always a puzzle that needs to be solved. Fortunately, we get better as we go, and new tools are always being developed to help in this arena. It’s also no small feat to build these complex systems with multiple layers of machine learning algorithms and interconnectedness. We have many new tools and techniques being developed in house, and we are gearing up for plenty more to come. It’s all a very fun challenge.</p>
+<p class="card-text">Product Development?</p>
+<p class="card-text">We are just starting to move into the development space and see how we can bring the predictive power of our digital twin and our data science expertise to this part of the business. There is great opportunity here to guide the decision making process of lead progression with an added focus on cross-indication learnings. I won’t go into much detail here other than it’s one of our next big pushes.</p>
+<p class="card-text">Commercial?</p>
+<p class="card-text">I’ve spent a fair amount of time during my career leading data science and machine learning initiatives in the commercial side of business. Whether that was direct to consumer sales, financial forecasting, market segmentation prediction, I’ve seen great power in these tools and skill sets to provide lift in this side of the business. There’s no difference at AgBiome and we have plans to grow our implementation of machine learning and guidance systems to commercial and create a holistic approach to Data Science at AgBiome. Product to market really is the entire chain of decisions that are made from bench to ad to sale. We plan to have AI systems in place to guide these decisions and accelerate the to market time at AgBiome through our cutting edge Data Science approach and capable team.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     Previous:
+    
+    <a href="../notes_on_mlops_one/">
+       Notes on MLOps - One
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+</div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    <p>
+          &copy; Copyright 2023, Matthew Martz.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -133,7 +133,7 @@ Machine Learning, and Data Science.
 
 Here is a list of most recent posts:
 
-.. postlist:: 5
+.. postlist:: 10
    :excerpts:
 
 
