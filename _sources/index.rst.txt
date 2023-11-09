@@ -6,8 +6,7 @@
 Writings and Perambulations
 ============================
 
-* New Post * Summer of AI - An AgBiome Perspective (interview) - :ref:`summer_of_AI`
-
+* New Post! Summer of AI - `An AgBiome Perspective (interview) <https://mutaku.io/summer_of_AI/>`_
 
 My background is in Quantitative Cell Biology and I have a PhD in Biochemistry and Molecular Biology. I spent much of my career researching novel cancer therapeutics through live cell imaging and machine learning. You can now find me developing and implementing machine learning platforms and algorithms for everything from optimization problems to personalized medicine and medicinal AI. In recent years I have researched and built novel recommenders, 24/7 production machine learning solutions, and received patents for personalization solutions in the consumer sales space and chemical profile recommenders.
 
