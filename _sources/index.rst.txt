@@ -41,17 +41,13 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     Previously
     ^^^^^^^^^^^^^^
-    Principal, Research and Machine Learning and Head of Data Science at Penrose Hill/Firstleaf
+    Created and maintained the core, patented algorithms behind the Firstleaf wine club.
 
-    Created and maintain the core algorithms behind the Firstleaf wine club.
+    I built and led a local and distributed team of Data Scientists and Machine Learning engineers (The Research and Machine Learning Team) developing machine learning and AI platforms to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle. This included the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques including computer vision, generative AI, and NLP, along with novel algorithm development.
 
-    Leading a team of Data Scientists and Machine Learning engineers developing machine learning and AI platforms
-    to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle.
-    This includes the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques, along with novel algorithm development.
+    I was further responsible for the continual growth of the team, maintaining stakeholder communication, driving Data Science strategy across the organization, and directly working with C-level executives to maintain a vision and communicate strategy and execution plans aligned with business executives.
 
-    The Research and Machine Learning team is responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf.
-    We utilize cutting edge approaches to both empower internal company function as well as consumer facing products.
-    The team is also responsible for the design and implementation of the algorithms behind our patented personalization technologies that drive the Firstleaf experience.
+    The Research and Machine Learning team was responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf. We utilized cutting edge approaches to both empower internal company function as well as customer facing products. The team was also responsible for design and implementation of the patented (developed technologies, co-write and secured patents) algorithms that drove the Firstleaf experience. The team was responsible for initiating, driving, and executing on data science strategies across Marketing, Finance, Business Intelligence, and Wine Making functions -- the Research and Machine Learning team was a full spectrum B2B and B2C solution within Firstleaf.
 
 .. panels::
     :column: col-lg-12 p-0
