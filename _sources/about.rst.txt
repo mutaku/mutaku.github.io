@@ -23,7 +23,7 @@ Find more about me here: :ref:`about`
 
     Currently
     ^^^^^^^^^^^^^^
-    Head of Data Science/ML/AI and Technical Lead / Strategic Vision
+    HEAD OF DATA SCIENCE/ML/AI AND TECHNICAL LEAD / STRATEGIC VISION
 
     Led a growing team of Data Scientists working to drive biological research and accelerate product development.
 
@@ -37,7 +37,7 @@ Find more about me here: :ref:`about`
 
     Sat on a team of technical leaders that drove research initiatives across the company and served as a hive mind to solve challenges across domains. Identified and addressed gaps in research and Data Science.
 
-    Developed a novel algorithm to use interpretable machine learning model ensembles to traverse genomic annotations and drive mode of action discovery from small datasets. Further, developed a predictive modeling platform to accelerate product discovery in indication screening. Worked on developing, and began implementation of, a cross-indication prediction platform to enable multi-target identification.
+    Developed a novel algorithm to use interpretable machine learning model ensembles to traverse genomic annotations and drive mode of action discovery from small datasets. Designed and developed a predictive modeling platform to accelerate product discovery in indication screening. Designed and developed a cross-indication prediction platform to enable multi-target identification.
 
 .. panels::
     :column: col-lg-12 p-0
@@ -45,6 +45,8 @@ Find more about me here: :ref:`about`
 
     Previously
     ^^^^^^^^^^^^^^
+    HEAD OF DATA SCIENCE AND PRINCIPAL, RESEARCH AND MACHINE LEARNING
+
     Created and maintained the core, patented algorithms behind the Firstleaf wine club.
 
     I built and led a local and distributed team of Data Scientists and Machine Learning engineers (The Research and Machine Learning Team) developing machine learning and AI platforms to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle. This included the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques including computer vision, generative AI, and NLP, along with novel algorithm development.
