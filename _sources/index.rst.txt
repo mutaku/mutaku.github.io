@@ -20,15 +20,21 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     Currently
     ^^^^^^^^^^^^^^
-    HEAD OF DATA SCIENCE/ML/AI AND TECHNICAL LEAD / STRATEGIC VISION
+    Served as director of Data Science/Machine Learning/Artificial Intelligence strategy and innovation initiatives.
 
     Led a growing team of Data Scientists working to drive biological research and accelerate product development.
 
+    Team size ranged from 7 to over 20, across disciplines of Data and Product.
+
     Developed and drove 4 year strategy and vision for Data Science, Data Engineering, Bioinformatics, and Data Product for entire organization.
+
+    Advocate and conduct learning around Data Science/ML/AI products and platforms both to internal teams, executive team and board members, and external partners and collaborators (customers).
+
+    Directly contributed to high impact publications and invited for speaking engagements.
 
     Served as Data Science liaison across the company, communicating strategy, accomplishments, initiatives, and best practices. Developed the long-term Data Science strategy and vision, hiring plan, technological innovation pipeline, and overall project management for the department.
 
-    Developed a proprietary predictive artificial intelligence decision guidance system to serve as a core to our proprietary natural and whole microbe product discovery platform.
+    Developed a proprietary predictive artificial intelligence decision guidance system to serve as a core to our proprietary natural and whole microbe product discovery platform - GENESIS, a digital twin technology. This digital twin technology has already generated a large corpus of actionable research, product leads, and accelerated screening paradigms to put the best leads in the field. Excitingly, my team was able to harness GENESIS to generate cross-indication predictive models to drive and accelerate lead identification across the research platform.
 
     Led Data Science contribution to external manuscripts and internal white papers for both research, Data Science, and SOPs.
 
@@ -48,6 +54,8 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     I built and led a local and distributed team of Data Scientists and Machine Learning engineers (The Research and Machine Learning Team) developing machine learning and AI platforms to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle. This included the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques including computer vision, generative AI, and NLP, along with novel algorithm development.
 
+    Team size ranged from 5 to 10, across disciplines of Data and Product.
+
     I was further responsible for the continual growth of the team, maintaining stakeholder communication, driving Data Science strategy across the organization, and directly working with C-level executives to maintain a vision and communicate strategy and execution plans aligned with business executives.
 
     The Research and Machine Learning team was responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf. We utilized cutting edge approaches to both empower internal company function as well as customer facing products. The team was also responsible for design and implementation of the patented (developed technologies, co-write and secured patents) algorithms that drove the Firstleaf experience. The team was responsible for initiating, driving, and executing on data science strategies across Marketing, Finance, Business Intelligence, and Wine Making functions -- the Research and Machine Learning team was a full spectrum B2B and B2C solution within Firstleaf.
@@ -58,10 +66,7 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     Expertise
     ^^^^^^^^^^^^^^
-    Predictive Modeling | Medicinal AI | Machine Learning | Algorithm Development | Technical Writing |
-    Leadership | Mentorship | Team Building | Cross-departmental Collaboration | Data Science | Artificial Intelligence |
-    Python/Software Engineering | Cell Biology | Biophysics | Microscopy | Cancer Therapeutics | E-commerce |
-    Manuscript and Grant Preparation | Patent Development | Bioinformatics | Microbiology | Crop Protection | AgTech | Biotechnology | Strategy and Vision Building | Resource Allocation
+    Predictive Modeling | Medicinal AI | Machine Learning | Strategy and Vision Building | Resource Allocation Logistics | Algorithm Development | Technical Writing | Leadership | Mentorship | Team Building | Cross-departmental Collaboration | Data Science | Artificial Intelligence | Python/Software Engineering | Cell Biology | Biophysics | Microscopy | Cancer Therapeutics | E-commerce | Manuscript and Grant Preparation | Patent Development | Bioinformatics | Microbiology | Crop Protection | AgTech | Digital Twinning | Biotechnology | Personalized Medicine
 
 .. panels::
     :column: col-lg-12 p-0
@@ -74,10 +79,11 @@ Most recently, I have been working in the Biotechnology space where I have devel
     - BS in Biochemistry and Molecular Biology, The Pennsylvania State University
     - PhD in Biochemistry and Molecular Biology, Thomas Jefferson University
     - Research Postdoctoral Fellow, Lineberger Cancer Center, University of North Carolina at Chapel Hill
+    - 20+ Member teams across disciplines in data and product
     - 21 years of Software Engineering and Data Science experience
     - 17 years of rigorous scientific training in academic programs
     - 8+ years of Data Science and Machine Learning leadership
-    - Industry proven leader in Data Science and Machine Learning
+    - Industry proven leader in Data Science and Machine Learning Innovation
 
 .. panels::
     :column: col-lg-12 p-0
@@ -119,6 +125,7 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     Selected Publications
     ^^^^^^^^^^^^^^
+    - Nicholas C. Dove, Laura K. Potter, Matthew K. Martz*, Douglas Lawton*. *These authors contributed equally to the work. Ground Truthed Models to Inform Tangible Guids of Global Microbial Diversity Using Deep Neural Network Computer Vision. In Preparation.
     - Yong Jun Goh*, Brody J. DeYoung, Nicholas C. Dove, Brant R. Johnson, Matthew K. Martz, Patrick Videau. AgBiome: Harnessing the Microbial World for Human Benefit. Trends in Biotechnology. In press.
     - Ramona Schrage, ..., Matthew Martz, ..., Evi Kostenis. The experimental power of FR900359 to study Gq-regulated biological processes. Nature Communications 6, Article number: 10156. 14 December 2015.
     - Michelle C Helms, Elda Grabocka, Matthew K Martz, Christopher C Fischer, Nobuchika Suzuki, Philip B Wedegaertner. Mitotic-dependent phosphorylation of leukemia-associated RhoGEF (LARG) by Cdk1. Cellular Signalling, Volume 28, Issue 1, January 2016, Pages 43-52.
