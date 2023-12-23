@@ -48,7 +48,7 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     Previously
     ^^^^^^^^^^^^^^
-    HEAD OF DATA SCIENCE AND PRINCIPAL, RESEARCH AND MACHINE LEARNING
+    HEAD OF DATA SCIENCE/ML/AI AND PRINCIPAL RESEARCH AND MACHINE LEARNING
 
     Created and maintained the core, patented algorithms behind the Firstleaf wine club.
 
