@@ -25,13 +25,21 @@ Find more about me here: :ref:`about`
     ^^^^^^^^^^^^^^
     HEAD OF DATA SCIENCE/ML/AI AND TECHNICAL LEAD / STRATEGIC VISION
 
+    Served as director of Data Science/Machine Learning/Artificial Intelligence strategy and innovation initiatives.
+
     Led a growing team of Data Scientists working to drive biological research and accelerate product development.
+
+    Team size ranged from 7 to over 20, across disciplines of Data and Product.
 
     Developed and drove 4 year strategy and vision for Data Science, Data Engineering, Bioinformatics, and Data Product for entire organization.
 
+    Advocate and conduct learning around Data Science/ML/AI products and platforms both to internal teams, executive team and board members, and external partners and collaborators (customers).
+
+    Directly contributed to high impact publications and invited for speaking engagements.
+
     Served as Data Science liaison across the company, communicating strategy, accomplishments, initiatives, and best practices. Developed the long-term Data Science strategy and vision, hiring plan, technological innovation pipeline, and overall project management for the department.
 
-    Developed a proprietary predictive artificial intelligence decision guidance system to serve as a core to our proprietary natural and whole microbe product discovery platform.
+    Developed a proprietary predictive artificial intelligence decision guidance system to serve as a core to our proprietary natural and whole microbe product discovery platform - GENESIS, a digital twin technology. This digital twin technology has already generated a large corpus of actionable research, product leads, and accelerated screening paradigms to put the best leads in the field. Excitingly, my team was able to harness GENESIS to generate cross-indication predictive models to drive and accelerate lead identification across the research platform.
 
     Led Data Science contribution to external manuscripts and internal white papers for both research, Data Science, and SOPs.
 
@@ -45,11 +53,13 @@ Find more about me here: :ref:`about`
 
     Previously
     ^^^^^^^^^^^^^^
-    HEAD OF DATA SCIENCE AND PRINCIPAL, RESEARCH AND MACHINE LEARNING
+    HEAD OF DATA SCIENCE/ML/AI AND PRINCIPAL, RESEARCH AND MACHINE LEARNING
 
     Created and maintained the core, patented algorithms behind the Firstleaf wine club.
 
     I built and led a local and distributed team of Data Scientists and Machine Learning engineers (The Research and Machine Learning Team) developing machine learning and AI platforms to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle. This included the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques including computer vision, generative AI, and NLP, along with novel algorithm development.
+
+    Team size ranged from 5 to 10, across disciplines of Data and Product.
 
     I was further responsible for the continual growth of the team, maintaining stakeholder communication, driving Data Science strategy across the organization, and directly working with C-level executives to maintain a vision and communicate strategy and execution plans aligned with business executives.
 
