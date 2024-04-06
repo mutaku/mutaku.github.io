@@ -9,7 +9,7 @@ My expertise is in building and leading teams of Data Scientists, Machine Learni
 My background is in Quantitative Cell Biology and I have a PhD in Biochemistry and Molecular Biology.
 I spent much of my career researching novel cancer therapeutics through live cell imaging and machine learning.
 You can now find me developing and implementing machine learning platforms and algorithms for everything from
-optimization problems to personalized medicine and medicinal AI. In recent years I have researched and built
+optimization problems to precision medicine and medicinal AI. In recent years I have researched and built
 novel recommenders, 24/7 production machine learning solutions, and received patents for personalization solutions
 in the consumer sales space and chemical profile recommenders.
 
@@ -22,6 +22,16 @@ Find more about me here: :ref:`about`
     :header: text-secondary font-weight-bold
 
     Currently
+    ^^^^^^^^^^^^^^
+    TRAITS DIGITAL BIOLOGY LEAD
+
+    [Details to come]
+
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary font-weight-bold
+
+    Previously
     ^^^^^^^^^^^^^^
     DIRECTOR OF DATA SCIENCE/ML/AI AND TECHNICAL LEAD/STRATEGIC VISION
 
@@ -75,7 +85,7 @@ Find more about me here: :ref:`about`
     Predictive Modeling | Medicinal AI | Machine Learning | Algorithm Development | Technical Writing |
     Leadership | Mentorship | Team Building | Cross-departmental Collaboration | Data Science | Artificial Intelligence |
     Python/Software Engineering | Cell Biology | Biophysics | Microscopy | Cancer Therapeutics | E-commerce |
-    Manuscript and Grant Preparation | Patent Development | Bioinformatics | Microbiology | Crop Protection | AgTech | Biotechnology | Strategy and Vision Building | Resource Allocation
+    Manuscript and Grant Preparation | Patent Development | Bioinformatics | Microbiology | Crop Protection | AgTech | Biotechnology | Strategy and Vision Building | Resource Allocation | Multimodal Modeling
 
 .. panels::
     :column: col-lg-12 p-0
@@ -83,6 +93,7 @@ Find more about me here: :ref:`about`
 
     Experience
     ^^^^^^^^^^^^^^
+    - Digital Biology Lead
     - Head of Data Science/ML/AI and Technical Lead / Strategic Vision
     - Head of Data Science and Principal, Research and Machine Learning at Penrose Hill/Firstleaf
     - BS in Biochemistry and Molecular Biology, The Pennsylvania State University
