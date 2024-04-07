@@ -93,8 +93,8 @@ Find more about me here: :ref:`about`
 
     Experience
     ^^^^^^^^^^^^^^
-    - Digital Biology Lead
-    - Head of Data Science/ML/AI and Technical Lead / Strategic Vision
+    - Digital Biology Lead at Syngenta
+    - Head of Data Science/ML/AI and Technical Lead / Strategic Vision at AgBiome
     - Head of Data Science and Principal, Research and Machine Learning at Penrose Hill/Firstleaf
     - BS in Biochemistry and Molecular Biology, The Pennsylvania State University
     - PhD in Biochemistry and Molecular Biology, Thomas Jefferson University
