@@ -129,9 +129,13 @@ Find more about me here: :ref:`about`
     POSTDOCTORAL RESEARCH FELLOW (Biological Machine Learning and AI) - University of North Carolina, Lineberger Cancer Center
 
     American Heart Association funded research fellow in AI-driven precision medicine
+
     Identifying, modeling, and understanding noise in single cell signaling during stress responses focusing on utilization of live cell imaging and machine learning on big data
+
     Built and ran Data Science and Data Engineering capabilities in the areas of computer vision, natural language processing, artificial intelligence, infrastructure, high performance computing, predictive modeling, and mathematical modeling
+
     Built and maintained live cell imaging infrastructure, developed a suite of machine learning algorithms to understand noise in single cell signaling, wrote and secured two fellowships, directly contributed to high impact publications and invited for speaking engagements, and mentored several graduate students and postdoctoral fellows.
+
     Extensive experience working with time series data from signal data from engineering of pipelines and early data processing to complex machine learning algorithm development and implementation for decision-making and novel hypothesis generation
 
 
@@ -150,14 +154,22 @@ Find more about me here: :ref:`about`
 
     Experience
     ^^^^^^^^^^^^^^
-    Global Traits Digital Science Lead and Traits Discovery and Delivery Program Lead - Syngenta
+    GLOBAL TRAITS DIGITAL SCIENCE LEAD, GLOBAL TRAITS DISCOVERY AND DELIVERY PROGRAM LEAD - Syngenta
+
     8+ years of Data Science and Machine Learning Engineering Leadership and Strategy Development at the Director or VP level
+
     11+ years solutioning ML/AI architecture
+
     5 patents awarded or in final status for the development and application of novel applications of ML/AI
+
     25+ Member teams across disciplines in data and product
+
     21 years of production Software Engineering experience
+
     17 years of production Data Science/ML/AI experience and leadership
+
     17 years of rigorous scientific training in academic programs - healthcare and precision medicine
+
     Industry proven leader in Data Science and Machine Learning Innovation across the AI landscape
 
 
