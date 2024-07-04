@@ -12,7 +12,8 @@ My expertise is in building and leading teams of Data Scientists, Machine Learni
 
 My background is in Quantitative Cell Biology and I have a PhD in Biochemistry and Molecular Biology. I spent much of my career researching novel cancer therapeutics through live cell imaging and machine learning. You can now find me developing and implementing machine learning platforms and algorithms for everything from optimization problems to precision medicine and medicinal AI. In recent years I have researched and built novel recommenders, 24/7 production machine learning solutions, and received patents for personalization solutions in the consumer sales space and chemical profile recommenders.
 
-Most recently, I have been working in the Biotechnology space where I have developed the long-term strategy and vision for Data Science, led a growing team of Data Scientists to develop novel algorithms in the predictive modeling and Bioinformatics spaces, and accelerated biological discovery. Moreover, I designed and implemented novel algorithms to detect differential modes of action in both natural products and whole microbe systems, and engineered a proprietary online learning platform to serve as an artificial intelligence decision guidance system for our extensive microbial collection and proprietary product discovery platform (Genesis), a digital twin. I rebuilt research and enablement programs across domains for knowledge generation using cutting edge deep learning techniques on records data and data governance and provenance at both the discovery and enterprise levels.
+Most recently, I have been working in the Biotechnology space where I have developed the long-term strategy and vision for Data Science, led a growing team of Data Scientists to develop novel algorithms in the predictive modeling and Bioinformatics spaces, and accelerated biological discovery. Moreover, I designed and implemented novel algorithms to detect differential modes of action in both natural products and whole microbe systems, and engineered a proprietary online learning platform to serve as an artificial intelligence decision guidance system for our extensive microbial collection and proprietary product discovery platform (Genesis), a digital twin. I rebuilt research and enablement programs across domains for knowledge generation and product creation and delivery using cutting edge deep learning techniques on records, genomics, and omics data as the global lead for digital science discovery and delivery programs. Established, built, and implemented data governance and provenance at both the discovery and enterprise levels.
+
 
 .. panels::
     :column: col-lg-12 p-0
@@ -20,21 +21,23 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     Currently
     ^^^^^^^^^^^^^^
-    TRAIT DISCOVERY AND DELIVERY PROGRAM LEAD
-
-    DIGITAL BIOLOGY LEAD (traits)
+    GLOBAL TRAITS DIGITAL SCIENCE LEAD, GLOBAL TRAITS DISCOVERY AND DELIVERY PROGRAM LEAD
 
     BENCHLING RESEARCH PIPELINE TECHNICAL LEAD
 
-    Led Trait Discovery and Delivery efforts within RD and IT Digital Science
+    Led Trait (gene, phenotype) Discovery and Delivery efforts within RD and IT Digital Science across the entire Syngenta global space
 
-    Owned stack from data model, application landscape, and AI research initiatives from gene discovery to trait (phenotype) introgression
+    Created, built, and led Generative AI program to automate and optimize the delivery process for gene delivery processes to target specific traits (phenotypes) or gene expression objectives
 
-    Team comprised business (Analysts, Architects, Delivery Managers, Scrum Masters), IT (Developers, QA, MLOps, DevOPs), and science (SMEs, Product Owners, Wet Lab Researchers) domains
+    Created and led the program to use multimodal modeling with structured and instructed data, and foundation LLMs for knowledge generation, product discovery and delivery pipeline performance guidance, regulatory audits, and prompt-based experimental design
+
+    Owned stack from data model, application landscape, and AI research initiatives from gene discovery to trait (phenotype) introgression including building of API integrations, MLOps, DevOPs workflows
+
+    Team comprised business (Analysts, Architects, Delivery Managers, Scrum Masters), IT (Developers, QA, MLOps, DevOPs), and science (SMEs, Product Owners, Wet Lab Researchers) domains - both domestic and distributed teams
 
     Mentored junior team members with a focus on professional development and upskilling opportunities
 
-    Led Data Science efforts to research and deploy foundational Large Language Models (LLMs) for protein design to predict expression levels of various molecular biology constructs as a software workbench for bench researchers - work emphasized multimodal data and contextualization/fine tuning
+    Led Data Science efforts to research and deploy foundational Large Language Models (LLMs) for protein design to predict expression levels of various molecular biology constructs as a software workbench for bench researchers - work emphasized multimodal data and contextualization/fine tuning of foundation models
 
     Built strategy and vision across discovery and delivery to streamline scientific application portfolio, create single source of truth data streams, and initiated foundational work to bring cutting edge ML/AI technologies to the scientific pipeline
 
@@ -51,7 +54,11 @@ Most recently, I have been working in the Biotechnology space where I have devel
     ^^^^^^^^^^^^^^
     DIRECTOR OF DATA SCIENCE/ML/AI AND TECHNICAL LEAD/STRATEGIC VISION
 
-    Served as Director of Data Science/Machine Learning/Artificial Intelligence strategy and innovation initiatives.
+    Served as director of Data Science/Machine Learning/Artificial Intelligence strategy and innovation initiatives.
+
+    Created, built, deployed, then led the genomic AI program for disease prediction, novel mode of action identification, biomarker discovery, and understanding population variation from DNA to signaling pathways/omics.
+
+    Served as technical lead for the development and utilization of mixed effects models to explain the impact of environmental factors on phenotypic outcomes in the background of genomic models.
 
     Led a growing team of Data Scientists working to drive biological research and accelerate product development.
 
@@ -59,13 +66,17 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     Developed and drove 4 year strategy and vision for Data Science, Data Engineering, Bioinformatics, and Data Product for entire organization.
 
+    Onboarded artificial intelligence methodologies like Generative AI and Large Language Models for genomic information and protein variant creation.
+
+    Owned stack from data model, application landscape, and AI research initiatives across all of ML/AI and Data Science  including building of API integrations, MLOps, DevOPs workflows
+
     Advocate and conduct learning around Data Science/ML/AI products and platforms both to internal teams, executive team and board members, and external partners and collaborators (customers).
 
     Directly contributed to high impact publications and invited for speaking engagements.
 
     Served as Data Science liaison across the company, communicating strategy, accomplishments, initiatives, and best practices. Developed the long-term Data Science strategy and vision, hiring plan, technological innovation pipeline, and overall project management for the department.
 
-    Developed a proprietary predictive artificial intelligence decision guidance system to serve as a core to our proprietary natural and whole microbe product discovery platform - GENESIS, a digital twin technology. This digital twin technology has already generated a large corpus of actionable research, product leads, and accelerated screening paradigms to put the best leads in the field. Excitingly, my team was able to harness GENESIS to generate cross-indication predictive models to drive and accelerate lead identification across the research platform.
+    Developed a proprietary predictive artificial intelligence decision guidance system to serve as a core to our proprietary natural and whole microbe product discovery platform - GENESIS, a digital twin technology in part combining genomics and geospatial data modeling. This digital twin technology has already generated a large corpus of actionable research, product leads, and accelerated screening paradigms to put the best leads in the field. Excitingly, my team was able to harness GENESIS to generate cross-indication predictive models to drive and accelerate lead identification across the research platform.
 
     Led Data Science contribution to external manuscripts and internal white papers for both research, Data Science, and SOPs.
 
@@ -73,23 +84,51 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     Developed a novel algorithm to use interpretable machine learning model ensembles to traverse genomic annotations and drive mode of action discovery from small datasets. Designed and developed a predictive modeling platform to accelerate product discovery in indication screening. Designed and developed a cross-indication prediction platform to enable multi-target identification.
 
+    Two publications and multiple patentable IP technologies developed within first year.
+
+
 .. panels::
     :column: col-lg-12 p-0
     :header: text-secondary font-weight-bold
 
     Previously
     ^^^^^^^^^^^^^^
-    HEAD OF DATA SCIENCE/ML/AI AND PRINCIPAL RESEARCH AND MACHINE LEARNING
+    DIRECTOR OF DATA SCIENCE/ML/AI AND PRINCIPAL, RESEARCH AND MACHINE LEARNING
 
-    Created and maintained the core, patented algorithms behind the Firstleaf wine club.
+    Was responsible for  envisioning and creating Data Science from scratch that saw a rapid incline of over 10x user growth and key KPIs like LTV, spend, and user ratings through my creation of our AI-driven personalization program.
+
+    Created and maintained the core, patented algorithms behind the Firstleaf wine club using both shallow, rules-based, and deep learning machine learning and AI technologies on both molecular data and marketing big data and ran the DevOps and MLOps for the realtime, 24/7 AI platform.
+
+    Designed, built, deployed, then led a set of  interpretable model algorithms to generate industry first user profiles built on billions of data points per user.
+
+    Designed, built, deployed, then led a data-driven product creation AI built on molecular and consumer profile data, optimized through MCMC parameterizarion, that could scope down to zip code level targets and was used in both standard creation workflows, as well as running regional wine clubs like the LA Times.
 
     I built and led a local and distributed team of Data Scientists and Machine Learning engineers (The Research and Machine Learning Team) developing machine learning and AI platforms to drive real time recommendations, inform business strategy, and create/integrate with product design life cycle. This included the end-to-end development of the ML stack using both traditional ML and cutting edge deep learning techniques including computer vision, generative AI, and NLP, along with novel algorithm development.
 
-    Team size ranged from 5 to 10, across disciplines of Data and Product.
+    Team size ranged from 5 to 15, across disciplines of Data and Product.
 
     I was further responsible for the continual growth of the team, maintaining stakeholder communication, driving Data Science strategy across the organization, and directly working with C-level executives to maintain a vision and communicate strategy and execution plans aligned with business executives.
 
-    The Research and Machine Learning team was responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf. We utilized cutting edge approaches to both empower internal company function as well as customer facing products. The team was also responsible for design and implementation of the patented (developed technologies, co-write and secured patents) algorithms that drove the Firstleaf experience. The team was responsible for initiating, driving, and executing on data science strategies across Marketing, Finance, Business Intelligence, and Wine Making functions -- the Research and Machine Learning team was a full spectrum B2B and B2C solution within Firstleaf.
+    The Research and Machine Learning team was responsible for identifying and developing key Data Science and Machine Learning technologies for Firstleaf. We utilized cutting edge approaches to both empower internal company function as well as customer facing products. The team was also responsible for design and implementation of the patented (developed technologies, co-write and secured patents) algorithms that drove the Firstleaf experience.
+
+    The team was responsible for initiating, driving, and executing on data science strategies across Marketing, Finance, Business Intelligence, and Wine Making functions -- the Research and Machine Learning team was a full spectrum B2B and B2C solution within Firstleaf.
+
+    5 patents (3 awarded, 2 in final review), multiple interviews, blog posts, and department awards providing high visibility to intellectual property and achievements of team.
+
+.. panels::
+    :column: col-lg-12 p-0
+    :header: text-secondary font-weight-bold
+
+    Previously
+    ^^^^^^^^^^^^^^
+    POSTDOCTORAL RESEARCH FELLOW (Biological Machine Learning and AI) - University of North Carolina, Lineberger Cancer Center
+
+    American Heart Association funded research fellow in AI-driven precision medicine
+    Identifying, modeling, and understanding noise in single cell signaling during stress responses focusing on utilization of live cell imaging and machine learning on big data
+    Built and ran Data Science and Data Engineering capabilities in the areas of computer vision, natural language processing, artificial intelligence, infrastructure, high performance computing, predictive modeling, and mathematical modeling
+    Built and maintained live cell imaging infrastructure, developed a suite of machine learning algorithms to understand noise in single cell signaling, wrote and secured two fellowships, directly contributed to high impact publications and invited for speaking engagements, and mentored several graduate students and postdoctoral fellows.
+    Extensive experience working with time series data from signal data from engineering of pipelines and early data processing to complex machine learning algorithm development and implementation for decision-making and novel hypothesis generation
+
 
 .. panels::
     :column: col-lg-12 p-0
@@ -97,7 +136,8 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     Expertise
     ^^^^^^^^^^^^^^
-    Predictive Modeling | Medicinal AI | Machine Learning | Strategy and Vision Building | Resource Allocation Logistics | Algorithm Development | Technical Writing | Leadership | Mentorship | Team Building | Cross-departmental Collaboration | Data Science | Artificial Intelligence | Python/Software Engineering | Cell Biology | Biophysics | Microscopy | Cancer Therapeutics | E-commerce | Manuscript and Grant Preparation | Patent Development | Bioinformatics | Microbiology | Crop Protection | AgTech | Digital Twinning | Biotechnology | Precision Medicine | Multimodal Modeling
+    Predictive Modeling | Medicinal AI | Machine Learning | Strategy and Vision Building | Resource Allocation Logistics | Algorithm Development | Technical Writing | Leadership | Mentorship | Team Building | Cross-departmental Collaboration | Data Science | Artificial Intelligence | Generative AI | Python/Software Engineering | Cell Biology | Biophysics |
+    Microscopy | Cancer Therapeutics | E-commerce | Manuscript and Grant Preparation | Patent Development | Bioinformatics | Microbiology | Crop Protection | AgTech | Digital Twinning | Biotechnology | Precision Medicine | Multimodal Modeling | Generative AI | Fine-Tuning
 
 .. panels::
     :column: col-lg-12 p-0
@@ -105,17 +145,16 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     Experience
     ^^^^^^^^^^^^^^
-    - Digital Biology Lead at Syngenta
-    - Head of Data Science/ML/AI and Technical Lead / Strategic Vision at AgBiome
-    - Head of Data Science and Principal, Research and Machine Learning at Penrose Hill/Firstleaf
-    - BS in Biochemistry and Molecular Biology, The Pennsylvania State University
-    - PhD in Biochemistry and Molecular Biology, Thomas Jefferson University
-    - Research Postdoctoral Fellow, Lineberger Cancer Center, University of North Carolina at Chapel Hill
-    - 20+ Member teams across disciplines in data and product
-    - 21 years of Software Engineering and Data Science experience
-    - 17 years of rigorous scientific training in academic programs
-    - 8+ years of Data Science and Machine Learning leadership
-    - Industry proven leader in Data Science and Machine Learning Innovation
+    Global Traits Digital Science Lead and Traits Discovery and Delivery Program Lead - Syngenta
+    8+ years of Data Science and Machine Learning Engineering Leadership and Strategy Development at the Director or VP level
+    11+ years solutioning ML/AI architecture
+    5 patents awarded or in final status for the development and application of novel applications of ML/AI
+    25+ Member teams across disciplines in data and product
+    21 years of production Software Engineering experience
+    17 years of production Data Science/ML/AI experience and leadership
+    17 years of rigorous scientific training in academic programs - healthcare and precision medicine
+    Industry proven leader in Data Science and Machine Learning Innovation across the AI landscape
+
 
 .. panels::
     :column: col-lg-12 p-0
@@ -123,10 +162,11 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     Patents
     ^^^^^^^^^^^^^^
-    - Systems and methods for labeling and distributing products having multiple versions with recipient version correlation on a per user basis
-    - Systems and methods for controlling production and distribution of consumable items based on their chemical profiles
-    - [Under review (title withheld)]: A patent application for recommender personalization under certain location-based constraints
-    - [Under review (title withheld)]: A patent application for the utilization of chemical data for certain environmental predictive capabilities
+    Systems and methods for labeling and distributing products having multiple versions with recipient version correlation on a per user basis
+    Method, system, and computer readable medium for labeling and distributing products having multiple versions with recipient version correlation on a per user basis
+    Systems and methods for controlling production and distribution of consumable items based on their chemical profiles
+    Using FI-RT to build wine classification models
+    Using FI-RT to generate wine shopping and dining recommendations
 
 
 .. panels::
@@ -146,10 +186,7 @@ Most recently, I have been working in the Biotechnology space where I have devel
 
     Languages, Tooling, Infrastructure
     ^^^^^^^^^^^^^^
-    Python | Amazon Web Services (AWS) | Pandas | Numpy | Scikit-learn | Matplotlib | Scipy | SQL | PyTorch | Sympy |
-    Flask | Gunicorn | FastAPI | BASH Shell Scripting | Linux | BSD | Git Github | Jupyter | HTML | CSS | Javascript |
-    Microsoft Office | Google Suite | Matlab | Full Stack Dev | APIs | MLOps | DevOPs | NLP (OpenAI, Hugging Face) | Agile | Multimodal
-
+    Python | Amazon Web Services (AWS) | Pandas | Numpy | Scikit-learn | Matplotlib | Scipy | SQL | PyTorch | Sympy | Flask | Gunicorn | FastAPI | BASH | Linux | Git Github | Jupyter | HTML | Javascript | Microsoft Office | Google Suite | Matlab | Full Stack Dev | APIs | Agile | Jira | Time Series Modeling | Simulations | MLOps | DevOPs | Generative AI| LLMs | NLP (OpenAI, Hugging Face, Vertex) | MultiModal | GenAI | Fine Tuning
 
 .. panels::
     :column: col-lg-12 p-0
