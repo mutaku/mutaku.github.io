@@ -14,12 +14,10 @@ My background is in Quantitative Cell Biology and I have a PhD in Biochemistry a
 
 Most recently, I have been working in the Biotechnology space where I have developed the long-term strategy and vision for Data Science, led a growing team of Data Scientists to develop novel algorithms in the predictive modeling and Bioinformatics spaces, and accelerated biological discovery. Moreover, I designed and implemented novel algorithms to detect differential modes of action in both natural products and whole microbe systems, and engineered a proprietary online learning platform to serve as an artificial intelligence decision guidance system for our extensive microbial collection and proprietary product discovery platform (Genesis), a digital twin. I rebuilt research and enablement programs across domains for knowledge generation and product creation and delivery using cutting edge deep learning techniques on records, genomics, and omics data as the global lead for digital science discovery and delivery programs. Established, built, and implemented data governance and provenance at both the discovery and enterprise levels.
 
-.. parsed-literal::
+.. panels::
+    :column: col-lg-12 p-0
 
     I am now pursuing my passion work in improving patient outcomes utilizing cutting edge, clinical AI. The company is in early inception phases, but we are already building out the next generation of clinical AI technology. I would love to discuss with you the exciting work we are doing, so please reach out!
-
-
-
 
 .. panels::
     :column: col-lg-12 p-0
