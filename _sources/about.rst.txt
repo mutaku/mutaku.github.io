@@ -6,14 +6,9 @@ About Matthew Martz
 
 My expertise is in building and leading teams of Data Scientists, Machine Learning Engineers, Data Engineers, and Data Product experts of diverse experience levels, distributed across cultural and knowledge bases, to drive innovation, product development, and cutting edge, actionable research. I have a proven track record of mentoring, growing, executing, and building strategy around ambitious goals across the Data Science technical platform to provide business value.
 
-My background is in Quantitative Cell Biology and I have a PhD in Biochemistry and Molecular Biology.
-I spent much of my career researching novel cancer therapeutics through live cell imaging and machine learning.
-You can now find me developing and implementing machine learning platforms and algorithms for everything from
-optimization problems to precision medicine and medicinal AI. In recent years I have researched and built
-novel recommenders, 24/7 production machine learning solutions, and received patents for personalization solutions
-in the consumer sales space and chemical profile recommenders.
+My background is in Quantitative Cell Biology and I have a PhD in Biochemistry and Molecular Biology. I spent much of my career researching novel cancer therapeutics through live cell imaging and machine learning. You can now find me developing and implementing machine learning platforms and algorithms for everything from optimization problems to personalized medicine and medicinal AI. I have researched and built novel recommenders, 24/7 production machine learning solutions, and received patents for personalization solutions in the consumer sales space and chemical profile recommenders.
 
-Most recently, I have been working in the Biotechnology space where I have developed the long-term strategy and vision for Data Science, led a growing team of Data Scientists to develop novel algorithms in the predictive modeling and Bioinformatics spaces, and accelerated biological discovery. Moreover, I designed and implemented novel algorithms to detect differential modes of action in both natural products and whole microbe systems, and engineered a proprietary online learning platform to serve as an artificial intelligence decision guidance system for our extensive microbial collection and proprietary product discovery platform (Genesis), a digital twin. I rebuilt research and enablement programs across domains for knowledge generation and product creation and delivery using cutting edge deep learning techniques on records, genomics, and omics data as the global lead for digital science discovery and delivery programs. Established, built, and implemented data governance and provenance at both the discovery and enterprise levels.
+Most recently, I have been working in the Biotechnology space where I have developed the long-term strategy and vision for Data Science, led a growing team of Data Scientists to develop novel algorithms in the predictive modeling and Bioinformatics spaces, and accelerated biological discovery. Moreover, I designed and implemented novel algorithms to detect differential modes of action in both natural products and whole microbe systems, and engineered a proprietary online learning platform to serve as an artificial intelligence decision guidance system for our extensive microbial collection and proprietary product discovery platform (Genesis), a digital twin. I rebuilt global research and enablement programs across domains for knowledge generation and product creation and delivery using cutting edge deep learning techniques on unstructured records, genomics, omics, and image data as the global lead for digital science discovery and delivery programs. Established, built, and implemented data governance and provenance at both the discovery and enterprise levels. Built multimodal knowledge graphs using LLM guidance to develop GraphRAG technologies in-house for production use in the global pipeline.
 
 Find more about me here: :ref:`about`
 
@@ -30,7 +25,8 @@ Find more about me here: :ref:`about`
     Currently
     ^^^^^^^^^^^^^^
     Mayo Clinic (Rochester, MN)
-    Senior Architect and Technical Development Lead
+
+    SENIOR ARCHITECT AND TECHNICAL DEVELOPMENT LEAD
 
     More about my work to come. Reach out to me through email or LinkedIn to chat.
 
