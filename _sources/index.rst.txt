@@ -8,6 +8,8 @@ Writings and Perambulations
 
 * New Post! Summer of AI - `An AgBiome Perspective (interview) <https://mutaku.io/summer_of_AI/>`_
 
+Code Samples: https://gist.github.com/mutaku/81a6cf00717462686734d5ef9454a2e9
+
 My expertise is in building and leading teams of Data Scientists, Machine Learning Engineers, Data Engineers, and Data Product experts of diverse experience levels, distributed across cultural and knowledge bases, to drive innovation, product development, and cutting edge, actionable research. I have a proven track record of mentoring, growing, executing, and building strategy around ambitious goals across the Data Science technical platform to provide business value.
 
 My background is in Quantitative Cell Biology and I have a PhD in Biochemistry and Molecular Biology. I spent much of my career researching novel cancer therapeutics through live cell imaging and machine learning. You can now find me developing and implementing machine learning platforms and algorithms for everything from optimization problems to personalized medicine and medicinal AI. I have researched and built novel recommenders, 24/7 production machine learning solutions, and received patents for personalization solutions in the consumer sales space and chemical profile recommenders.
