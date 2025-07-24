@@ -2,45 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <id>https://mutaku.github.io</id>
   <title>Mutaku</title>
-  <updated>2025-03-24T18:19:49.475438+00:00</updated>
+  <updated>2025-07-24T17:35:52.869330+00:00</updated>
   <link href="https://mutaku.github.io"/>
   <link href="https://mutaku.github.io/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.io/" version="0.11.12">ABlog</generator>
   <entry>
-    <id>https://mutaku.github.io/nested_dictionary_lookups/</id>
-    <title>Dictionary Lookup - Exploring the Depths</title>
-    <updated>2020-11-13T00:00:00-05:00</updated>
+    <id>https://mutaku.github.io/summer_of_AI/</id>
+    <title>Summer of AI - An AgBiome Perspective</title>
+    <updated>2023-11-09T00:00:00-05:00</updated>
     <author>
       <name>Matthew Martz</name>
     </author>
-    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
-&lt;p&gt;Exploring methods of performant Python dictionary lookups&lt;/p&gt;
-&lt;/div&gt;
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This is an interview that served as the starting point for a podcast wherein we discussed
+Artificial Intelligence with an AgBiome perspective. The podcast went beyond what is below and
+looked at the broader societal perspective; I will link the podcast shortly.&lt;/p&gt;
+&lt;/p&gt;
 </content>
-    <link href="https://mutaku.github.io/nested_dictionary_lookups/" rel="alternate"/>
-    <summary>Exploring methods of performant Python dictionary lookups</summary>
+    <link href="https://mutaku.github.io/summer_of_AI/"/>
+    <summary>This is an interview that served as the starting point for a podcast wherein we discussed
+Artificial Intelligence with an AgBiome perspective. The podcast went beyond what is below and
+looked at the broader societal perspective; I will link the podcast shortly.</summary>
     <category term="atag" label="atag"/>
-    <published>2020-11-13T00:00:00-05:00</published>
-  </entry>
-  <entry>
-    <id>https://mutaku.github.io/python_generators_and_comprehension/</id>
-    <title>Python Generators and Comprehension</title>
-    <updated>2020-11-13T00:00:00-05:00</updated>
-    <author>
-      <name>Matthew Martz</name>
-    </author>
-    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
-&lt;p&gt;Digging into generators and comprehension - from basics to
-to implementation in a comprehensive tutorial. This is a walkthrough
-for beginners that will build up to real world examples.&lt;/p&gt;
-&lt;/div&gt;
-</content>
-    <link href="https://mutaku.github.io/python_generators_and_comprehension/" rel="alternate"/>
-    <summary>Digging into generators and comprehension - from basics to
-to implementation in a comprehensive tutorial. This is a walkthrough
-for beginners that will build up to real world examples.</summary>
-    <category term="atag" label="atag"/>
-    <published>2020-11-13T00:00:00-05:00</published>
+    <published>2023-11-09T00:00:00-05:00</published>
   </entry>
   <entry>
     <id>https://mutaku.github.io/notes_on_mlops_one/</id>
@@ -49,14 +32,13 @@ for beginners that will build up to real world examples.</summary>
     <author>
       <name>Matthew Martz</name>
     </author>
-    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
-&lt;p&gt;This is a short piece I wrote while at Firstleaf as a response
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;This is a short piece I wrote while at Firstleaf as a response
 to a really great article on the state of MLOps. I used several
 strong points in the article to articulate my thoughts on where
 we did things well and directions I would like to see us take.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/p&gt;
 </content>
-    <link href="https://mutaku.github.io/notes_on_mlops_one/" rel="alternate"/>
+    <link href="https://mutaku.github.io/notes_on_mlops_one/"/>
     <summary>This is a short piece I wrote while at Firstleaf as a response
 to a really great article on the state of MLOps. I used several
 strong points in the article to articulate my thoughts on where
@@ -65,23 +47,37 @@ we did things well and directions I would like to see us take.</summary>
     <published>2023-04-17T00:00:00-04:00</published>
   </entry>
   <entry>
-    <id>https://mutaku.github.io/summer_of_AI/</id>
-    <title>Summer of AI - An AgBiome Perspective</title>
-    <updated>2023-11-09T00:00:00-05:00</updated>
+    <id>https://mutaku.github.io/python_generators_and_comprehension/</id>
+    <title>Python Generators and Comprehension</title>
+    <updated>2020-11-13T00:00:00-05:00</updated>
     <author>
       <name>Matthew Martz</name>
     </author>
-    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
-&lt;p&gt;This is an interview that served as the starting point for a podcast wherein we discussed
-Artificial Intelligence with an AgBiome perspective. The podcast went beyond what is below and
-looked at the broader societal perspective; I will link the podcast shortly.&lt;/p&gt;
-&lt;/div&gt;
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Digging into generators and comprehension - from basics to
+to implementation in a comprehensive tutorial. This is a walkthrough
+for beginners that will build up to real world examples.&lt;/p&gt;
+&lt;/p&gt;
 </content>
-    <link href="https://mutaku.github.io/summer_of_AI/" rel="alternate"/>
-    <summary>This is an interview that served as the starting point for a podcast wherein we discussed
-Artificial Intelligence with an AgBiome perspective. The podcast went beyond what is below and
-looked at the broader societal perspective; I will link the podcast shortly.</summary>
+    <link href="https://mutaku.github.io/python_generators_and_comprehension/"/>
+    <summary>Digging into generators and comprehension - from basics to
+to implementation in a comprehensive tutorial. This is a walkthrough
+for beginners that will build up to real world examples.</summary>
     <category term="atag" label="atag"/>
-    <published>2023-11-09T00:00:00-05:00</published>
+    <published>2020-11-13T00:00:00-05:00</published>
+  </entry>
+  <entry>
+    <id>https://mutaku.github.io/nested_dictionary_lookups/</id>
+    <title>Dictionary Lookup - Exploring the Depths</title>
+    <updated>2020-11-13T00:00:00-05:00</updated>
+    <author>
+      <name>Matthew Martz</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Exploring methods of performant Python dictionary lookups&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="https://mutaku.github.io/nested_dictionary_lookups/"/>
+    <summary>Exploring methods of performant Python dictionary lookups</summary>
+    <category term="atag" label="atag"/>
+    <published>2020-11-13T00:00:00-05:00</published>
   </entry>
 </feed>
