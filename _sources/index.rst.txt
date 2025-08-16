@@ -41,7 +41,7 @@ Most recently, I have been working in the Biotechnology space where I have devel
     As part of this work, I am currently developing an algorithm and model platform to identify cognitive complexity for each patient touchpoint and the summation to the clinician's day load.
     Please reach out to chat about my research, or any of the work below.
 
-    Owner/Creator and Team Lead - Knowledge Factory AI Platform - Rochester, MN
+    Creator and Team Lead - Agentic Knowledge Engine - Rochester, MN
 
     As leader of a highly skilled team, I'm developing a cutting-edge, robust data platform. Engineered for multi-modal data, it integrates seamlessly with diverse databases and data lakes, facilitating real-time ingestion into a sophisticated knowledge graph. Our core mission is to transform complex, disparate data into actionable insights, driving advancements across various domains.
 
