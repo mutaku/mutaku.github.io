@@ -1,1 +1,2 @@
-![MutakU_7_cropped](https://user-images.githubusercontent.com/674431/113584995-9d192c00-95f9-11eb-8997-62b575dbef11.png)
+
+<img width="1024" height="1024" alt="plot_header" src="https://github.com/user-attachments/assets/cdd88648-0923-49a2-8565-75c71156a25c" />
