@@ -42,6 +42,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          cd new-site
           pip install -r requirements.txt
 
       - name: Setup Pages
@@ -50,12 +51,13 @@ jobs:
 
       - name: Build with MkDocs
         run: |
+          cd new-site
           mkdocs build --clean --strict
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./site
+          path: ./new-site/site
 
   deploy:
     if: github.ref == 'refs/heads/main'
