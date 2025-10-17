@@ -92,7 +92,7 @@ I'm pioneering the development of **comprehensive healthcare AI platforms** that
 ## Current Position
 
 <div class="experience-card">
-  <h3>Creator and Team Lead - Agentic Knowledge Engine</h3>
+  <h3>Creator and Team Leader - Agentic Knowledge Engine</h3>
   <div class="company">Mayo Clinic, Rochester, MN</div>
   <div class="duration">2024 - Present</div>
 

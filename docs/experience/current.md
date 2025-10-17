@@ -5,7 +5,7 @@
 
 ---
 
-## Creator and Team Lead - Agentic Knowledge Engine
+## Creator and Team Leader - Agentic Knowledge Engine
 
 As leader of a highly skilled team, I'm developing a cutting-edge, robust data platform engineered for multi-modal data that integrates seamlessly with diverse databases and data lakes, facilitating real-time ingestion into sophisticated knowledge graphs.
 
