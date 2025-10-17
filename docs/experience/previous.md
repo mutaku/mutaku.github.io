@@ -1,7 +1,7 @@
 # Previous Positions
 
 ## Syngenta - Global Leadership Roles
-*2020-2023*
+*2024 (Short-term Contract)*
 
 ### Global Traits Digital Science Lead
 *Global Traits Discovery and Delivery Program Lead*
@@ -28,7 +28,7 @@ Led Trait (gene, phenotype) Discovery and Delivery efforts within R&D and IT Dig
 ---
 
 ## AgBiome - Director of Data Science/ML/AI
-*2019-2020*
+*2023-2024*
 
 ### Strategic Vision & Technical Leadership
 
@@ -55,7 +55,7 @@ Served as Director of Data Science/Machine Learning/Artificial Intelligence stra
 ---
 
 ## Firstleaf - Director of Data Science/ML/AI
-*2017-2019*
+*2017-2023*
 
 ### Principal, Research and Machine Learning
 
@@ -65,12 +65,13 @@ Led the creation of Data Science from scratch, achieving rapid 10x user growth a
 
 **Patent-Winning Algorithms**
 - Created and maintained core, patented algorithms behind Firstleaf wine club
-- Implemented shallow, rules-based, and deep learning ML/AI technologies
-- Operated realtime, 24/7 AI platform with DevOps and MLOps
+- Implemented models with over a billion parameters serving real-time recommendations
+- Operated realtime, 24/7 AI platform achieving millisecond response times with 98%+ accuracy
+- Delivered business optimization algorithms including 5 patents for innovative ML work
 
 **Revolutionary User Profiling**
 - Built industry-first user profiles from billions of data points per user
-- Developed interpretable model algorithms for personalized recommendations
+- Developed interpretable model algorithms for personalized recommendations with multiple industry awards
 - Created data-driven product creation AI optimized through MCMC parameterization
 
 **Team Leadership & Impact**
@@ -81,7 +82,7 @@ Led the creation of Data Science from scratch, achieving rapid 10x user growth a
 ---
 
 ## University of North Carolina - Postdoctoral Research Fellow
-*2015-2017*
+*2014-2017*
 
 ### Biological Machine Learning and AI
 *Lineberger Cancer Center*
@@ -118,10 +119,10 @@ Led the creation of Data Science from scratch, achieving rapid 10x user growth a
 - **Global team management** across cultural and knowledge bases
 
 ### Domain Expertise Evolution
-- **Academic Research**: Cancer therapeutics and cell biology (2015-2017)
-- **Consumer AI**: Wine personalization and recommendations (2017-2019)
-- **Biotechnology**: Microbial discovery and genomics (2019-2020)
-- **Agriculture**: Gene discovery and trait development (2020-2023)
-- **Clinical AI**: Healthcare digital twins and patient outcomes (2023-present)
+- **Academic Research**: Cancer therapeutics and cell biology (2014-2017)
+- **Consumer AI**: Wine personalization with real-time ML systems (2017-2023)
+- **Biotechnology**: Microbial discovery and genomics (2023-2024)
+- **Agriculture**: Gene discovery and trait development (2024)
+- **Clinical AI**: Healthcare digital twins and patient outcomes (2024-present)
 
 This progression demonstrates a unique blend of deep technical expertise with strategic leadership, consistently driving innovation at the intersection of AI and life sciences.

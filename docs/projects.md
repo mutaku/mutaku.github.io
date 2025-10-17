@@ -25,11 +25,12 @@ Key technical achievements:
 ## Previous Platform Work
 
 ### Wine Recommendation & Personalization Engine
-**Company**: Firstleaf
-**Role**: Senior Data Scientist & ML Engineer
-**Technology Stack**: Python, scikit-learn, TensorFlow, PostgreSQL, Redis, AWS
+**Company**: Firstleaf  
+**Role**: Director of Data Science/ML/AI
+**Technology Stack**: Python, PyTorch, ExtraTreesClassifier, PostgreSQL, Redis, AWS
+**Scale**: Billion+ parameter models serving real-time recommendations
 
-Developed and deployed a sophisticated recommendation system serving personalized wine selections:
+Built and deployed production ML systems with industry-leading performance metrics:
 
 ```python
 # Example: Core recommendation algorithm architecture
@@ -57,10 +58,21 @@ class PersonalizationEngine:
         ])
 ```
 
-**Impact**:
+**Technical Achievements**:
+
+- **Billion+ parameter models** running real-time recommendations with millisecond response times
+- **98%+ accuracy** in wine preference prediction using ensemble ExtraTreesClassifier (500 estimators)
+- **Real-time ML inference** serving 24/7 personalization platform with complete DevOps/MLOps
+- **5 patents awarded** for innovative wine recommendation and business optimization algorithms
+- **Industry recognition** with multiple awards for AI-driven personalization innovation
+- **Production codebase**: Advanced ML algorithms for user modeling, collaborative filtering, and real-time personalization ([firstleaf-ml repository](https://github.com/mutaku/firstleaf-ml))
+
+**Business Impact**:
+
 - Increased customer satisfaction scores by 23%
 - Improved retention rates by 18%
 - Reduced customer service inquiries by 15%
+- Scaled platform to handle millions of users with sub-second response times
 
 ### Decision Tree Analysis & Explainability System
 

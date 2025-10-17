@@ -12,7 +12,7 @@
   </p>
   <div class="cta-buttons">
     <a href="about/" class="cta-button">Learn More About Me</a>
-    <a href="https://gist.github.com/mutaku/81a6cf00717462686734d5ef9454a2e9" class="cta-button secondary">View Code Samples</a>
+    <a href="projects/" class="cta-button secondary">View Project Portfolio</a>
   </div>
 </div>
 
@@ -62,9 +62,10 @@ I'm pioneering the development of **comprehensive healthcare AI platforms** that
     <h4>🚀 Innovation Track Record</h4>
     <div class="skill-tags">
       <span class="skill-tag">5 Patents Awarded</span>
-      <span class="skill-tag">Multiple Publications</span>
-      <span class="skill-tag">10x User Growth</span>
-      <span class="skill-tag">AI-driven Personalization</span>
+      <span class="skill-tag">Billion+ Parameter Models</span>
+      <span class="skill-tag">98%+ Accuracy Real-time ML</span>
+      <span class="skill-tag">Millisecond Response Times</span>
+      <span class="skill-tag">Industry Awards</span>
     </div>
   </div>
 
@@ -93,11 +94,12 @@ I'm pioneering the development of **comprehensive healthcare AI platforms** that
 <div class="experience-card">
   <h3>Creator and Team Lead - Agentic Knowledge Engine</h3>
   <div class="company">Mayo Clinic, Rochester, MN</div>
-  <div class="duration">Current Position</div>
+  <div class="duration">2024 - Present</div>
 
   Leading development of a cutting-edge, robust data platform engineered for multi-modal data that integrates seamlessly with diverse databases and data lakes, facilitating real-time ingestion into sophisticated knowledge graphs.
 
   **Key Achievements:**
+
   - Developing proprietary algorithms for multi-modal data processing
   - Creating and refining knowledge graphs enhanced by advanced AI-driven data processing
   - Building intelligent agents and toolchains for complex question-answering flows
