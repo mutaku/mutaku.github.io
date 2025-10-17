@@ -56,7 +56,7 @@ Building a transformative platform that addresses healthcare AI's fundamental fa
 ## Previous Platform Work
 
 ### Wine Recommendation & Personalization Engine
-**Company**: Firstleaf  
+**Company**: Firstleaf
 **Role**: Director of Data Science/ML/AI
 **Technology Stack**: Python, PyTorch, ExtraTreesClassifier, PostgreSQL, Redis, AWS
 **Scale**: Billion+ parameter models serving real-time recommendations

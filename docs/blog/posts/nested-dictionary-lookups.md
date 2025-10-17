@@ -95,19 +95,19 @@ def get_nested_step_by_step(data):
     user = data.get('user')
     if user is None:
         return None
-    
+
     profile = user.get('profile')
     if profile is None:
         return None
-    
+
     preferences = profile.get('preferences')
     if preferences is None:
         return None
-    
+
     notifications = preferences.get('notifications')
     if notifications is None:
         return None
-    
+
     return notifications.get('email')
 
 result = get_nested_step_by_step(user_data)
