@@ -82,6 +82,7 @@ These digital twins are envisioned as dynamic, continuously evolving representat
 - **Multiple Publications** in high-impact journals
 - **100x User Growth** achieved through AI-driven personalization
 - **$M+ Revenue Impact** from predictive modeling platforms
+- **High-profile Media Interviews** as subject matter expert in AI and Data Science for solving problems in novel domain spaces
 
 ---
 
