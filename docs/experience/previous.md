@@ -1,7 +1,7 @@
 # Previous Positions
 
 ## Syngenta - Global Leadership Roles
-*2020-2023*
+*2024-2024*
 
 ### Global Traits Digital Science Lead
 *Global Traits Discovery and Delivery Program Lead*
