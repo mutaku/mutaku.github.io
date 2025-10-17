@@ -5,8 +5,8 @@ This page showcases selected technical projects and implementations that demonst
 ## Current Focus: Healthcare AI Platform Development
 
 ### Clinical AI Integration Platform
-**Role**: Principal Architect & Technical Lead
-**Technology Stack**: Python, TypeScript, React, PostgreSQL, Redis, Docker, Kubernetes
+**Role**: Creator and Principal Architect and Lead
+**Stack**: Python, Reflex, Neo4j, PyTorch, Redis
 **Scale**: Enterprise healthcare environments
 
 Building a comprehensive platform for integrating AI capabilities into clinical workflows, focusing on:
@@ -65,13 +65,13 @@ class PersonalizationEngine:
 - **Real-time ML inference** serving 24/7 personalization platform with complete DevOps/MLOps
 - **5 patents awarded** for innovative wine recommendation and business optimization algorithms
 - **Industry recognition** with multiple awards for AI-driven personalization innovation
-- **Production codebase**: Advanced ML algorithms for user modeling, collaborative filtering, and real-time personalization ([firstleaf-ml repository](https://github.com/mutaku/firstleaf-ml))
+- **Production codebase**: Advanced ML algorithms for user modeling, collaborative filtering, and real-time personalization
 
 **Business Impact**:
 
-- Increased customer satisfaction scores by 23%
-- Improved retention rates by 18%
-- Reduced customer service inquiries by 15%
+- Supported business scaling almost 100 fold
+- Increased customer satisfaction scores year over year
+- Improved retention rates
 - Scaled platform to handle millions of users with sub-second response times
 
 ### Decision Tree Analysis & Explainability System
