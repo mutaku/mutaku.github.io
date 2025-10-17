@@ -42,12 +42,16 @@ Building a transformative platform that addresses healthcare AI's fundamental fa
 - **Treatment pathway optimization** via digital twin simulations
 - **Automated clinical trial design** and patient matching platform
 
-**Current Impact Metrics**:
+**Market Opportunity & Platform Potential**:
 
-- Healthcare AI represents $45 billion market by 2026
-- 15-30% reduction in preventable hospital readmissions through predictive models
-- 48-72 hour advance prediction of clinical deterioration
-- $2,000-5,000 cost savings per prevented readmission in value-based care models
+*Note: Platform is in development/research phase - these represent industry benchmarks and potential impact for a platform like this:*
+
+- Healthcare AI represents $45 billion market opportunity by 2026
+- Research shows 15-30% reduction potential in preventable hospital readmissions through predictive models
+- Studies demonstrate 48-72 hour advance prediction capability for clinical deterioration
+- Value-based care models show $2,000-5,000 potential cost savings per prevented readmission
+
+**Current Platform Status**: Research and development phase with 2.3M patient demonstration dataset showing scalability and technical feasibility
 
 ## Previous Platform Work
 
