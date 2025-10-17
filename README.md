@@ -90,16 +90,89 @@ Edit `new-site/docs/research.md` for healthcare AI platform updates.
 
 ## 🚀 Deployment
 
-The site auto-deploys to GitHub Pages via GitHub Actions:
+### Automated GitHub Pages Deployment
 
-1. Make changes in `new-site/`
-2. Build locally: `mkdocs build --clean`
-3. Commit and push:
-   ```bash
-   git add -A
-   git commit -m "Update site content"
-   git push
-   ```
+The site automatically deploys to GitHub Pages via GitHub Actions when changes are pushed to the main branch.
+
+#### Standard Deployment Workflow
+
+```bash
+# 1. Navigate to the new-site directory
+cd c:\Users\matthew\Programming\mutaku.github.io\new-site
+
+# 2. Make your content changes (edit files in docs/)
+# - Update research.md for healthcare AI content
+# - Add blog posts in docs/blog/posts/YYYY/MM/DD/
+# - Modify styling in docs/stylesheets/extra.css
+# - Update configuration in mkdocs.yml
+
+# 3. Test locally before deploying
+mkdocs build --clean
+
+# 4. Optional: Serve locally to preview
+mkdocs serve --dev-addr 127.0.0.1:8090
+# Or serve the built site:
+cd site && python -m http.server 8090
+
+# 5. Deploy to production
+cd c:\Users\matthew\Programming\mutaku.github.io
+git add -A
+git commit -m "new site content and engine"
+git push
+```
+
+#### What Happens During Deployment
+
+1. **GitHub Actions Triggers**: Push to main branch activates the workflow
+2. **Environment Setup**: Ubuntu runner with Python 3.11
+3. **Dependencies Install**: Installs MkDocs Material and plugins from `new-site/requirements.txt`
+4. **Site Build**: Executes `mkdocs build --clean --strict` in the `new-site/` folder
+5. **Artifact Upload**: Packages the generated `new-site/site/` directory
+6. **Pages Deployment**: Deploys to GitHub Pages at mutaku.io
+7. **Live Site**: Changes appear at [https://mutaku.io](https://mutaku.io) within 2-5 minutes
+
+#### Deployment Configuration
+
+**GitHub Actions Workflow**: `.github/workflows/deploy.yml`
+
+```yaml
+# Key workflow steps:
+- Install dependencies from new-site/requirements.txt
+- Build site from new-site/ directory  
+- Deploy from new-site/site/ output
+- Automatic deployment on main branch pushes
+```
+
+**Required GitHub Settings**:
+
+- **Repository Settings → Pages → Source**: "GitHub Actions"
+- **Custom Domain**: mutaku.io (configured in Pages settings)
+- **Workflow Permissions**: Read repository contents, write to Pages
+
+#### Troubleshooting Deployment
+
+**If deployment fails**:
+
+1. Check [GitHub Actions](https://github.com/mutaku/mutaku.github.io/actions) for error logs
+2. Verify `mkdocs build --clean` works locally without errors
+3. Ensure all required files are committed and pushed
+4. Check that `new-site/requirements.txt` includes all dependencies
+
+**Common issues**:
+
+- **Build errors**: Fix markdown linting issues or missing files
+- **Git conflicts**: Resolve with `git pull` before pushing
+- **Workflow permissions**: Ensure GitHub Actions has Pages write access
+- **Custom domain**: Verify DNS settings for mutaku.io point to GitHub Pages
+
+**Force rebuild**: Use GitHub Actions "Run workflow" button for manual trigger
+
+#### Monitoring Deployment
+
+- **Actions Page**: <https://github.com/mutaku/mutaku.github.io/actions>
+- **Pages Settings**: <https://github.com/mutaku/mutaku.github.io/settings/pages>  
+- **Site Status**: Monitor build and deployment status in real-time
+- **Build Time**: Typical deployment takes 2-3 minutes from push to live site
 
 ## 🔧 Technology Stack
 
@@ -119,7 +192,7 @@ The site auto-deploys to GitHub Pages via GitHub Actions:
 ## 📞 Contact
 
 - **Website**: [mutaku.io](https://mutaku.io)
-- **Email**: matthew@mutaku.io
+- **Email**: <matthew@mutaku.io>
 - **LinkedIn**: [matthew-martz-phd](https://linkedin.com/in/matthew-martz-phd)
 - **GitHub**: [@mutaku](https://github.com/mutaku)
 
