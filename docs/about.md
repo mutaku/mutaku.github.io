@@ -80,7 +80,7 @@ These digital twins are envisioned as dynamic, continuously evolving representat
 
 - **5 Patents** awarded or in final status for novel ML/AI applications
 - **Multiple Publications** in high-impact journals
-- **10x User Growth** achieved through AI-driven personalization
+- **100x User Growth** achieved through AI-driven personalization
 - **$M+ Revenue Impact** from predictive modeling platforms
 
 ---
