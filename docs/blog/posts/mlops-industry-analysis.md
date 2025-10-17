@@ -15,6 +15,10 @@ categories:
 
 This piece examines the current state of MLOps (Machine Learning Operations) through the lens of practical experience implementing ML systems in production environments. Written during my time at Firstleaf, these observations reflect real-world challenges and solutions in operationalizing machine learning at scale.
 
+Dive into real-world MLOps challenges including loop closure, declarative systems, data management, and cultural adoption. Learn from production experience scaling ML systems to handle millions of users with sub-second response times.
+
+<!-- more -->
+
 ## Table of Contents
 
 1. [The MLOps Maturity Question](#mlops-maturity)

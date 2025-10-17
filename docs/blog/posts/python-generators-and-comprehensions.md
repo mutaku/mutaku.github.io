@@ -10,6 +10,10 @@ categories:
 
 This comprehensive guide explores Python generators and comprehensions - powerful constructs that can dramatically improve your code's performance, readability, and memory efficiency. We'll cover everything from basic syntax to advanced patterns, including real-world applications and performance comparisons.
 
+Master these essential Python features that separate intermediate developers from advanced practitioners. Learn when to use list comprehensions vs. generator expressions, how to implement custom generators, and advanced patterns for data processing pipelines.
+
+<!-- more -->
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
@@ -73,6 +77,58 @@ print(collection)
 ```
 
 **Understanding this comprehension**: We iterate over `range(20)` to create 20 pairs. Since we don't use the number from `range()`, we use the Python convention `_` to indicate an unused variable. For each iteration, we randomly sample from `alpha` for the key and generate a random integer for the value. The `{key: value}` syntax within `{}` creates our dictionary comprehension.
+
+### Working with Collections
+
+Now let's demonstrate operations with our `collection` dictionary using Python's built-in tools:
+
+```python
+from collections import Counter
+
+# Count occurrences of each value
+value_counts = Counter(collection.values())
+print(value_counts.most_common())
+
+# Example output:
+# [(93, 2), (31, 2), (15, 1), (14, 1), (74, 1), (0, 1), (64, 1), 
+#  (17, 1), (18, 1), (80, 1), (48, 1), (45, 1), (55, 1), (40, 1), (53, 1)]
+```
+
+**Understanding Counter**: The `collections.Counter` class creates a frequency distribution from our dictionary values. We call `most_common()` to sort the counts in descending order by occurrence. This shows us which values appear multiple times in our randomly generated collection.
+
+### Manual Implementation Comparison
+
+For learning purposes, here's what `Counter` does behind the scenes:
+
+```python
+# Manual implementation equivalent to Counter
+value_counts = {}
+for val in collection.values():
+    value_counts[val] = value_counts.get(val, 0) + 1
+
+# Sort by count (descending)
+sorted_counts = sorted(value_counts.items(), key=lambda count: count[1], reverse=True)
+print(sorted_counts)
+```
+
+**Why Counter is better**: While this manual approach works, `Counter` is optimized, more readable, and provides additional methods like `most_common()`, `subtract()`, and arithmetic operations between counters.
+
+## Conditional Selection with Comprehensions
+
+Let's find all keys whose values meet certain criteria:
+
+```python
+# Find keys with values greater than 40
+gt40keys = [
+    k for (k, v) in collection.items()
+    if v > 40
+]
+print(f"Keys with values > 40: {gt40keys}")
+
+# Example output: ['h', 'x', 'd', 'm', 'l', 'c', 'q', 'b', 't']
+```
+
+**Breaking down the syntax**: We use `collection.items()` to get key-value pairs, unpack them as `(k, v)`, then filter with `if v > 40`. This demonstrates how comprehensions can combine iteration, unpacking, and conditional logic in a single, readable expression.
 
 ### Nested Loops in Comprehensions
 
