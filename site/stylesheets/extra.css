@@ -1,0 +1,263 @@
+/* Custom CSS for Matthew Martz's site */
+
+:root {
+  --md-primary-fg-color: #0066cc;
+  --md-primary-fg-color--light: #2c6ccd;
+  --md-primary-fg-color--dark: #004d99;
+  --md-accent-fg-color: #43a1ff;
+  --md-accent-bg-color: #e0efff;
+}
+
+/* Hero section styling */
+.hero-section {
+  background: linear-gradient(135deg, var(--md-primary-fg-color--light), var(--md-primary-fg-color--dark));
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-section .subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.hero-section .cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  background: white;
+  color: var(--md-primary-fg-color) !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: 2px solid white;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background: var(--md-primary-fg-color);
+  color: white !important;
+}
+
+.cta-button.secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white !important;
+}
+
+.cta-button.secondary:hover {
+  background: white;
+  color: var(--md-primary-fg-color) !important;
+}
+
+/* Profile image styling */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+/* Experience cards */
+.experience-card {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.experience-card h3 {
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.experience-card .company {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card .duration {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Skills section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.skill-category {
+  background: var(--md-code-bg-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--md-accent-fg-color);
+}
+
+.skill-category h4 {
+  color: var(--md-primary-fg-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: var(--md-accent-bg-color);
+  color: var(--md-accent-fg-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Blog post styling */
+.blog-post-meta {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.blog-post-excerpt {
+  font-style: italic;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--md-accent-fg-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section .subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Publications and Patents styling */
+.publication-item {
+  padding: 1rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  margin-bottom: 1rem;
+}
+
+.publication-item:last-child {
+  border-bottom: none;
+}
+
+.publication-title {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.5rem;
+}
+
+.publication-authors {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.publication-journal {
+  color: var(--md-accent-fg-color);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Contact section */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.contact-item {
+  text-align: center;
+  padding: 1rem;
+  background: var(--md-code-bg-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-item a {
+  text-decoration: none !important;
+  color: var(--md-primary-fg-color);
+}
+
+.contact-item .icon {
+  font-size: 2rem;
+  color: var(--md-accent-fg-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Custom admonitions */
+.md-typeset .admonition.research {
+  border-color: #00bcd4;
+}
+
+.md-typeset .admonition.research > .admonition-title {
+  background-color: rgba(0, 188, 212, 0.1);
+  border-color: #00bcd4;
+}
+
+.md-typeset .admonition.research > .admonition-title::before {
+  background-color: #00bcd4;
+  -webkit-mask-image: var(--md-admonition-icon--note);
+  mask-image: var(--md-admonition-icon--note);
+}

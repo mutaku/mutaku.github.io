@@ -168,10 +168,6 @@ nav:
     - Patents & Publications: experience/achievements.md
   - Blog:
     - blog/index.md
-  - Technical Writing:
-    - Python Deep Dives: blog/posts/python-generators-and-comprehensions.md
-    - Data Engineering: blog/posts/nested-dictionary-lookups.md
-    - MLOps Analysis: blog/posts/mlops-industry-analysis.md
   - Projects: projects.md
 
 # Watch additional files (commented out since includes directory doesn't exist yet)

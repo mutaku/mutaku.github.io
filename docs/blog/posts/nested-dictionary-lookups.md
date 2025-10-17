@@ -1,6 +1,13 @@
-# Nested Dictionary Lookups: Methods, Performance, and Best Practices
-
-## Published: November 2023
+---
+title: "Nested Dictionary Lookups: Methods, Performance, and Best Practices"
+description: "Advanced techniques for handling complex data structures in Python with performance analysis and robust solutions"
+authors:
+  - matthew
+date: 2023-11-20
+categories:
+  - Data Science
+  - Technology
+---
 
 When working with complex data structures in Python, nested dictionaries are ubiquitous. Whether you're processing JSON APIs, configuration files, or hierarchical data, you'll frequently need to safely access deeply nested values. This article explores various methods for nested dictionary lookups, compares their performance, and provides robust solutions for real-world applications.
 

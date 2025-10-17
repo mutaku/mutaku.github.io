@@ -1,6 +1,12 @@
-# Python Generators and Comprehensions: A Deep Dive
-
-*Published: December 2023*
+---
+title: "Python Generators and Comprehensions: A Deep Dive"
+description: "Comprehensive guide to Python generators and comprehensions with performance comparisons and real-world applications"
+authors:
+  - matthew
+date: 2023-12-01
+categories:
+  - Technology
+---
 
 This comprehensive guide explores Python generators and comprehensions - powerful constructs that can dramatically improve your code's performance, readability, and memory efficiency. We'll cover everything from basic syntax to advanced patterns, including real-world applications and performance comparisons.
 

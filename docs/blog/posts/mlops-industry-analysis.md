@@ -1,6 +1,15 @@
-# Notes on MLOps: Industry Analysis and Practical Insights
+---
+title: "Notes on MLOps: Industry Analysis and Practical Insights"
+description: "Real-world MLOps implementation challenges and solutions from production ML systems"
+authors:
+  - matthew
+date: 2023-09-15
+categories:
+  - AI/ML
+  - Technology
+---
 
-## Published: September 2023
+# Notes on MLOps: Industry Analysis and Practical Insights
 
 *Originally written in response to industry discussions about MLOps maturity and adoption challenges*
 
