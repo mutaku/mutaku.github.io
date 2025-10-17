@@ -44,13 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
             opacity: 0;
             transition: opacity 0.2s;
         `;
-
+        
         block.style.position = 'relative';
         block.appendChild(button);
-
+        
         block.addEventListener('mouseenter', () => button.style.opacity = '1');
         block.addEventListener('mouseleave', () => button.style.opacity = '0');
-
+        
         button.addEventListener('click', async () => {
             const code = block.querySelector('code').textContent;
             try {

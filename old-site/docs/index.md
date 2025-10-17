@@ -7,7 +7,7 @@
     Data Science & AI Leader | Clinical AI Innovator | Director of ML/AI Strategy
   </div>
   <p>
-    Expert in building and leading teams of Data Scientists, Machine Learning Engineers,
+    Expert in building and leading teams of Data Scientists, Machine Learning Engineers, 
     and Data Product experts to drive innovation, product development, and cutting-edge research.
   </p>
   <div class="cta-buttons">
@@ -25,7 +25,7 @@ I'm pioneering the development of **comprehensive healthcare AI platforms** that
 **What I've Built**:
 
 - **2.3 million patient knowledge graph** demonstrating scalable AI platform capabilities
-- **Privacy-preserving federated learning** enabling multi-site collaboration without data sharing
+- **Privacy-preserving federated learning** enabling multi-site collaboration without data sharing  
 - **Clinical workflow integration** with 15+ interfaces and 100+ service methods
 - **Patient digital twins** for precision medicine at population scale
 
@@ -46,7 +46,7 @@ I'm pioneering the development of **comprehensive healthcare AI platforms** that
       <span class="skill-tag">Strategy & Vision</span>
     </div>
   </div>
-
+  
   <div class="skill-category">
     <h4>🧬 Domain Expertise</h4>
     <div class="skill-tags">
@@ -57,7 +57,7 @@ I'm pioneering the development of **comprehensive healthcare AI platforms** that
       <span class="skill-tag">Genomics</span>
     </div>
   </div>
-
+  
   <div class="skill-category">
     <h4>🚀 Innovation Track Record</h4>
     <div class="skill-tags">
@@ -67,7 +67,7 @@ I'm pioneering the development of **comprehensive healthcare AI platforms** that
       <span class="skill-tag">AI-driven Personalization</span>
     </div>
   </div>
-
+  
   <div class="skill-category">
     <h4>💻 Technical Stack</h4>
     <div class="skill-tags">
@@ -94,7 +94,7 @@ I'm pioneering the development of **comprehensive healthcare AI platforms** that
   <h3>Creator and Team Lead - Agentic Knowledge Engine</h3>
   <div class="company">Mayo Clinic, Rochester, MN</div>
   <div class="duration">Current Position</div>
-
+  
   Leading development of a cutting-edge, robust data platform engineered for multi-modal data that integrates seamlessly with diverse databases and data lakes, facilitating real-time ingestion into sophisticated knowledge graphs.
 
   **Key Achievements:**

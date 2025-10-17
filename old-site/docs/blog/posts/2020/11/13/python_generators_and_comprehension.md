@@ -36,8 +36,8 @@ collection
 ```
 
 ```python
-{'i': 15, 'u': 14, 'h': 74, 'x': 93, 'r': 0, 'd': 64, 'v': 31,
- 'k': 17, 'm': 93, 'p': 18, 'l': 80, 'o': 31, 'c': 48, 'q': 45,
+{'i': 15, 'u': 14, 'h': 74, 'x': 93, 'r': 0, 'd': 64, 'v': 31, 
+ 'k': 17, 'm': 93, 'p': 18, 'l': 80, 'o': 31, 'c': 48, 'q': 45, 
  'b': 55, 's': 40, 't': 53}
 ```
 
@@ -65,7 +65,7 @@ value_counts.most_common()
 ```
 
 ```python
-[(93, 2), (31, 2), (15, 1), (14, 1), (74, 1), (0, 1), (64, 1),
+[(93, 2), (31, 2), (15, 1), (14, 1), (74, 1), (0, 1), (64, 1), 
  (17, 1), (18, 1), (80, 1), (48, 1), (45, 1), (55, 1), (40, 1), (53, 1)]
 ```
 
@@ -174,7 +174,7 @@ for (i, (k, v)) in enumerate(collection.items()):
     if v == 93:
         print(f'Found a 93 on loop {i=} for {k=}')
         found.append(k)
-
+    
     if len(found) == 2:
         break
 
@@ -214,11 +214,11 @@ class User:
         self.name = name
         self.age = age
         self.active = active
-
+    
     def toggle_active(self):
         self.active = not self.active
         return True
-
+    
     def __repr__(self):
         return f'<User> {self.name=} | {self.age=} | {self.active=}'
 
