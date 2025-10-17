@@ -48,36 +48,36 @@ I'm pioneering the development of **comprehensive healthcare AI platforms** that
   </div>
 
   <div class="skill-category">
-    <h4>🧬 Domain Expertise</h4>
+    <h4>🧬 AI Platform Architecture</h4>
     <div class="skill-tags">
-      <span class="skill-tag">Clinical AI</span>
-      <span class="skill-tag">Biotechnology</span>
-      <span class="skill-tag">Precision Medicine</span>
-      <span class="skill-tag">Digital Health</span>
-      <span class="skill-tag">Genomics</span>
+      <span class="skill-tag">Graph Neural Networks</span>
+      <span class="skill-tag">Agentic Knowledge Systems</span>
+      <span class="skill-tag">Patient Digital Twins</span>
+      <span class="skill-tag">Multimodal AI Integration</span>
+      <span class="skill-tag">Privacy-Preserving ML</span>
     </div>
   </div>
 
   <div class="skill-category">
-    <h4>🚀 Innovation Track Record</h4>
+    <h4>🚀 Production Scale Achievements</h4>
     <div class="skill-tags">
-      <span class="skill-tag">5 Patents Awarded</span>
-      <span class="skill-tag">Billion+ Parameter Models</span>
-      <span class="skill-tag">98%+ Accuracy Real-time ML</span>
-      <span class="skill-tag">Millisecond Response Times</span>
-      <span class="skill-tag">Industry Awards</span>
+      <span class="skill-tag">2.3M Patient Knowledge Graph</span>
+      <span class="skill-tag">400M+ Graph Relationships</span>
+      <span class="skill-tag">Billion+ Parameter Models Live</span>
+      <span class="skill-tag">Sub-millisecond Inference</span>
+      <span class="skill-tag">5 Awarded Patents</span>
     </div>
   </div>
 
   <div class="skill-category">
-    <h4>💻 Technical Stack</h4>
+    <h4>💻 Production Technical Stack</h4>
     <div class="skill-tags">
-      <span class="skill-tag">Python</span>
-      <span class="skill-tag">PyTorch</span>
-      <span class="skill-tag">AWS</span>
-      <span class="skill-tag">MLOps/DevOps</span>
-      <span class="skill-tag">LLMs & GenAI</span>
-      <span class="skill-tag">Knowledge Graphs</span>
+      <span class="skill-tag">PyTorch Geometric GNNs</span>
+      <span class="skill-tag">Neo4j 5.x Graph Database</span>
+      <span class="skill-tag">CUDA Multi-GPU Training</span>
+      <span class="skill-tag">Real-time ML APIs (ms latency)</span>
+      <span class="skill-tag">Federated Learning & Privacy</span>
+      <span class="skill-tag">Clinical AI Frameworks</span>
     </div>
   </div>
 </div>
