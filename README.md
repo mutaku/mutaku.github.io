@@ -138,7 +138,7 @@ git push
 ```yaml
 # Key workflow steps:
 - Install dependencies from new-site/requirements.txt
-- Build site from new-site/ directory  
+- Build site from new-site/ directory
 - Deploy from new-site/site/ output
 - Automatic deployment on main branch pushes
 ```
@@ -170,7 +170,7 @@ git push
 #### Monitoring Deployment
 
 - **Actions Page**: <https://github.com/mutaku/mutaku.github.io/actions>
-- **Pages Settings**: <https://github.com/mutaku/mutaku.github.io/settings/pages>  
+- **Pages Settings**: <https://github.com/mutaku/mutaku.github.io/settings/pages>
 - **Site Status**: Monitor build and deployment status in real-time
 - **Build Time**: Typical deployment takes 2-3 minutes from push to live site
 

@@ -34,7 +34,7 @@ These digital twins are envisioned as dynamic, continuously evolving representat
       <span class="skill-tag">Generative AI</span>
     </div>
   </div>
-  
+
   <div class="skill-category">
     <h4>Knowledge Systems</h4>
     <div class="skill-tags">
@@ -45,7 +45,7 @@ These digital twins are envisioned as dynamic, continuously evolving representat
       <span class="skill-tag">LLMs</span>
     </div>
   </div>
-  
+
   <div class="skill-category">
     <h4>Clinical Applications</h4>
     <div class="skill-tags">
@@ -56,7 +56,7 @@ These digital twins are envisioned as dynamic, continuously evolving representat
       <span class="skill-tag">Cognitive Load Analysis</span>
     </div>
   </div>
-  
+
   <div class="skill-category">
     <h4>Technical Leadership</h4>
     <div class="skill-tags">

@@ -119,12 +119,12 @@ Let's build a reusable function for nested dictionary access:
 def nested_get(dictionary, keys, default=None):
     """
     Safely get nested dictionary value using a list of keys.
-    
+
     Args:
         dictionary: The dictionary to search
         keys: List of keys representing the path
         default: Default value if path doesn't exist
-    
+
     Returns:
         The value at the nested path, or default if not found
     """
@@ -161,13 +161,13 @@ For even more flexibility, let's create a function that accepts dot-notation str
 def get_nested_value(data, path, default=None, separator='.'):
     """
     Get nested dictionary value using dot notation path.
-    
+
     Args:
         data: The dictionary to search
         path: String path using dot notation (e.g., 'users.user_1.name')
         default: Default value if path doesn't exist
         separator: Path separator (default: '.')
-    
+
     Returns:
         The value at the path, or default if not found
     """
@@ -203,21 +203,21 @@ def jsonpath_get(data, path, default=None):
     """
     Get nested value using JSONPath-like syntax.
     Supports array indices and wildcard matching.
-    
+
     Args:
         data: The dictionary/list to search
         path: JSONPath-like string (e.g., 'users.*.name')
         default: Default value if path doesn't exist
-    
+
     Returns:
         The value(s) at the path, or default if not found
     """
     # Split path and handle array indices
     parts = re.split(r'[.\[\]]', path)
     parts = [p for p in parts if p]  # Remove empty strings
-    
+
     current = data
-    
+
     for part in parts:
         if part == '*':
             # Wildcard - collect all values at this level
@@ -238,7 +238,7 @@ def jsonpath_get(data, path, default=None):
             try:
                 if isinstance(current, list):
                     # Apply to all items in list
-                    current = [item.get(part) if isinstance(item, dict) 
+                    current = [item.get(part) if isinstance(item, dict)
                              else None for item in current]
                     # Filter out None values
                     current = [item for item in current if item is not None]
@@ -246,7 +246,7 @@ def jsonpath_get(data, path, default=None):
                     current = current[part]
             except (KeyError, TypeError):
                 return default
-    
+
     return current if current is not None else default
 
 # Usage examples
@@ -286,7 +286,7 @@ large_data = {
 
 def benchmark_access_methods(data, iterations=10000):
     """Benchmark different nested access methods."""
-    
+
     # Method 1: Direct access with try/except
     start_time = time.time()
     for _ in range(iterations):
@@ -295,7 +295,7 @@ def benchmark_access_methods(data, iterations=10000):
         except KeyError:
             value = None
     direct_time = time.time() - start_time
-    
+
     # Method 2: Using get() chaining
     start_time = time.time()
     for _ in range(iterations):
@@ -304,13 +304,13 @@ def benchmark_access_methods(data, iterations=10000):
                 .get('metadata', {})
                 .get('processed'))
     get_time = time.time() - start_time
-    
+
     # Method 3: Using our nested_get function
     start_time = time.time()
     for _ in range(iterations):
         value = nested_get(data, ['level_50', 'sublevel_50', 'metadata', 'processed'])
     nested_get_time = time.time() - start_time
-    
+
     print(f"Direct access: {direct_time:.4f} seconds")
     print(f"Get chaining: {get_time:.4f} seconds")
     print(f"Nested get function: {nested_get_time:.4f} seconds")
@@ -362,7 +362,7 @@ def nested_set(dictionary, keys, value):
     """
     Set a value in a nested dictionary using a list of keys.
     Creates intermediate dictionaries if they don't exist.
-    
+
     Args:
         dictionary: The dictionary to modify
         keys: List of keys representing the path
@@ -401,33 +401,33 @@ New nested structure created:
 def safe_nested_access(data, path, default=None, required_keys=None):
     """
     Enhanced nested access with validation.
-    
+
     Args:
         data: Dictionary to search
         path: List of keys or dot-notation string
         default: Default value if not found
         required_keys: Keys that must exist at the final level
-    
+
     Returns:
         Value or default, with optional validation
     """
     if isinstance(path, str):
         path = path.split('.')
-    
+
     result = nested_get(data, path, default)
-    
+
     # Validate required keys exist in result
     if required_keys and isinstance(result, dict):
         missing_keys = [key for key in required_keys if key not in result]
         if missing_keys:
             print(f"Warning: Missing required keys: {missing_keys}")
-    
+
     return result
 
 # Usage with validation
 user_profile = safe_nested_access(
-    data, 
-    'users.user_1.profile', 
+    data,
+    'users.user_1.profile',
     default={},
     required_keys=['age', 'location', 'preferences']
 )
